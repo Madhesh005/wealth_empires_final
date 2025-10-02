@@ -8,7 +8,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
     color: #1a1a1a;
-    background-color: #F5F2B8;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
 }
 
 .container {
@@ -19,14 +20,27 @@ body {
 
 /* Header */
 header {
-    background: transparent;
-    backdrop-filter: none;
-    border-bottom: none;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
+    padding: 20px 0;
+    background: transparent;
+}
+
+.nav-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+    max-width: 1400px;
 }
 
 nav {
@@ -34,6 +48,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 16px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 60px;
+    width: 100%;
+    flex-wrap: nowrap;
 }
 
 .logo {
@@ -42,6 +61,7 @@ nav {
     font-size: 24px;
     font-weight: 700;
     color: #1a1a1a;
+    flex-shrink: 0;
 }
 
 .logo-text {
@@ -52,32 +72,33 @@ nav {
     position: relative;
 }
 
-.logo-text:before {
-    content: "//";
-    color: #F4C430;
-    font-weight: 700;
-    margin-right: 8px;
-}
-
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 32px;
+    gap: 40px;
     position: relative;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: 0 40px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #1a1a1a;
     font-weight: 500;
-    font-size: 14px;
-    transition: color 0.2s ease;
-    padding: 8px 0;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    padding: 8px 16px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
-    color: #1a1a1a;
-    opacity: 0.7;
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
 }
 
 /* Dropdown Styles */
@@ -93,7 +114,7 @@ nav {
 }
 
 .dropdown-arrow {
-    font-size: 10px;
+    font-size: 12px;
     transition: transform 0.2s ease;
     color: #666;
 }
@@ -104,20 +125,21 @@ nav {
 
 .dropdown-menu {
     position: absolute;
-    top: calc(100% + 8px);
+    top: calc(100% + 12px);
     left: 50%;
     transform: translateX(-50%);
-    background: #fff;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
     min-width: 200px;
     width: max-content;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    border-radius: 12px;
-    padding: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    border-radius: 16px;
+    padding: 8px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease;
     z-index: 1000;
-    border: 1px solid rgba(0,0,0,0.06);
+    border: 1px solid rgba(255,255,255,0.2);
     white-space: nowrap;
 }
 
@@ -133,7 +155,7 @@ nav {
     color: #1a1a1a !important;
     text-decoration: none;
     transition: all 0.2s ease;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 14px;
     font-weight: 500;
     white-space: nowrap;
@@ -142,9 +164,8 @@ nav {
 }
 
 .dropdown-item:hover {
-    background: #f8fafc;
-    color: #1a1a1a !important;
-    opacity: 0.7;
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea !important;
 }
 
 .dropdown-item span {
@@ -156,16 +177,18 @@ nav {
 
 .header-buttons {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     align-items: center;
+    flex-shrink: 0;
+    height: 100%;
 }
 
 .btn-demo {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background: transparent;
     color: #1a1a1a;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-weight: 500;
     font-size: 14px;
     transition: all 0.2s ease;
@@ -173,30 +196,44 @@ nav {
 }
 
 .btn-demo:hover {
-    background: #f8fafc;
-    border-color: rgba(0,0,0,0.15);
+    background: rgba(102, 126, 234, 0.1);
+    border-color: #667eea;
+    color: #667eea;
 }
 
 .btn-primary {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background: #1a1a1a;
     color: #fff;
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
+    border-radius: 12px;
+    font-weight: 600;
     font-size: 14px;
     transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary:hover {
     background: #333;
     transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.btn-primary::after {
+    content: "→";
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+
+.btn-primary:hover::after {
+    transform: translateX(4px);
 }
 
 /* Hero Section */
 .hero {
-    background: #F5F2B8;
-    padding: 120px 0 80px;
+    background: transparent;
+    padding: 140px 0 80px;
     min-height: 90vh;
     display: flex;
     align-items: center;
@@ -214,8 +251,9 @@ nav {
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 24px;
-    color: #1a1a1a;
+    color: #ffffff;
     letter-spacing: -1px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.1);
 }
 
 .hero-text h1 .highlight {
@@ -224,7 +262,7 @@ nav {
 
 .hero-text p {
     font-size: 1.25rem;
-    color: #64748b;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 32px;
     line-height: 1.6;
     font-weight: 400;
@@ -238,7 +276,7 @@ nav {
 
 .btn-large {
     padding: 14px 28px;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
@@ -246,35 +284,57 @@ nav {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .btn-black {
-    background: #1a1a1a;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a1a1a;
+    backdrop-filter: blur(20px);
 }
 
 .btn-black:hover {
-    background: #333;
-    transform: translateY(-1px);
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
 .btn-white {
-    background: #fff;
-    color: #1a1a1a;
-    border: 1px solid rgba(0,0,0,0.15);
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.3);
 }
 
 .btn-white:hover {
-    background: #f8fafc;
-    border-color: rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255,255,255,0.5);
+    transform: translateY(-2px);
+}
+
+.service-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.service-link:hover {
+    color: #4c51bf;
+    transform: translateX(4px);
 }
 
 .trustpilot {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #64748b;
+    color: #ffffff;
     font-size: 14px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
 }
 
 .stars {
@@ -284,6 +344,101 @@ nav {
 
 .hero-visual {
     position: relative;
+}
+
+/* Glassmorphism Card Styles */
+.glassmorphism-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.glassmorphism-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.glass-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.accounting-badge {
+    background: rgba(52, 152, 219, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    border-radius: 15px;
+    padding: 20px 30px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.accounting-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.3) 0%, rgba(52, 152, 219, 0.1) 100%);
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.accounting-badge h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.accounting-badge h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 8px 0 0 0;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.professional-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.professional-image img {
+    filter: brightness(1.1) contrast(1.1);
+    transition: transform 0.3s ease;
+}
+
+.glassmorphism-card:hover .professional-image img {
+    transform: scale(1.05);
 }
 
 .hero-image {
@@ -350,29 +505,66 @@ nav {
 }
 
 .advantage-card:nth-child(1) {
-    background: #F5F2B8; /* Light Yellow like Doola's Business Formation */
+    background: #E5E8F5; /* Light Blue consistent color */
 }
 
 .advantage-card:nth-child(2) {
-    background: #F2E5F2; /* Light Pink like Doola's Analytics */
+    background: #E5E8F5; /* Light Blue consistent color */
 }
 
 .advantage-card:nth-child(3) {
-    background: #E5F5E5; /* Light Green like Doola's Taxes */
+    background: #E5E8F5; /* Light Blue consistent color */
 }
 
 .advantage-card:nth-child(4) {
-    background: #E5E8F5; /* Light Blue like Doola's Bookkeeping */
+    background: #E5E8F5; /* Light Blue consistent color */
 }
 
 .advantage-card:nth-child(5) {
-    background: #F5F0E8; /* Light Beige like Doola's Business-in-a-Box */
+    background: #E5E8F5; /* Light Blue consistent color */
+}
+
+.advantage-card:nth-child(6) {
+    background: #E5E8F5; /* Light Blue consistent color */
 }
 
 .advantage-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 32px rgba(0,0,0,0.12);
     border-color: rgba(0,0,0,0.1);
+}
+
+.advantage-item {
+    background: #fff;
+    padding: 32px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    border-color: rgba(0,0,0,0.1);
+}
+
+.advantage-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.advantage-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.advantage-item p {
+    color: #64748b;
+    line-height: 1.5;
 }
 
 .advantage-card h3 {
@@ -485,6 +677,10 @@ nav {
 
 .step:nth-child(5) {
     background: #f5f2b8; /* Light Beige */
+}
+
+.step:nth-child(6) {
+    background: #F5F2B8; /* Light Yellow */
 }
 
 .step:hover {
@@ -912,15 +1108,15 @@ nav {
 }
 
 .deliverable-item:nth-child(1) {
-    background: #F5F2B8; /* Light Yellow */
+    background: #E5E8F5; /* Light Yellow */
 }
 
 .deliverable-item:nth-child(2) {
-    background: #F2E5F2; /* Light Pink */
+    background: #e5e8f5; /* Light Pink */
 }
 
 .deliverable-item:nth-child(3) {
-    background: #E5F5E5; /* Light Green */
+    background: #E5e8F5; /* Light Green */
 }
 
 .deliverable-item:nth-child(4) {
@@ -928,7 +1124,7 @@ nav {
 }
 
 .deliverable-item:nth-child(5) {
-    background: #F5F0E8; /* Light Beige */
+    background: #E5E8F5; /* Light Beige */
 }
 
 .deliverable-item:hover {
@@ -974,8 +1170,223 @@ nav {
     font-weight: 600;
 }
 
+/* Timeline Styles */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #667eea, #764ba2);
+    top: 0;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-year {
+    background: #667eea;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    min-width: 80px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 45%;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.timeline-content h3 {
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Mission Vision Styles */
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.mission-item {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.mission-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.mission-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.mission-item h3 {
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.mission-item p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Partnership Styles */
+.partnership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.partnership-type {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.partnership-type:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    border-color: #667eea;
+}
+
+.partnership-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.partnership-type h3 {
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.partnership-type p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.partnership-type ul {
+    list-style: none;
+    padding: 0;
+}
+
+.partnership-type ul li {
+    color: #64748b;
+    padding: 4px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.partnership-type ul li::before {
+    content: "✓";
+    color: #667eea;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding-left: 50px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        flex-direction: column !important;
+    }
+    
+    .timeline-content {
+        width: 100%;
+        margin-top: 16px;
+    }
+    
+    .timeline-year {
+        position: absolute;
+        left: -20px;
+        top: 0;
+        min-width: 60px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .mission-vision-grid,
+    .partnership-grid {
+        grid-template-columns: 1fr;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        margin: 0 10px;
+        padding: 0 16px;
+    }
+    
+    .nav-links {
+        display: flex;
+    }
+    
+    .header-buttons {
+        gap: 8px;
+    }
+    
+    .btn-demo, .btn-primary {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -986,8 +1397,27 @@ nav {
         font-size: 2.5rem;
     }
 
-    .nav-links {
-        display: none;
+    .glassmorphism-card {
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    .accounting-badge {
+        padding: 15px 20px;
+    }
+    
+    .accounting-badge h2 {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+    
+    .accounting-badge h3 {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    
+    .professional-image {
+        max-width: 100%;
     }
 
     .advantages-grid {
