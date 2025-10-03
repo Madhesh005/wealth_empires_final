@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,27 @@
     <link rel="shortcut icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="stylesheet" href="styles.css?v=3">
 </head>
+
 <body>
     <!-- Header -->
+    <div class="nav-overlay" id="navOverlay"></div>
     <header>
         <div class="nav-container">
             <nav>
                 <div class="logo">
-                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
-                        <img src="Wealth Empires.jpg" alt="Wealth Empires Logo" style="height: 40px; width: auto; border-radius: 8px;">
+                    <a href="index.html"
+                        style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                        <img src="Wealth Empires.jpg" alt="Wealth Empires Logo"
+                            style="height: 48px; width: auto; border-radius: 8px;">
                         <div class="logo-text">Wealth Empires</div>
                     </a>
                 </div>
-                <ul class="nav-links">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="navLinks">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
                         <div class="dropdown-menu">
@@ -35,7 +45,7 @@
                             <a href="taxes.html" class="dropdown-item">
                                 <span>Taxes</span>
                             </a>
-                            
+
                         </div>
                     </li>
                     <li class="dropdown">
@@ -51,11 +61,14 @@
                     </li>
                     <li><a href="our-story.html">Our Story</a></li>
                     <li><a href="our-partner.html">Our Partners</a></li>
+                    <li class="header-buttons-li">
+                        <div class="header-buttons">
+                            <a href="contact.html" class="btn-demo">Contact Us</a>
+                            <a href="https://crm.wealthempires.in/" class="btn-demo">Start Registration</a>
+                        </div>
+                    </li>
                 </ul>
-                <div class="header-buttons">
-                    <a href="contact.html" class="btn-demo">Contact Us</a>
-                    <a href="https://crm.wealthempires.in/" class="btn-primary">Start Registration</a>
-                </div>
+
             </nav>
         </div>
     </header>
@@ -66,7 +79,8 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Trademark <span class="highlight">Registration</span> Services</h1>
-                    <p>Protect your brand identity with professional trademark registration services. Secure your intellectual property and build brand trust.</p>
+                    <p>Protect your brand identity with professional trademark registration services. Secure your
+                        intellectual property and build brand trust.</p>
                     <div class="hero-buttons">
                         <a href="contact.html" class="btn-large btn-black">Contact Us</a>
                         <a href="https://crm.wealthempires.in/" class="btn-large btn-white">Start Registration</a>
@@ -80,7 +94,9 @@
                     <div class="glassmorphism-card">
                         <div class="glass-content">
                             <div class="professional-image">
-                                <img src="trademark.png" alt="Trademark Registration Services - Brand Protection Made Easy" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px;">
+                                <img src="trademark.png"
+                                    alt="Trademark Registration Services - Brand Protection Made Easy"
+                                    style="width: 100%; height: auto; object-fit: cover; border-radius: 12px;">
                             </div>
                         </div>
                     </div>
@@ -94,45 +110,56 @@
         <div class="container">
             <div class="section-title">
                 <h2>Why is Trademark Registration Important?</h2>
-                <p>Registering your trademark is crucial because it helps protect your brand's identity, builds trust with customers, and ensures your business stands out in a crowded market.</p>
+                <p>Registering your trademark is crucial because it helps protect your brand's identity, builds trust
+                    with customers, and ensures your business stands out in a crowded market.</p>
             </div>
             <div class="gst-content">
-                <div class="advantages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                <div class="advantages-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
                     <div class="advantage-card" style="background: #E5E8F5;">
                         <h3>Legal Protection</h3>
-                        <p>A trademark protects your brand from being copied or used by others without permission, which helps keep your business unique.</p>
+                        <p>A trademark protects your brand from being copied or used by others without permission, which
+                            helps keep your business unique.</p>
                     </div>
                     <div class="advantage-card" style="background: #E5E8F5;">
                         <h3>Trademark Search</h3>
-                        <p>Doing a trademark search ensures that your brand name or logo is original and hasn't been taken by someone else.</p>
+                        <p>Doing a trademark search ensures that your brand name or logo is original and hasn't been
+                            taken by someone else.</p>
                     </div>
                     <div class="advantage-card" style="background: #E5E8F5;">
                         <h3>Online Registration</h3>
-                        <p>Registering your trademark online gives your brand legal protection in India and other countries.</p>
+                        <p>Registering your trademark online gives your brand legal protection in India and other
+                            countries.</p>
                     </div>
                     <div class="advantage-card" style="background: #E5E8F5;">
                         <h3>Valuable Asset</h3>
-                        <p>A trademark becomes a valuable asset for your business, helping build your reputation and brand recognition.</p>
+                        <p>A trademark becomes a valuable asset for your business, helping build your reputation and
+                            brand recognition.</p>
                     </div>
                     <div class="advantage-card" style="background: #E5E8F5;">
                         <h3>Attract Customers</h3>
-                        <p>A registered trademark helps make your brand easily recognizable, drawing in both loyal and new customers.</p>
+                        <p>A registered trademark helps make your brand easily recognizable, drawing in both loyal and
+                            new customers.</p>
                     </div>
                     <div class="advantage-card" style="background: #E5E8F5;">
                         <h3>Legal Action</h3>
-                        <p>If someone tries to use your trademark without permission, you have the right to take legal action to stop them.</p>
+                        <p>If someone tries to use your trademark without permission, you have the right to take legal
+                            action to stop them.</p>
                     </div>
                     <div class="advantage-card" style="background: #E5E8F5;">
                         <h3>Renewal</h3>
-                        <p>A trademark lasts for ten years and can be renewed, giving your brand long-term protection.</p>
+                        <p>A trademark lasts for ten years and can be renewed, giving your brand long-term protection.
+                        </p>
                     </div>
                     <div class="advantage-card" style="background: #E5E8F5;">
                         <h3>Grow Your Business</h3>
-                        <p>A trademark helps grow your business by making your brand stand out, increasing its value over time.</p>
+                        <p>A trademark helps grow your business by making your brand stand out, increasing its value
+                            over time.</p>
                     </div>
                     <div class="advantage-card" style="background: #E5E8F5;">
                         <h3>Global Protection</h3>
-                        <p>You can register your trademark internationally to protect your brand in other countries as well.</p>
+                        <p>You can register your trademark internationally to protect your brand in other countries as
+                            well.</p>
                     </div>
                 </div>
             </div>
@@ -146,21 +173,27 @@
                 <h2>Trademark Symbols</h2>
                 <p>Understanding the different trademark symbols and their meanings</p>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; max-width: 900px; margin: 0 auto;">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; max-width: 900px; margin: 0 auto;">
                 <div class="advantage-card" style="background: #E5E8F5; text-align: center;">
                     <div style="font-size: 3rem; margin-bottom: 16px; color: #1a1a1a;">™</div>
                     <h3>TM Symbol (™)</h3>
-                    <p>The TM symbol stands for "trademark" and can be used by the owner, even though the trademark is not yet registered. It provides basic rights to the owner.</p>
+                    <p>The TM symbol stands for "trademark" and can be used by the owner, even though the trademark is
+                        not yet registered. It provides basic rights to the owner.</p>
                 </div>
                 <div class="advantage-card" style="background: #E5E8F5; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px; color: #1a1a1a; border: 2px solid #1a1a1a; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">®</div>
+                    <div
+                        style="font-size: 3rem; margin-bottom: 16px; color: #1a1a1a; border: 2px solid #1a1a1a; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+                        ®</div>
                     <h3>® Symbol (®)</h3>
-                    <p>The ® symbol indicates that the trademark is officially registered with the relevant authority. It provides full legal protection against unauthorized use.</p>
+                    <p>The ® symbol indicates that the trademark is officially registered with the relevant authority.
+                        It provides full legal protection against unauthorized use.</p>
                 </div>
                 <div class="advantage-card" style="background: #E5E8F5; text-align: center;">
                     <div style="font-size: 3rem; margin-bottom: 16px; color: #1a1a1a;">℠</div>
                     <h3>SM Symbol (℠)</h3>
-                    <p>The SM symbol stands for "service mark" and is used to represent services, even if they are not registered. Like TM, it helps indicate rights to the service.</p>
+                    <p>The SM symbol stands for "service mark" and is used to represent services, even if they are not
+                        registered. Like TM, it helps indicate rights to the service.</p>
                 </div>
             </div>
         </div>
@@ -172,8 +205,9 @@
             <div class="documents-section">
                 <h3>Required Documents</h3>
                 <p>Essential documents needed for trademark registration</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 800px; margin: 40px auto;">
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 800px; margin: 40px auto;">
                     <div class="document-item">
                         <h4>MSME (Or) Incorporation Certificate</h4>
                         <p class="doc-description">Business registration proof to establish legal entity status</p>
@@ -184,7 +218,7 @@
                             <li>Company formation documents</li>
                         </ul>
                     </div>
-                    
+
                     <div class="document-item">
                         <h4>Brand Logo (PDF)</h4>
                         <p class="doc-description">High-quality logo file for trademark application</p>
@@ -207,28 +241,35 @@
                 <h2>How it works?</h2>
                 <p>Process to Register a Trademark</p>
             </div>
-            
+
             <!-- Process Steps Visual -->
             <div style="text-align: center; margin: 40px 0;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
                     <div style="text-align: center;">
-                        <div style="width: 80px; height: 80px; background: #E5F5FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">🔍</div>
+                        <div
+                            style="width: 80px; height: 80px; background: #E5F5FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">
+                            🔍</div>
                         <h4>TM search by our experts</h4>
                         <p style="font-size: 14px; color: #64748b;">Result within 24 hours</p>
                     </div>
                     <div style="text-align: center;">
-                        <div style="width: 80px; height: 80px; background: #FFE5F5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">📝</div>
+                        <div
+                            style="width: 80px; height: 80px; background: #FFE5F5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">
+                            📝</div>
                         <h4>TM application filing & start using TM</h4>
                         <p style="font-size: 14px; color: #64748b;">1 - 2 days process</p>
                     </div>
                     <div style="text-align: center;">
-                        <div style="width: 80px; height: 80px; background: #E5FFE5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">📜</div>
+                        <div
+                            style="width: 80px; height: 80px; background: #E5FFE5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">
+                            📜</div>
                         <h4>TM registration certificate (10 years validity)</h4>
                         <p style="font-size: 14px; color: #64748b;">Upon approval</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="process-timeline"></div>
             <div class="process-steps">
                 <div class="step">
@@ -238,7 +279,8 @@
                     </div>
                     <div class="step-content">
                         <h3>Search for Existing Trademarks (TM search)</h3>
-                        <p>Before applying, search for existing trademarks on the IP India website. This helps ensure your chosen trademark isn't already in use.</p>
+                        <p>Before applying, search for existing trademarks on the IP India website. This helps ensure
+                            your chosen trademark isn't already in use.</p>
                         <span class="step-badge">Initial Research</span>
                     </div>
                 </div>
@@ -249,7 +291,11 @@
                     </div>
                     <div class="step-content">
                         <h3>Submit Your Trademark Application</h3>
-                        <p>Once the search is complete, you can file your trademark application in two ways: Manual filing (Submit application forms at the trademark office) or Online filing (Use the trademark registration portal for a faster process). You can apply for one class of goods or services or for multiple classes, depending on your business. Fees vary based on the number of classes.</p>
+                        <p>Once the search is complete, you can file your trademark application in two ways: Manual
+                            filing (Submit application forms at the trademark office) or Online filing (Use the
+                            trademark registration portal for a faster process). You can apply for one class of goods or
+                            services or for multiple classes, depending on your business. Fees vary based on the number
+                            of classes.</p>
                         <span class="step-badge">Application Filing</span>
                     </div>
                 </div>
@@ -260,7 +306,10 @@
                     </div>
                     <div class="step-content">
                         <h3>Examination of Your Application</h3>
-                        <p>After submission, your application is reviewed by the Indian Trademark Registry. The registrar officer will issue an examination report to check if your trademark follows the rules of the Trademark Act 1999. If everything is in order, the trademark will be published in the Trademark Journal.</p>
+                        <p>After submission, your application is reviewed by the Indian Trademark Registry. The
+                            registrar officer will issue an examination report to check if your trademark follows the
+                            rules of the Trademark Act 1999. If everything is in order, the trademark will be published
+                            in the Trademark Journal.</p>
                         <span class="step-badge">Review Process</span>
                     </div>
                 </div>
@@ -271,7 +320,9 @@
                     </div>
                     <div class="step-content">
                         <h3>Publication in the Trademark Journal</h3>
-                        <p>Your trademark will be published in the Trademark Journal. After publication, there is a four-month opposition period where others can oppose your application. If no one objects during these months from the date of publication, your application moves forward.</p>
+                        <p>Your trademark will be published in the Trademark Journal. After publication, there is a
+                            four-month opposition period where others can oppose your application. If no one objects
+                            during these months from the date of publication, your application moves forward.</p>
                         <span class="step-badge">Opposition Period</span>
                     </div>
                 </div>
@@ -282,7 +333,9 @@
                     </div>
                     <div class="step-content">
                         <h3>Receive Your Trademark Certificate</h3>
-                        <p>If there is no opposition, or if it is resolved, you will receive your trademark registration certificate. Once you get the certificate, your brand is officially protected, and you can use the TM symbol (TM).</p>
+                        <p>If there is no opposition, or if it is resolved, you will receive your trademark registration
+                            certificate. Once you get the certificate, your brand is officially protected, and you can
+                            use the TM symbol (TM).</p>
                         <span class="step-badge">Certificate Issued</span>
                     </div>
                 </div>
@@ -293,7 +346,10 @@
                     </div>
                     <div class="step-content">
                         <h3>Monitor Your Application</h3>
-                        <p>Throughout the process, you can check the trademark status on the India portal. It's important to stay updated as the registration process can take several months. By following these steps, you can complete the trademark registration process in India and ensure your brand is legally protected.</p>
+                        <p>Throughout the process, you can check the trademark status on the India portal. It's
+                            important to stay updated as the registration process can take several months. By following
+                            these steps, you can complete the trademark registration process in India and ensure your
+                            brand is legally protected.</p>
                         <span class="step-badge">Ongoing Monitoring</span>
                     </div>
                 </div>
@@ -302,49 +358,47 @@
     </section>
 
     <!-- Sample Certificate Section -->
-    <section class="gst-section" style="background: #f8fafc; padding: 80px 0;">
+    <section class="gst-section">
         <div class="container">
-            <div class="section-title" style="text-align: center; margin-bottom: 60px;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 12px;">Sample Certificate</h2>
-                <p style="font-size: 1.1rem; color: #64748b;">Official trademark registration certificate from Government of India</p>
+            <div class="section-title">
+                <h2>Sample Certificate</h2>
+                <p>
+                    Official trademark registration certificate from Government of India
+                </p>
             </div>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+
+            <div class="certificate-grid">
                 <!-- Left Side - Content -->
-                <div>
-                    <h3 style="font-size: 2rem; margin-bottom: 24px; color: #1a1a1a;">Official Trademark Certificate</h3>
-                    <p style="color: #64748b; line-height: 1.8; font-size: 1.1rem; margin-bottom: 24px;">
-                        Upon successful registration, you will receive an official Certificate of Registration of Trade Mark from the Government of India Trade Marks Registry.
+                <div class="certificate-content">
+                    <h3>Official Trademark Certificate</h3>
+                    <p>
+                        Upon successful registration, you will receive an official Certificate
+                        of Registration of Trade Mark from the Government of India Trade Marks
+                        Registry.
                     </p>
-                    <p style="color: #64748b; line-height: 1.8; font-size: 1.1rem; margin-bottom: 24px;">
-                        This certificate serves as legal proof of your trademark ownership and provides nationwide protection under the Trade Marks Act, 1999.
+                    <p>
+                        This certificate serves as legal proof of your trademark ownership and
+                        provides nationwide protection under the Trade Marks Act, 1999.
                     </p>
-                    
-                    <div style="background: white; padding: 24px; border-radius: 16px; border-left: 4px solid #667eea; margin-top: 32px;">
-                        <h4 style="margin: 0 0 12px 0; color: #1a1a1a; font-size: 1.2rem;">Certificate Details</h4>
-                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
-                            <li style="color: #64748b; display: flex; align-items: start; gap: 8px;">
-                                <span style="color: #667eea;">✓</span> Trade Mark Number & Registration Date
-                            </li>
-                            <li style="color: #64748b; display: flex; align-items: start; gap: 8px;">
-                                <span style="color: #667eea;">✓</span> Proprietor/Applicant Details
-                            </li>
-                            <li style="color: #64748b; display: flex; align-items: start; gap: 8px;">
-                                <span style="color: #667eea;">✓</span> Class of Goods/Services
-                            </li>
-                            <li style="color: #64748b; display: flex; align-items: start; gap: 8px;">
-                                <span style="color: #667eea;">✓</span> Official Government Seal
-                            </li>
+
+                    <div class="certificate-details">
+                        <h4>Certificate Details</h4>
+                        <ul>
+                            <li><span>✓</span> Trade Mark Number & Registration Date</li>
+                            <li><span>✓</span> Proprietor/Applicant Details</li>
+                            <li><span>✓</span> Class of Goods/Services</li>
+                            <li><span>✓</span> Official Government Seal</li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Right Side - Certificate Image -->
-                <div>
-                    <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
-                        <img src="sample paper.jpg" alt="Sample Trademark Certificate" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid #e5e7eb;">
-                        <p style="margin-top: 20px; font-size: 14px; color: #64748b; text-align: center; line-height: 1.6;">
-                            Official Certificate issued by Trade Marks Registry, Government of India
+                <div class="certificate-image">
+                    <div class="image-box">
+                        <img src="sample paper.jpg" alt="Sample Trademark Certificate" />
+                        <p>
+                            Official Certificate issued by Trade Marks Registry, Government of
+                            India
                         </p>
                     </div>
                 </div>
@@ -352,11 +406,161 @@
         </div>
     </section>
 
-    
+    <style>
+        .gst-section {
+            background: #f8fafc;
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #64748b;
+        }
+
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .certificate-content h3 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+        }
+
+        .certificate-content p {
+            color: #64748b;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .certificate-details {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            border-left: 4px solid #667eea;
+            margin-top: 32px;
+        }
+
+        .certificate-details h4 {
+            margin: 0 0 12px 0;
+            color: #1a1a1a;
+            font-size: 1.2rem;
+        }
+
+        .certificate-details ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .certificate-details li {
+            color: #64748b;
+            display: flex;
+            align-items: start;
+            gap: 8px;
+        }
+
+        .certificate-details li span {
+            color: #667eea;
+        }
+
+        .certificate-image .image-box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificate-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .certificate-image p {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #64748b;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* ✅ Responsive (Mobile View) */
+        @media (max-width: 768px) {
+            .certificate-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .certificate-image {
+                order: 2;
+                /* Push image below content */
+            }
+
+            .certificate-content {
+                order: 1;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .certificate-content h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gst-section {
+                padding: 50px 20px;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-title p {
+                font-size: 1rem;
+            }
+
+            .certificate-content p {
+                font-size: 1rem;
+            }
+
+            .certificate-details {
+                padding: 20px;
+            }
+
+            .certificate-details h4 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+
+
     <!-- Footer -->
     <footer style="background: white; color: #1a1a1a; padding: 60px 0 0 0;">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 40px;">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 40px;">
                 <!-- Our Office -->
                 <div>
                     <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Our Office</h3>
@@ -371,7 +575,8 @@
                         </div>
                         <div style="display: flex; align-items: center; gap: 12px;">
                             <span style="font-size: 20px;">✉️</span>
-                            <a href="mailto:support@wealthempires.in" style="color: #555; text-decoration: none;">support@wealthempires.in</a>
+                            <a href="mailto:support@wealthempires.in"
+                                style="color: #555; text-decoration: none;">support@wealthempires.in</a>
                         </div>
                     </div>
                 </div>
@@ -379,46 +584,65 @@
                 <!-- Services -->
                 <div>
                     <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Services</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
-                        <li><a href="taxes.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Tax Planning</a></li>
-                        <li><a href="360-compliance.html" style="color: #555; text-decoration: none; transition: color 0.3s;">GST Compliance</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">Accounting</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">Financial Consultancy</a></li>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
+                        <li><a href="taxes.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Tax
+                                Planning</a></li>
+                        <li><a href="360-compliance.html"
+                                style="color: #555; text-decoration: none; transition: color 0.3s;">GST Compliance</a>
+                        </li>
+                        <li><a href="#"
+                                style="color: #555; text-decoration: none; transition: color 0.3s;">Accounting</a></li>
+                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">Financial
+                                Consultancy</a></li>
                     </ul>
                 </div>
 
                 <!-- Expertise -->
                 <div>
                     <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Expertise</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
-                        <li><a href="trademark.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Trademark</a></li>
-                        <li><a href="incorporation.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Business Incorporation</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">FSSAI Certification</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">ISO Certification</a></li>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
+                        <li><a href="trademark.html"
+                                style="color: #555; text-decoration: none; transition: color 0.3s;">Trademark</a></li>
+                        <li><a href="incorporation.html"
+                                style="color: #555; text-decoration: none; transition: color 0.3s;">Business
+                                Incorporation</a></li>
+                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">FSSAI
+                                Certification</a></li>
+                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">ISO
+                                Certification</a></li>
                     </ul>
                 </div>
 
                 <!-- Reach Us - QR Code -->
                 <div>
                     <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Reach Us</h3>
-                    <div style="background: #f5f5f5; padding: 15px; border-radius: 12px; display: inline-block; border: 1px solid #e0e0e0;">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wealthempires.in" alt="QR Code" style="width: 180px; height: 180px; display: block;">
+                    <div
+                        style="background: #f5f5f5; padding: 15px; border-radius: 12px; display: inline-block; border: 1px solid #e0e0e0;">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wealthempires.in"
+                            alt="QR Code" style="width: 180px; height: 180px; display: block;">
                     </div>
                 </div>
             </div>
 
             <!-- Social Media Icons - Moved to bottom -->
-            <div style="display: flex; justify-content: center; gap: 15px; margin: 40px 0; padding: 30px 0; border-top: 1px solid #e0e0e0;">
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
+            <div
+                style="display: flex; justify-content: center; gap: 15px; margin: 40px 0; padding: 30px 0; border-top: 1px solid #e0e0e0;">
+                <a href="#"
+                    style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
                     <span style="font-size: 20px;">𝕏</span>
                 </a>
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
+                <a href="#"
+                    style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
                     <span style="font-size: 20px;">📷</span>
                 </a>
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
+                <a href="#"
+                    style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
                     <span style="font-size: 20px;">▶️</span>
                 </a>
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
+                <a href="#"
+                    style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
                     <span style="font-size: 20px;">in</span>
                 </a>
             </div>
@@ -427,12 +651,81 @@
         <!-- Footer Bottom -->
         <div style="border-top: 1px solid #e0e0e0; padding: 25px 0; margin-top: 0; background: #f8f8f8;">
             <div class="container">
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-                    <p style="margin: 0; color: #555; font-size: 14px;">© Wealth Empires Private Limited | All Rights Reserved.</p>
-                    <p style="margin: 0; color: #555; font-size: 14px;">Designed & Developed By <span style="color: #667eea; font-weight: 600;">Softrate Global</span></p>
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                    <p style="margin: 0; color: #555; font-size: 14px;">© Wealth Empires Private Limited | All Rights
+                        Reserved.</p>
+                    <p style="margin: 0; color: #555; font-size: 14px;">Designed & Developed By <span
+                            style="color: #667eea; font-weight: 600;">Softrate Global</span></p>
                 </div>
             </div>
         </div>
     </footer>
+        <script>
+        // --- Hamburger Menu, Overlay, and Dropdown Logic ---
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const navOverlay = document.getElementById('navOverlay');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+        });
+
+        navOverlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            navOverlay.classList.remove('active');
+        });
+
+        dropdowns.forEach(dropdown => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            toggle.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.nav-links a:not(.dropdown-toggle)').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                }
+            });
+        });
+
+        // --- Original Smooth Scrolling Logic ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // --- Original Scroll Effect for Header ---
+        window.addEventListener('scroll', function () {
+            const navContainer = document.querySelector('.nav-container');
+            if (window.scrollY > 100) {
+                navContainer.style.background = 'rgba(255, 255, 255, 0.98)';
+                navContainer.style.backdropFilter = 'blur(20px)';
+            } else {
+                navContainer.style.background = 'rgba(255, 255, 255, 0.95)';
+                navContainer.style.backdropFilter = 'blur(20px)';
+            }
+        });
+    </script>
 </body>
+
 </html>

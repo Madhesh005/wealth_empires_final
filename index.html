@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,27 @@
     <link rel="shortcut icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="stylesheet" href="styles.css?v=3">
 </head>
+
 <body>
     <!-- Header -->
+    <div class="nav-overlay" id="navOverlay"></div>
     <header>
         <div class="nav-container">
             <nav>
                 <div class="logo">
-                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
-                        <img src="Wealth Empires.jpg" alt="Wealth Empires Logo" style="height: 60px; width: auto; border-radius: 8px;">
+                    <a href="index.html"
+                        style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                        <img src="Wealth Empires.jpg" alt="Wealth Empires Logo"
+                            style="height: 48px; width: auto; border-radius: 8px;">
                         <div class="logo-text">Wealth Empires</div>
                     </a>
                 </div>
-                <ul class="nav-links">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="navLinks">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
                         <div class="dropdown-menu">
@@ -35,7 +45,7 @@
                             <a href="taxes.html" class="dropdown-item">
                                 <span>Taxes</span>
                             </a>
-                            
+
                         </div>
                     </li>
                     <li class="dropdown">
@@ -51,11 +61,14 @@
                     </li>
                     <li><a href="our-story.html">Our Story</a></li>
                     <li><a href="our-partner.html">Our Partners</a></li>
+                    <li class="header-buttons-li">
+                        <div class="header-buttons">
+                            <a href="contact.html" class="btn-demo">Contact Us</a>
+                            <a href="https://crm.wealthempires.in/" class="btn-primary">Start Registration</a>
+                        </div>
+                    </li>
                 </ul>
-                <div class="header-buttons">
-                    <a href="contact.html" class="btn-demo">Contact Us</a>
-                    <a href="https://crm.wealthempires.in/" class="btn-primary">Start Registration</a>
-                </div>
+
             </nav>
         </div>
     </header>
@@ -66,7 +79,8 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Wealth Empires<br><span class="highlight">Formation Faster</span></h1>
-                    <p>Launch your Indian business from anywhere in the world. We handle the paperwork, filings, and compliance so you can focus on building your vision.</p>
+                    <p>Launch your Indian business from anywhere in the world. We handle the paperwork, filings, and
+                        compliance so you can focus on building your vision.</p>
                     <div class="hero-buttons">
                         <a href="contact.html" class="btn-large btn-black">Contact Us</a>
                         <a href="https://crm.wealthempires.in/" class="btn-large btn-white">Start Registration</a>
@@ -79,7 +93,9 @@
                 </div>
                 <div class="hero-visual">
                     <div class="hero-image">
-                        <img src="home.png" alt="India's No.1 Startup-friendly Accounting Firm - Professional Company Registration Services" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <img src="home.png"
+                            alt="India's No.1 Startup-friendly Accounting Firm - Professional Company Registration Services"
+                            style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                     </div>
                 </div>
             </div>
@@ -89,61 +105,111 @@
     <section class="gst-section" style="background: #ffffff; padding: 80px 0;">
         <div class="container">
             <div class="section-title" style="text-align: center; margin-bottom: 20px;">
-                <p style="color: #667eea; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Service Suite</p>
-                <h2 style="font-size: 2.8rem; margin-bottom: 16px; color: #1a1a1a; font-weight: 700;">Your Back Office. Simplified.</h2>
-                <p style="font-size: 1.1rem; color: #64748b; max-width: 600px; margin: 0 auto;">Each tool is powerful on its own, but together? Game-changing.</p>
+                <p
+                    style="color: #667eea; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">
+                    Service Suite</p>
+                <h2 style="font-size: 2.8rem; margin-bottom: 16px; color: #1a1a1a; font-weight: 700;">Your Back Office.
+                    Simplified.</h2>
+                <p style="font-size: 1.1rem; color: #64748b; max-width: 600px; margin: 0 auto;">Each tool is powerful on
+                    its own, but together? Game-changing.</p>
             </div>
             <div style="display: flex; justify-content: center; gap: 20px; margin: 40px 0 60px 0;">
-                <a href="https://crm.wealthempires.in/" style="background: #000; color: white; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">Start Registration<span>›</span></a>
-                <a href="contact.html" style="background: transparent; color: #1a1a1a; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; border: 2px solid #e5e7eb; transition: all 0.3s;">Contact Us</a>
+                <a href="https://crm.wealthempires.in/"
+                    style="background: #000; color: white; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">Start
+                    Registration<span>›</span></a>
+                <a href="contact.html"
+                    style="background: transparent; color: #1a1a1a; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; border: 2px solid #e5e7eb; transition: all 0.3s;">Contact
+                    Us</a>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto;">
+            <div class="service-grid">
                 <!-- U.S. Business Formation -->
 
-                <div style="background: linear-gradient(135deg, #FFF9E6 0%, #FFF3CC 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
-                    <div style="width: 48px; height: 48px; background: rgba(0,0,0,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px;">🚀</div>
-                    <h3 style="font-size: 1.4rem; margin-bottom: 14px; color: #1a1a1a; font-weight: 700;">Company Incorporation</h3>
-                    <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: auto; font-size: 0.95rem;">Skip the paperwork. We set up your business so you can start selling faster.</p>
-                    <a href="incorporation.html" style="color: #8B7355; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Start Your Business <span>›</span></a>
+                <div
+                    style="background: linear-gradient(135deg, #FFF9E6 0%, #FFF3CC 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
+                    <div
+                        style="width: 48px; height: 48px; background: rgba(0,0,0,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px;">
+                        🚀</div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 14px; color: #1a1a1a; font-weight: 700;">Company
+                        Incorporation</h3>
+                    <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: auto; font-size: 0.95rem;">Skip the
+                        paperwork. We set up your business so you can start selling faster.</p>
+                    <a href="incorporation.html"
+                        style="color: #8B7355; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Start
+                        Your Business <span>›</span></a>
                 </div>
-                <div style="background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
-                    <div style="width: 48px; height: 48px; background: rgba(0,0,0,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px;">✓</div>
-                    <h3 style="font-size: 1.4rem; margin-bottom: 14px; color: #1a1a1a; font-weight: 700;">360° Compliance</h3>
-                    <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: auto; font-size: 0.95rem;">End-to-end compliance management for all your business regulatory requirements.</p>
-                    <a href="360-compliance.html" style="color: #E65100; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Stay Compliant <span>›</span></a>
+                <div
+                    style="background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
+                    <div
+                        style="width: 48px; height: 48px; background: rgba(0,0,0,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px;">
+                        ✓</div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 14px; color: #1a1a1a; font-weight: 700;">360°
+                        Compliance</h3>
+                    <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: auto; font-size: 0.95rem;">End-to-end
+                        compliance management for all your business regulatory requirements.</p>
+                    <a href="360-compliance.html"
+                        style="color: #E65100; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Stay
+                        Compliant <span>›</span></a>
                 </div>
-                 <div style="background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
-                    <div style="width: 48px; height: 48px; background: rgba(0,0,0,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px;">®️</div>
-                    <h3 style="font-size: 1.4rem; margin-bottom: 14px; color: #1a1a1a; font-weight: 700;">Trademark Registration</h3>
-                    <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: auto; font-size: 0.95rem;">Protect your brand identity with professional trademark registration services.</p>
-                    <a href="trademark.html" style="color: #7B1FA2; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Register Trademark <span>›</span></a>
+                <div
+                    style="background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
+                    <div
+                        style="width: 48px; height: 48px; background: rgba(0,0,0,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px;">
+                        ®️</div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 14px; color: #1a1a1a; font-weight: 700;">Trademark
+                        Registration</h3>
+                    <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: auto; font-size: 0.95rem;">Protect your
+                        brand identity with professional trademark registration services.</p>
+                    <a href="trademark.html"
+                        style="color: #7B1FA2; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Register
+                        Trademark <span>›</span></a>
                 </div>
-                
+
                 <!-- Smart Sales Analytics -->
-                <div style="background: linear-gradient(135deg, #FFE8F0 0%, #FFD6E8 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
-                    <div style="width: 48px; height: 48px; background: rgba(0,0,0,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px;">✨</div>
-                    <h3 style="font-size: 1.4rem; margin-bottom: 14px; color: #1a1a1a; font-weight: 700;">Smart Sales Analytics</h3>
-                    <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: auto; font-size: 0.95rem;">Know what's selling, what's not, and how to boost your revenue.</p>
-                    <a href="hitworth.html" style="color: #B8457D; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Analyze Your Sales <span>›</span></a>
+                <div
+                    style="background: linear-gradient(135deg, #FFE8F0 0%, #FFD6E8 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
+                    <div
+                        style="width: 48px; height: 48px; background: rgba(0,0,0,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px;">
+                        ✨</div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 14px; color: #1a1a1a; font-weight: 700;">Smart Sales
+                        Analytics</h3>
+                    <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: auto; font-size: 0.95rem;">Know what's
+                        selling, what's not, and how to boost your revenue.</p>
+                    <a href="hitworth.html"
+                        style="color: #B8457D; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Analyze
+                        Your Sales <span>›</span></a>
                 </div>
-                
+
                 <!-- Stress-Free Taxes -->
-                <div style="background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
-                    <div style="width: 48px; height: 48px; background: rgba(0,0,0,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px;">💰</div>
-                    <h3 style="font-size: 1.4rem; margin-bottom: 14px; color: #1a1a1a; font-weight: 700;">Stress-Free Taxes</h3>
-                    <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: auto; font-size: 0.95rem;">Stay compliant, save time, and never stress about tax season again.</p>
-                    <a href="taxes.html" style="color: #388E3C; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">File Your Taxes <span>›</span></a>
+                <div
+                    style="background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
+                    <div
+                        style="width: 48px; height: 48px; background: rgba(0,0,0,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px;">
+                        💰</div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 14px; color: #1a1a1a; font-weight: 700;">Stress-Free
+                        Taxes</h3>
+                    <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: auto; font-size: 0.95rem;">Stay
+                        compliant, save time, and never stress about tax season again.</p>
+                    <a href="taxes.html"
+                        style="color: #388E3C; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">File
+                        Your Taxes <span>›</span></a>
                 </div>
-                
+
                 <!-- Seamless Bookkeeping -->
-                <div style="background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
-                    <div style="width: 48px; height: 48px; background: rgba(0,0,0,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px;">⏱️</div>
-                    <h3 style="font-size: 1.4rem; margin-bottom: 14px; color: #1a1a1a; font-weight: 700;">Seamless Bookkeeping</h3>
-                    <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: auto; font-size: 0.95rem;">No spreadsheets, no hassle, just real-time financial insights.</p>
-                    <a href="health-check.html" style="color: #3949AB; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Track Your Books <span>›</span></a>
+                <div
+                    style="background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
+                    <div
+                        style="width: 48px; height: 48px; background: rgba(0,0,0,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px;">
+                        ⏱️</div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 14px; color: #1a1a1a; font-weight: 700;">Seamless
+                        Bookkeeping</h3>
+                    <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: auto; font-size: 0.95rem;">No
+                        spreadsheets, no hassle, just real-time financial insights.</p>
+                    <a href="health-check.html"
+                        style="color: #3949AB; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Track
+                        Your Books <span>›</span></a>
                 </div>
-                
-                
+
+
             </div>
         </div>
     </section>
@@ -152,49 +218,79 @@
     <section style="background: #ffffff; padding: 80px 0;">
         <div class="container">
             <div class="section-title" style="text-align: center; margin-bottom: 20px;">
-                <p style="color: #667eea; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Resources</p>
-                <h2 style="font-size: 2.8rem; margin-bottom: 16px; color: #1a1a1a; font-weight: 700;">Why Wealth Empires?</h2>
-                <p style="font-size: 1.05rem; color: #64748b; max-width: 700px; margin: 0 auto 10px auto;">We don't just set up your business, we set you up for success.</p>
-                <p style="font-size: 1.05rem; color: #64748b; max-width: 700px; margin: 0 auto;">See how Wealth Empires stacks up against the competition.</p>
+                <p
+                    style="color: #667eea; font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">
+                    Resources</p>
+                <h2 style="font-size: 2.8rem; margin-bottom: 16px; color: #1a1a1a; font-weight: 700;">Why Wealth
+                    Empires?</h2>
+                <p style="font-size: 1.05rem; color: #64748b; max-width: 700px; margin: 0 auto 10px auto;">We don't just
+                    set up your business, we set you up for success.</p>
+                <p style="font-size: 1.05rem; color: #64748b; max-width: 700px; margin: 0 auto;">See how Wealth Empires
+                    stacks up against the competition.</p>
             </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1000px; margin: 50px auto 0 auto;">
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1000px; margin: 50px auto 0 auto;">
                 <!-- Do It With Wealth Empires -->
-                <div style="background: linear-gradient(135deg, #F4E8B9 0%, #E8D89B 100%); border-radius: 24px; padding: 0; overflow: hidden; position: relative; min-height: 450px; display: flex; flex-direction: column;">
+                <div
+                    style="background: linear-gradient(135deg, #F4E8B9 0%, #E8D89B 100%); border-radius: 24px; padding: 0; overflow: hidden; position: relative; min-height: 450px; display: flex; flex-direction: column;">
                     <div style="padding: 40px 36px; flex: 1; display: flex; flex-direction: column;">
-                        <div style="flex: 1; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+                        <div
+                            style="flex: 1; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
                             <div style="text-align: center; padding: 40px 20px;">
                                 <div style="font-size: 80px; margin-bottom: 20px;">👨‍💼</div>
-                                <div style="font-size: 48px; font-weight: 300; color: rgba(0,0,0,0.2); margin-bottom: 10px;">✓</div>
+                                <div
+                                    style="font-size: 48px; font-weight: 300; color: rgba(0,0,0,0.2); margin-bottom: 10px;">
+                                    ✓</div>
                             </div>
                         </div>
                         <div style="margin-top: auto;">
-                            <h3 style="font-size: 1.8rem; margin-bottom: 12px; color: #1a1a1a; font-weight: 700;">Do It With Wealth Empires</h3>
-                            <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: 24px; font-size: 1rem;">Build your dream. We'll handle the rest.</p>
-                            <a href="#services" style="background: #000; color: white; padding: 14px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">Create a Free Account <span>›</span></a>
+                            <h3 style="font-size: 1.8rem; margin-bottom: 12px; color: #1a1a1a; font-weight: 700;">Do It
+                                With Wealth Empires</h3>
+                            <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: 24px; font-size: 1rem;">Build
+                                your dream. We'll handle the rest.</p>
+                            <a href="#services"
+                                style="background: #000; color: white; padding: 14px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">Create
+                                a Free Account <span>›</span></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Do It Yourself -->
-                <div style="background: linear-gradient(135deg, #4A4A4A 0%, #2C2C2C 100%); border-radius: 24px; padding: 0; overflow: hidden; position: relative; min-height: 450px; display: flex; flex-direction: column; color: white;">
+                <div
+                    style="background: linear-gradient(135deg, #4A4A4A 0%, #2C2C2C 100%); border-radius: 24px; padding: 0; overflow: hidden; position: relative; min-height: 450px; display: flex; flex-direction: column; color: white;">
                     <div style="padding: 40px 36px; flex: 1; display: flex; flex-direction: column;">
-                        <div style="flex: 1; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; position: relative;">
+                        <div
+                            style="flex: 1; display: flex; align-items: center; justify-content: center; margin-bottom: 30px; position: relative;">
                             <div style="text-align: center; padding: 40px 20px;">
-                                <div style="font-size: 80px; margin-bottom: 20px; filter: grayscale(100%) opacity(0.6);">👩‍💻</div>
-                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;">
-                                    <div style="color: rgba(255,255,255,0.3); font-size: 24px; font-weight: 600; margin: 5px 0;">Deadlines</div>
-                                    <div style="color: rgba(255,255,255,0.25); font-size: 20px; margin: 5px 0;">Stress</div>
-                                    <div style="color: rgba(255,255,255,0.3); font-size: 22px; margin: 5px 0;">Bad Reviews</div>
-                                    <div style="color: rgba(255,255,255,0.25); font-size: 18px; margin: 5px 0;">Angry Clients</div>
-                                    <div style="color: rgba(255,255,255,0.3); font-size: 20px; margin: 5px 0;">Paperwork</div>
+                                <div
+                                    style="font-size: 80px; margin-bottom: 20px; filter: grayscale(100%) opacity(0.6);">
+                                    👩‍💻</div>
+                                <div
+                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;">
+                                    <div
+                                        style="color: rgba(255,255,255,0.3); font-size: 24px; font-weight: 600; margin: 5px 0;">
+                                        Deadlines</div>
+                                    <div style="color: rgba(255,255,255,0.25); font-size: 20px; margin: 5px 0;">Stress
+                                    </div>
+                                    <div style="color: rgba(255,255,255,0.3); font-size: 22px; margin: 5px 0;">Bad
+                                        Reviews</div>
+                                    <div style="color: rgba(255,255,255,0.25); font-size: 18px; margin: 5px 0;">Angry
+                                        Clients</div>
+                                    <div style="color: rgba(255,255,255,0.3); font-size: 20px; margin: 5px 0;">Paperwork
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div style="margin-top: auto;">
-                            <h3 style="font-size: 1.8rem; margin-bottom: 12px; color: #ffffff; font-weight: 700;">Do It Yourself</h3>
-                            <p style="color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 24px; font-size: 1rem;">Going solo? See how we compare.</p>
-                            <a href="our-story.html" style="background: #ffffff; color: #1a1a1a; padding: 14px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">Compare <span>›</span></a>
+                            <h3 style="font-size: 1.8rem; margin-bottom: 12px; color: #ffffff; font-weight: 700;">Do It
+                                Yourself</h3>
+                            <p
+                                style="color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 24px; font-size: 1rem;">
+                                Going solo? See how we compare.</p>
+                            <a href="our-story.html"
+                                style="background: #ffffff; color: #1a1a1a; padding: 14px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">Compare
+                                <span>›</span></a>
                         </div>
                     </div>
                 </div>
@@ -203,95 +299,149 @@
     </section>
 
     <!-- Process Section -->
-    
-    <!-- Perks and Rewards Section -->
+
     <section style="background: #f8fafc; padding: 80px 0;">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto;">
-                <!-- Left Side - Content -->
+            <div class="perks-grid">
                 <div>
                     <div style="margin-bottom: 20px;">
-                        <span style="color: #F59E0B; font-weight: 600; font-size: 1rem; display: flex; align-items: center; gap: 8px;">
+                        <span
+                            style="color: #F59E0B; font-weight: 600; font-size: 1rem; display: flex; align-items: center; gap: 8px;">
                             <span style="font-size: 1.2rem;">🎁</span> Perks and Rewards
                         </span>
                     </div>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #1a1a1a; font-weight: 700; line-height: 1.2;">Wealth Empires Partners<br>Score ₹100K+ in Perks From Top Brands Worldwide.</h2>
-                    <p style="font-size: 1.05rem; color: #64748b; margin-bottom: 32px; line-height: 1.6;">Exclusive deals, big savings, and founder-first tools.</p>
-                    <a href="our-partner.html" style="background: #000; color: white; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">Visit Marketplace <span>›</span></a>
+                    <h2
+                        style="font-size: 2.5rem; margin-bottom: 20px; color: #1a1a1a; font-weight: 700; line-height: 1.2;">
+                        Wealth Empires Partners<br>Score ₹100K+ in Perks From Top Brands Worldwide.
+                    </h2>
+                    <p style="font-size: 1.05rem; color: #64748b; margin-bottom: 32px; line-height: 1.6;">
+                        Exclusive deals, big savings, and founder-first tools.
+                    </p>
+                    <a href="our-partner.html"
+                        style="background: #000; color: white; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">
+                        Visit Marketplace <span>›</span>
+                    </a>
                 </div>
 
-                <!-- Right Side - Partner Grid -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                    <!-- Row 1 -->
-                    <div style="background: white; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                        <div style="width: 72px; height: 72px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                            <img src="img/4 eCommerce.png" alt="E-commerce" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="partner-grid">
+                    <div
+                        style="background: white; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                        <div
+                            style="width: 72px; height: 72px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                            <img src="img/4 eCommerce.png" alt="E-commerce"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div>
                             <div style="font-weight: 600; color: #1a1a1a; font-size: 1rem;">FreshBook</div>
                             <div style="color: #64748b; font-size: 0.875rem;">E-commerce</div>
                         </div>
                     </div>
-                    <div style="background: white; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                        <div style="width: 72px; height: 72px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                            <img src="img/1 Software Development.jpg" alt="Software Development" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="background: white; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                        <div
+                            style="width: 72px; height: 72px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                            <img src="img/1 Software Development.jpg" alt="Software Development"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div>
                             <div style="font-weight: 600; color: #1a1a1a; font-size: 1rem;">Softrate</div>
                             <div style="color: #64748b; font-size: 0.875rem;">TechCorp Solutions</div>
                         </div>
                     </div>
-
-                    <!-- Row 2 -->
-                    <div style="background: white; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                        <div style="width: 72px; height: 72px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                            <img src="img/3 Corporate banking.jpg" alt="Corporate Banking" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="background: white; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                        <div
+                            style="width: 72px; height: 72px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                            <img src="img/3 Corporate banking.jpg" alt="Corporate Banking"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div>
                             <div style="font-weight: 600; color: #1a1a1a; font-size: 1rem;">IDFC First Bank</div>
                             <div style="color: #64748b; font-size: 0.875rem;">Corporate Bank Partners</div>
                         </div>
                     </div>
-                    <div style="background: white; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                        <div style="width: 72px; height: 72px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                            <img src="img/2 Pay roll.jpg" alt="Payroll Services" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="background: white; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                        <div
+                            style="width: 72px; height: 72px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                            <img src="img/2 Pay roll.jpg" alt="Payroll Services"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div>
                             <div style="font-weight: 600; color: #1a1a1a; font-size: 1rem;">DBS</div>
                             <div style="color: #64748b; font-size: 0.875rem;">Payroll Services</div>
                         </div>
                     </div>
-
-                    <!-- Row 3 -->
-                    <div style="background: white; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                        <div style="width: 72px; height: 72px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                            <img src="img/5 Office Space.png" alt="Office Space" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="background: white; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                        <div
+                            style="width: 72px; height: 72px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                            <img src="img/5 Office Space.png" alt="Office Space"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div>
-                            <div style="font-weight: 600; color: #1a1a1a; font-size: 1rem;">Greenways Business Park</div>
+                            <div style="font-weight: 600; color: #1a1a1a; font-size: 1rem;">Greenways Business Park
+                            </div>
                             <div style="color: #64748b; font-size: 0.875rem;">Office Space Solutions</div>
                         </div>
                     </div>
-                    <div style="background: white; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-                        <div style="width: 72px; height: 72px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                            <img src="img/6 Legal.png" alt="Legal Services" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="background: white; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                        <div
+                            style="width: 72px; height: 72px; border-radius: 12px; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                            <img src="img/6 Legal.png" alt="Legal Services"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div>
                             <div style="font-weight: 600; color: #1a1a1a; font-size: 1rem;">The Legal Empires</div>
                             <div style="color: #64748b; font-size: 0.875rem;">Legal Services</div>
                         </div>
                     </div>
-
-                    
-
-                    
                 </div>
             </div>
         </div>
     </section>
 
     <script>
-        // Smooth scrolling for navigation links
+        // --- Hamburger Menu, Overlay, and Dropdown Logic ---
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const navOverlay = document.getElementById('navOverlay');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+        });
+
+        navOverlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            navOverlay.classList.remove('active');
+        });
+
+        dropdowns.forEach(dropdown => {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            toggle.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.nav-links a:not(.dropdown-toggle)').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                }
+            });
+        });
+
+        // --- Original Smooth Scrolling Logic ---
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -305,8 +455,8 @@
             });
         });
 
-        // Add scroll effect to header (updated for new design)
-        window.addEventListener('scroll', function() {
+        // --- Original Scroll Effect for Header ---
+        window.addEventListener('scroll', function () {
             const navContainer = document.querySelector('.nav-container');
             if (window.scrollY > 100) {
                 navContainer.style.background = 'rgba(255, 255, 255, 0.98)';
@@ -324,88 +474,138 @@
             <div style="text-align: center; margin-bottom: 50px;">
                 <h2 style="font-size: 2.8rem; margin-bottom: 16px; color: #1a1a1a; font-weight: 700;">FAQs</h2>
             </div>
-            
+
             <div style="max-width: 800px; margin: 0 auto;">
                 <!-- FAQ Item 1 -->
-                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;" onclick="toggleFAQ(this)">
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">What is Wealth Empires?</h3>
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">What is Wealth
+                            Empires?</h3>
                         <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
                     </div>
                     <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-                        <p style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">Wealth Empires is India's No.1 Startup-friendly Accounting Firm that provides comprehensive business services including company incorporation, tax compliance, trademark registration, and 360° compliance management. We simplify legal and financial processes so entrepreneurs can focus on building their business.</p>
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Wealth Empires is India's No.1 Startup-friendly Accounting Firm that provides comprehensive
+                            business services including company incorporation, tax compliance, trademark registration,
+                            and 360° compliance management. We simplify legal and financial processes so entrepreneurs
+                            can focus on building their business.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;" onclick="toggleFAQ(this)">
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">How long does company incorporation take?</h3>
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">How long does
+                            company incorporation take?</h3>
                         <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
                     </div>
                     <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-                        <p style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">Company incorporation typically takes 7-14 days with our streamlined process. We handle all paperwork, MCA filings, and documentation to ensure quick and hassle-free business registration. The exact timeline may vary based on government processing and document verification.</p>
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Company incorporation typically takes 7-14 days with our streamlined process. We handle all
+                            paperwork, MCA filings, and documentation to ensure quick and hassle-free business
+                            registration. The exact timeline may vary based on government processing and document
+                            verification.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;" onclick="toggleFAQ(this)">
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">Why should I register a trademark for my business?</h3>
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">Why should I
+                            register a trademark for my business?</h3>
                         <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
                     </div>
                     <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-                        <p style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">Trademark registration protects your brand identity, prevents others from using similar names or logos, builds customer trust, and gives you exclusive legal rights to your brand. It's essential for establishing your business presence and preventing brand confusion in the market.</p>
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Trademark registration protects your brand identity, prevents others from using similar
+                            names or logos, builds customer trust, and gives you exclusive legal rights to your brand.
+                            It's essential for establishing your business presence and preventing brand confusion in the
+                            market.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;" onclick="toggleFAQ(this)">
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">What information do you need from me to get started?</h3>
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">What information do
+                            you need from me to get started?</h3>
                         <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
                     </div>
                     <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-                        <p style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">Depending on the service, we typically need basic information such as PAN card, Aadhaar card, business address proof, and bank account details. For company incorporation, we'll also need director details and proposed company names. Our team will guide you through the specific requirements for your chosen service.</p>
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Depending on the service, we typically need basic information such as PAN card, Aadhaar
+                            card, business address proof, and bank account details. For company incorporation, we'll
+                            also need director details and proposed company names. Our team will guide you through the
+                            specific requirements for your chosen service.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 5 -->
-                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;" onclick="toggleFAQ(this)">
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">What is 360° Compliance service?</h3>
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">What is 360°
+                            Compliance service?</h3>
                         <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
                     </div>
                     <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-                        <p style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">Our 360° Compliance service is a comprehensive package that includes MCA filing, accounting, RoC filing, government fees, stamp duties, and all necessary documentation. It's designed to ensure your business stays compliant with all regulatory requirements throughout the year without any hassle.</p>
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Our 360° Compliance service is a comprehensive package that includes MCA filing, accounting,
+                            RoC filing, government fees, stamp duties, and all necessary documentation. It's designed to
+                            ensure your business stays compliant with all regulatory requirements throughout the year
+                            without any hassle.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 6 -->
-                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;" onclick="toggleFAQ(this)">
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">Can you help me with GST registration and filing?</h3>
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">Can you help me with
+                            GST registration and filing?</h3>
                         <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
                     </div>
                     <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-                        <p style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">Yes! We provide complete GST registration and filing services. Our tax experts handle GST compliance, monthly/quarterly returns, and ensure you stay compliant with all tax regulations. We simplify the entire process so you never have to stress about tax season.</p>
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Yes! We provide complete GST registration and filing services. Our tax experts handle GST
+                            compliance, monthly/quarterly returns, and ensure you stay compliant with all tax
+                            regulations. We simplify the entire process so you never have to stress about tax season.
+                        </p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 7 -->
-                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;" onclick="toggleFAQ(this)">
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">Do you provide ongoing support after business registration?</h3>
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">Do you provide
+                            ongoing support after business registration?</h3>
                         <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
                     </div>
                     <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-                        <p style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">Absolutely! We're partners in your growth journey. Beyond registration, we offer continuous support for accounting, tax filing, compliance management, bookkeeping, and financial consultancy. Our team is always available to answer your questions and help your business thrive.</p>
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Absolutely! We're partners in your growth journey. Beyond registration, we offer continuous
+                            support for accounting, tax filing, compliance management, bookkeeping, and financial
+                            consultancy. Our team is always available to answer your questions and help your business
+                            thrive.</p>
                     </div>
                 </div>
 
                 <!-- Show More Button -->
                 <div style="text-align: center; margin-top: 40px;">
-                    <button onclick="showMoreFAQs()" style="background: #000; color: white; padding: 14px 32px; border-radius: 30px; border: none; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">
+                    <button onclick="showMoreFAQs()"
+                        style="background: #000; color: white; padding: 14px 32px; border-radius: 30px; border: none; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">
                         Show More <span style="transition: transform 0.3s;">›</span>
                     </button>
                 </div>
@@ -418,14 +618,14 @@
             const content = element.querySelector('div:last-child');
             const icon = element.querySelector('span:last-child');
             const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
-            
+
             // Close all FAQs
             document.querySelectorAll('[onclick="toggleFAQ(this)"]').forEach(faq => {
                 faq.querySelector('div:last-child').style.maxHeight = '0';
                 faq.querySelector('span:last-child').style.transform = 'rotate(0deg)';
                 faq.style.background = '#f8fafc';
             });
-            
+
             // Open clicked FAQ if it was closed
             if (!isOpen) {
                 content.style.maxHeight = content.scrollHeight + 'px';
@@ -440,86 +640,139 @@
     </script>
 
     <!-- CTA Section -->
-    <section style="background: linear-gradient(135deg, #FFF9E6 0%, #FFE8CC 100%); padding: 50px 70px; border-radius: 90px;;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto;">
+    <section
+        style="background: #feedd2; padding: 80px 0; margin: 0 50px; border-radius: 24px; position: relative; overflow: hidden; border: 1px solid #e5e7eb; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+        <!-- Background Pattern -->
+        <div
+            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.03; background-image: radial-gradient(circle at 20% 50%, #ff6b35 0%, transparent 50%), radial-gradient(circle at 80% 20%, #f7931e 0%, transparent 50%), radial-gradient(circle at 40% 80%, #ffb347 0%, transparent 50%);">
+        </div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="hero-grid">
                 <!-- Left Content -->
                 <div>
-                    <h2 style="font-size: 3rem; font-weight: 700; color: #1a1a1a; margin-bottom: 16px; line-height: 1.2;">
-                        #WE<br>Peolple First Company.
+                    <h2
+                        style="font-size: 3rem; font-weight: 700; color: #1a1a1a; margin-bottom: 16px; line-height: 1.2;">
+                        #WE<br>People First Company.
                     </h2>
                     <p style="font-size: 1.1rem; color: #666; margin-bottom: 32px;">
                         Join Wealth Empires and start building today.
                     </p>
-                    <div style="display: flex; gap: 16px;">
-                        <a href="#" style="background: #000; color: white; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                        <a href="https://crm.wealthempires.in/"
+                            style="background: #000; color: white; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">
                             Create a Free Account <span style="font-size: 1.2rem;">›</span>
                         </a>
-                        <a href="#" style="background: white; color: #000; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; border: 2px solid #000; transition: all 0.3s;">
+                        <a href="contact.html"
+                            style="background: white; color: #000; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; border: 2px solid #000; transition: all 0.3s;">
                             Get a Demo
                         </a>
                     </div>
                 </div>
 
-                <!-- Right Illustration -->
-                <div style="position: relative; display: flex; justify-content: center; align-items: center;">
-                    <div style="position: relative; width: 350px; height: 300px;">
-                        <!-- Box illustration -->
-                        <div style="position: absolute; width: 280px; height: 200px; background: linear-gradient(180deg, #FFD54F 0%, #FFC107 100%); border-radius: 12px; left: 50%; top: 50%; transform: translate(-50%, -50%); box-shadow: 0 20px 40px rgba(255, 193, 7, 0.3);"></div>
-                        
-                        <!-- Floating icons -->
-                        <div style="position: absolute; top: 20%; left: 10%; animation: float 3s ease-in-out infinite;">
-                            <div style="width: 60px; height: 60px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 24px;">
-                                🛒
-                            </div>
-                        </div>
-                        
-                        <div style="position: absolute; top: 10%; right: 15%; animation: float 3s ease-in-out infinite 0.5s;">
-                            <div style="width: 60px; height: 60px; background: #81C784; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 28px; color: white; font-weight: 700;">
-                                %
-                            </div>
-                        </div>
-                        
-                        <div style="position: absolute; bottom: 25%; left: 5%; animation: float 3s ease-in-out infinite 1s;">
-                            <div style="width: 60px; height: 60px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 24px;">
-                                📦
-                            </div>
-                        </div>
-                        
-                        <div style="position: absolute; bottom: 30%; right: 10%; animation: float 3s ease-in-out infinite 1.5s;">
-                            <div style="width: 60px; height: 60px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 24px;">
-                                📊
-                            </div>
-                        </div>
-                        
-                        <!-- Center icons in box -->
-                        <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);">
-                            <div style="display: flex; gap: 16px; align-items: center;">
-                                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #E3F2FD 0%, #90CAF9 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 32px;">
-                                    🚀
-                                </div>
-                                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #FCE4EC 0%, #F48FB1 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 32px;">
-                                    📈
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Right Image -->
+                <div class="hero-image" style="display: flex; justify-content: center; align-items: center;">
+                    <img src="hassle.jpg" alt="Analytics Dashboard"
+                        style="width: 100%; max-width: 400px; height: auto; border-radius: 12px; background-color: #feedd2;">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Enhanced CSS Animations -->
     <style>
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.4;
+            }
+        }
+
+        /* Desktop Grid */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hover effects for CTA buttons */
+        section a[href*="crm.wealthempires.in"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4) !important;
+        }
+
+        section a[href*="crm.wealthempires.in"]:hover span {
+            transform: translateX(5px) !important;
+        }
+
+        section a[href*="contact.html"]:hover {
+            background: rgba(255, 255, 255, 1) !important;
+            border-color: rgba(255, 107, 53, 0.6) !important;
+            transform: translateY(-1px) !important;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                /* single column */
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-grid img {
+                max-width: 90%;
+            }
+
+            /* Hide image on mobile */
+            .hero-image {
+                display: none !important;
+            }
+
+            section h2 {
+                font-size: 2.2rem !important;
+            }
+
+            section div[style*="flex-wrap: wrap"] {
+                justify-content: center !important;
+            }
+
+            section {
+                margin: 0 20px !important;
+                /* reduce side margin on mobile */
+                padding: 60px 20px !important;
+                /* smaller padding */
+            }
         }
     </style>
 
     <!-- Footer -->
     <footer style="background: white; color: #1a1a1a; padding: 60px 0 0 0;">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 40px;">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 40px;">
                 <!-- Our Office -->
                 <div>
                     <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Our Office</h3>
@@ -533,8 +786,9 @@
                             <a href="tel:+919884521264" style="color: #555; text-decoration: none;">+91 9884521264</a>
                         </div>
                         <div style="display: flex; align-items: center; gap: 12px;">
-                            <span style="font-size: 20px;">✉️</span>
-                            <a href="mailto:support@wealthempires.in" style="color: #555; text-decoration: none;">support@wealthempires.in</a>
+                            <span style="font-size: 20px;">✉</span>
+                            <a href="mailto:support@wealthempires.in"
+                                style="color: #555; text-decoration: none;">support@wealthempires.in</a>
                         </div>
                     </div>
                 </div>
@@ -542,60 +796,86 @@
                 <!-- Services -->
                 <div>
                     <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Services</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
-                        <li><a href="taxes.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Tax Planning</a></li>
-                        <li><a href="360-compliance.html" style="color: #555; text-decoration: none; transition: color 0.3s;">GST Compliance</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">Accounting</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">Financial Consultancy</a></li>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
+                        <li><a href="taxes.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Tax
+                                Planning</a></li>
+                        <li><a href="360-compliance.html"
+                                style="color: #555; text-decoration: none; transition: color 0.3s;">GST Compliance</a>
+                        </li>
+                        <li><a href="#"
+                                style="color: #555; text-decoration: none; transition: color 0.3s;">Accounting</a></li>
+                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">Financial
+                                Consultancy</a></li>
                     </ul>
                 </div>
 
                 <!-- Expertise -->
                 <div>
                     <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Expertise</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
-                        <li><a href="trademark.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Trademark</a></li>
-                        <li><a href="incorporation.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Business Incorporation</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">FSSAI Certification</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">ISO Certification</a></li>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
+                        <li><a href="trademark.html"
+                                style="color: #555; text-decoration: none; transition: color 0.3s;">Trademark</a></li>
+                        <li><a href="incorporation.html"
+                                style="color: #555; text-decoration: none; transition: color 0.3s;">Business
+                                Incorporation</a></li>
+                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">FSSAI
+                                Certification</a></li>
+                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">ISO
+                                Certification</a></li>
                     </ul>
                 </div>
 
                 <!-- Reach Us - QR Code -->
                 <div>
                     <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Reach Us</h3>
-                    <div style="background: #f5f5f5; padding: 15px; border-radius: 12px; display: inline-block; border: 1px solid #e0e0e0;">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wealthempires.in" alt="QR Code" style="width: 180px; height: 180px; display: block;">
+                    <div
+                        style="background: #f5f5f5; padding: 15px; border-radius: 12px; display: inline-block; border: 1px solid #e0e0e0;">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wealthempires.in"
+                            alt="QR Code" style="width: 180px; height: 180px; display: block;">
                     </div>
                 </div>
             </div>
 
-            <!-- Social Media Icons - Moved to bottom -->
-            <div style="display: flex; justify-content: center; gap: 15px; margin: 40px 0; padding: 30px 0; border-top: 1px solid #e0e0e0;">
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
-                    <span style="font-size: 20px;">𝕏</span>
-                </a>
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
-                    <span style="font-size: 20px;">📷</span>
-                </a>
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
-                    <span style="font-size: 20px;">▶️</span>
-                </a>
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
-                    <span style="font-size: 20px;">in</span>
-                </a>
-            </div>
+
         </div>
 
         <!-- Footer Bottom -->
-        <div style="border-top: 1px solid #e0e0e0; padding: 25px 0; margin-top: 0; background: #f8f8f8;">
+        <div style="border-top: 1px solid #e0e0e0; padding: 25px 0; margin-top: 40px; background: #f8f8f8;">
             <div class="container">
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-                    <p style="margin: 0; color: #555; font-size: 14px;">© Wealth Empires Private Limited | All Rights Reserved.</p>
-                    <p style="margin: 0; color: #555; font-size: 14px;">Designed & Developed By <span style="color: #667eea; font-weight: 600;">Softrate Global</span></p>
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                    <p style="margin: 0; color: #555; font-size: 14px;">© Wealth Empires Private Limited | All Rights
+                        Reserved.</p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <p style="margin: 0; color: #555; font-size: 14px;">Designed & Developed By <span
+                                style="color: #667eea; font-weight: 600;">Softrate Global</span></p>
+                        <!-- Social Media Icons -->
+                        <div style="display: flex; gap: 10px;">
+                            <a href="#"
+                                style="width: 35px; height: 35px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
+                                <span style="font-size: 16px;">𝕏</span>
+                            </a>
+                            <a href="#"
+                                style="width: 35px; height: 35px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
+                                <span style="font-size: 16px;">📷</span>
+                            </a>
+                            <a href="#"
+                                style="width: 35px; height: 35px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
+                                <span style="font-size: 16px;">▶</span>
+                            </a>
+                            <a href="#"
+                                style="width: 35px; height: 35px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
+                                <span style="font-size: 16px;">in</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+
 </body>
+
 </html>
