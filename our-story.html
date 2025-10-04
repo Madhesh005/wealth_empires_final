@@ -8,323 +8,7 @@
     <link rel="icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="stylesheet" href="styles.css?v=3">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
-        }
-
-        .hero-section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            background: linear-gradient(180deg, #f5e6d8 0%, #f0d9c5 50%, #e8cdb5 100%);
-            padding: 80px 20px;
-            overflow: hidden;
-        }
-
-        .background-illustration {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 1400px;
-            height: auto;
-            opacity: 0.3;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .background-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(245, 230, 216, 0.95) 0%, rgba(240, 217, 197, 0.85) 50%, rgba(232, 205, 181, 0.75) 100%);
-            z-index: 2;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-            position: relative;
-            z-index: 3;
-        }
-
-        .hero-content {
-            text-align: center;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .availability-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 50px;
-            margin-bottom: 40px;
-            font-size: 14px;
-            color: #4a4a4a;
-            font-weight: 500;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            animation: fadeIn 1.2s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .status-dot {
-            width: 10px;
-            height: 10px;
-            background-color: #10b981;
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 0.7;
-                transform: scale(1.1);
-            }
-        }
-
-        .hero-title {
-            font-size: 72px;
-            font-weight: 600;
-            line-height: 1.15;
-            color: #2d2d2d;
-            margin-bottom: 28px;
-            letter-spacing: -0.02em;
-        }
-
-        .hero-description {
-            font-size: 20px;
-            line-height: 1.7;
-            color: #5a5a5a;
-            margin-bottom: 48px;
-            max-width: 850px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 16px 36px;
-            font-size: 17px;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-            min-width: 160px;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #ff8c42 0%, #ff7420 100%);
-            color: #ffffff;
-            box-shadow: 0 4px 16px rgba(255, 116, 32, 0.3);
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #ff7420 0%, #ff6610 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 24px rgba(255, 116, 32, 0.4);
-        }
-
-        .btn-primary:active {
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background-color: #ffffff;
-            color: #2d2d2d;
-            border: 2px solid rgba(45, 45, 45, 0.15);
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .btn-secondary:hover {
-            background-color: #f9f9f9;
-            border-color: rgba(45, 45, 45, 0.25);
-            transform: translateY(-3px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-        }
-
-        .btn-secondary:active {
-            transform: translateY(-1px);
-        }
-
-        /* Decorative elements */
-        .decorative-circle {
-            position: absolute;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 140, 66, 0.15) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .circle-1 {
-            width: 600px;
-            height: 600px;
-            top: -200px;
-            right: -200px;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .circle-2 {
-            width: 400px;
-            height: 400px;
-            bottom: -100px;
-            left: -100px;
-            animation: float 15s ease-in-out infinite reverse;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translate(0, 0);
-            }
-            50% {
-                transform: translate(30px, -30px);
-            }
-        }
-
-        /* Tablet Styles */
-        @media (max-width: 1024px) {
-            .hero-title {
-                font-size: 56px;
-            }
-
-            .hero-description {
-                font-size: 18px;
-                max-width: 700px;
-            }
-
-            .background-illustration {
-                max-width: 1000px;
-            }
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 60px 20px;
-                min-height: 90vh;
-            }
-
-            .availability-badge {
-                font-size: 13px;
-                padding: 8px 16px;
-                margin-bottom: 32px;
-            }
-
-            .hero-title {
-                font-size: 44px;
-                margin-bottom: 24px;
-            }
-
-            .hero-description {
-                font-size: 17px;
-                line-height: 1.6;
-                margin-bottom: 40px;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                gap: 16px;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-                padding: 14px 32px;
-                font-size: 16px;
-            }
-
-            .background-illustration {
-                max-width: 800px;
-                opacity: 0.25;
-            }
-
-            .circle-1,
-            .circle-2 {
-                display: none;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-section {
-                padding: 40px 16px;
-            }
-
-            .hero-title {
-                font-size: 36px;
-                line-height: 1.2;
-            }
-
-            .hero-description {
-                font-size: 16px;
-                margin-bottom: 36px;
-            }
-
-            .btn {
-                padding: 13px 28px;
-                font-size: 15px;
-                min-width: 140px;
-            }
-        }
-
-        /* High resolution background image support */
-        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            .background-illustration {
-                image-rendering: -webkit-optimize-contrast;
-                image-rendering: crisp-edges;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -391,37 +75,43 @@
         </div>
     </header>
     <!-- Hero Section -->
-<section class="hero-section">
-        <!-- Decorative circles -->
-        <div class="decorative-circle circle-1"></div>
-        <div class="decorative-circle circle-2"></div>
-        
-        <!-- Background illustration -->
-        <img src="ourstory.jpg  " 
-             alt="Chennai Skyline" 
-             class="background-illustration"
-             onerror="this.style.display='none';">
-        
-        <!-- Background overlay -->
-        <div class="background-overlay"></div>
-
-        <div class="container">
-            <div class="hero-content">
-                <div class="availability-badge">
-                    <span class="status-dot"></span>
-                    <span>Available for projects</span>
+    <section class="hero"
+        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; padding: 120px 0 80px 0; margin-top: -120px; padding-top: 200px;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <!-- Content Section -->
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 60px auto;">
+                <div style="margin-bottom: 20px;">
+                    <span
+                        style="background: rgba(255, 255, 255, 0.1); color: #FFD700; padding: 6px 20px; border-radius: 30px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255, 215, 0, 0.2);">
+                        Our Story
+                    </span>
                 </div>
 
-                <h1 class="hero-title">Designing Experiences,<br>Building Brands</h1>
+                <h1 style="color: white; font-size: 3.2rem; font-weight: 700; margin-bottom: 24px; line-height: 1.2;">
+                    Made in Chennai,<br>
+                    <span style="color: #FFD700;">Made for the World</span>
+                </h1>
 
-                <p class="hero-description">
-                    We craft stunning visuals and seamless user experiences that elevate brands to the next level.<br>
-                    From UI/UX to branding, we bring your vision to life.
+                <p
+                    style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; line-height: 1.6; margin-bottom: 60px; max-width: 650px; margin-left: auto; margin-right: auto;">
+                    At Wealth Empires, we believe that entrepreneurship is the backbone of progress. Yet, for thousands
+                    of first-time founders and business owners, navigating India's legal and compliance maze becomes a
+                    nightmare.
                 </p>
+            </div>
 
-                <div class="cta-buttons">
-                    <a href="#get-started" class="btn btn-primary">Get Started</a>
-                    <a href="#our-work" class="btn btn-secondary">View Our Work</a>
+            <!-- Image Section -->
+            <div
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 24px;">
+                <div style="max-width: 700px; width: 100%;">
+                    <img src="my story.png" alt="Our Story - Wealth Empires Team"
+                        style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); border: 2px solid rgba(255, 255, 255, 0.1);">
+                </div>
+
+                <!-- Rating moved below image -->
+                <div style="display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 0.9rem;">
+                    <span style="color: #FFD700;">★★★★★</span>
+                    <span style="color: rgba(255, 255, 255, 0.8);">Trusted by 10,000+ entrepreneurs</span>
                 </div>
             </div>
         </div>
@@ -502,8 +192,9 @@
                 <div class="advantage-card" style="background: #E5E8F5;">
                     <div style="text-align: center; margin-bottom: 20px;">
                         <div
-                            style="width: 60px; height: 60px; background: #667eea; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto; font-size: 24px; color: white;">
-                            💰</div>
+                            style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <span style="font-size: 28px;">🤝</span>
+                        </div>
                     </div>
                     <h3>Cost Savings</h3>
                     <p>We've saved startups lakhs in hidden legal costs by providing transparent, upfront pricing and
@@ -511,9 +202,10 @@
                 </div>
                 <div class="advantage-card" style="background: #E5E8F5;">
                     <div style="text-align: center; margin-bottom: 20px;">
-                        <div
-                            style="width: 60px; height: 60px; background: #667eea; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto; font-size: 24px; color: white;">
-                            🛡️</div>
+                    <div
+                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <span style="font-size: 28px;">🎯</span>
+                    </div>
                     </div>
                     <h3>Risk Prevention</h3>
                     <p>We've helped founders avoid penalties and non-compliance risks through proactive guidance and
@@ -521,9 +213,10 @@
                 </div>
                 <div class="advantage-card" style="background: #E5E8F5;">
                     <div style="text-align: center; margin-bottom: 20px;">
-                        <div
-                            style="width: 60px; height: 60px; background: #667eea; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto; font-size: 24px; color: white;">
-                            🚀</div>
+                    <div
+                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <span style="font-size: 28px;">💼</span>
+                    </div>
                     </div>
                     <h3>Growth Focus</h3>
                     <p>We've given entrepreneurs the peace of mind to focus on growth, not paperwork, enabling them to
@@ -534,7 +227,7 @@
     </section>
 
     <!-- Statistics Section -->
-    <section class="gst-section" style="background: #f8fafc; padding: 60px 0;">
+    <section class="gst-section" style="background: #f8fafc; padding: 0px;">
         <div class="container">
             <div class="section-title">
                 <h2>Our Impact in Numbers</h2>

@@ -8,6 +8,229 @@
     <link rel="icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="stylesheet" href="styles.css?v=3">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #ffffff;
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 10% 40px 60px 40px;
+            background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-left {
+            padding-right: 20px;
+        }
+
+        .hero-left h1 {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-left p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #4a4a4a;
+            margin-bottom: 36px;
+            max-width: 540px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14p x 32px;
+            background-color: #2383E2;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(35, 131, 226, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #1a6ec4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(35, 131, 226, 0.3);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .hero-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            object-fit: contain;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .pagination-dots {
+            display: flex;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #d1d1d1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #2383E2;
+            width: 32px;
+            border-radius: 5px;
+        }
+
+        .dot:hover {
+            background-color: #a0a0a0;
+        }
+
+        /* Tablet Styles */
+        @media (max-width: 1024px) {
+            .hero-content {
+                gap: 50px;
+            }
+
+            .hero-left h1 {
+                font-size: 52px;
+            }
+
+            .hero-left p {
+                font-size: 18px;
+            }
+
+            .hero-image {
+                max-width: 500px;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 40px 20px;
+                min-height: auto;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-left {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .hero-left h1 {
+                font-size: 42px;
+            }
+
+            .hero-left p {
+                font-size: 17px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-right {
+                display: none;
+                padding-left: 0;
+                order: -1;
+            }
+
+            .hero-image {
+                max-width: 100%;
+            }
+
+            .pagination-dots {
+                justify-content: center;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 30px 16px;
+            }
+
+            .hero-left h1 {
+                font-size: 36px;
+            }
+
+            .hero-left p {
+                font-size: 16px;
+                margin-bottom: 28px;
+            }
+
+            .cta-button {
+                padding: 12px 28px;
+                font-size: 15px;
+            }
+
+            .pagination-dots {
+                margin-top: 30px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -64,7 +287,8 @@
                     <li class="header-buttons-li">
                         <div class="header-buttons">
                             <a href="contact.html" class="btn-demo">Contact Us</a>
-                            <a href="https://crm.wealthempires.in/" class="btn-demo">Start Registration</a>
+                            <a href="https://crm.wealthempires.in/" class="btn-primary" style="color: white;">Start
+                                Registration</a>
                         </div>
                     </li>
                 </ul>
@@ -74,36 +298,35 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Trademark <span class="highlight">Registration</span> Services</h1>
+                <div class="hero-right">
+
+                    <div>
+                        <img src="trademark.jpg" alt="heroimage" width="90%" height=100%>
+                    </div>
+                </div>
+                <div class="hero-left">
+                    <h1>Trademark <br> Registration Services</h1>
                     <p>Protect your brand identity with professional trademark registration services. Secure your
                         intellectual property and build brand trust.</p>
                     <div class="hero-buttons">
                         <a href="contact.html" class="btn-large btn-black">Contact Us</a>
-                        <a href="https://crm.wealthempires.in/" class="btn-large btn-white">Start Registration</a>
+                        <a href="https://crm.wealthempires.in/" class="btn-large btn-primary">Start Registration</a>
                     </div>
-                    <div class="trustpilot">
-                        <span class="stars">★★★★★</span>
-                        <span>Successfully registered 5,000+ trademarks</span>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="glassmorphism-card">
-                        <div class="glass-content">
-                            <div class="professional-image">
-                                <img src="trademark.png"
-                                    alt="Trademark Registration Services - Brand Protection Made Easy"
-                                    style="width: 100%; height: auto; object-fit: cover; border-radius: 12px;">
-                            </div>
-                        </div>
+                    <div class="pagination-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
                 </div>
+
             </div>
         </div>
+        </div>
     </section>
+
 
     <!-- Why Trademark Registration Important Section -->
     <section class="gst-section">
@@ -483,6 +706,10 @@
             color: #667eea;
         }
 
+        .certificate-image {
+            width: 80%;
+            height: auto;
+        }
         .certificate-image .image-box {
             background: white;
             padding: 30px;

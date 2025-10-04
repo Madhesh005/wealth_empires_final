@@ -8,6 +8,236 @@
     <link rel="icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="stylesheet" href="styles.css?v=3">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #ffffff;
+        }
+
+        /* Add this to your <style> section or main CSS file */
+        .header-buttons .btn-primary:hover {
+            background: #000 !important;
+            color: #fff !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-left {
+            padding-right: 20px;
+        }
+
+        .hero-left h1 {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-left p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #4a4a4a;
+            margin-bottom: 36px;
+            max-width: 540px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14p x 32px;
+            background-color: #2383E2;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(35, 131, 226, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #1a6ec4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(35, 131, 226, 0.3);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .hero-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            object-fit: contain;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .pagination-dots {
+            display: flex;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #d1d1d1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #2383E2;
+            width: 32px;
+            border-radius: 5px;
+        }
+
+        .dot:hover {
+            background-color: #a0a0a0;
+        }
+
+        /* Tablet Styles */
+        @media (max-width: 1024px) {
+            .hero-content {
+                gap: 50px;
+            }
+
+            .hero-left h1 {
+                font-size: 52px;
+            }
+
+            .hero-left p {
+                font-size: 18px;
+            }
+
+            .hero-image {
+                max-width: 500px;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 40px 20px;
+                min-height: auto;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-left {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .hero-left h1 {
+                font-size: 42px;
+            }
+
+            .hero-left p {
+                font-size: 17px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-right {
+                padding-left: 0;
+                order: -1;
+            }
+
+            .hero-image {
+                max-width: 100%;
+            }
+
+            .pagination-dots {
+                justify-content: center;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 30px 16px;
+            }
+
+            .hero-left h1 {
+                font-size: 36px;
+            }
+
+            .hero-left p {
+                font-size: 16px;
+                margin-bottom: 28px;
+            }
+
+            .cta-button {
+                padding: 12px 28px;
+                font-size: 15px;
+            }
+
+            .pagination-dots {
+                margin-top: 30px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -64,7 +294,8 @@
                     <li class="header-buttons-li">
                         <div class="header-buttons">
                             <a href="contact.html" class="btn-demo">Contact Us</a>
-                            <a href="https://crm.wealthempires.in/" class="btn-demo">Start Registration</a>
+                            <a href="https://crm.wealthempires.in/" class="btn-primary" style="color: white;">Start
+                                Registration</a>
                         </div>
                     </li>
                 </ul>
@@ -74,69 +305,111 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Contact Us<br><span class="highlight">Let's Start a Conversation</span></h1>
+                <div class="hero-left">
+                    <h1>Contact Us Let's Start a Conversation</h1>
                     <p>Have questions about our services? Need help with company registration or compliance? Our team is
                         here to help you succeed.</p>
-                    <div class="trustpilot">
-                        <div class="stars">★★★★★</div>
-                        <span>Excellent</span>
-                        <span>Trusted by 10,000+ entrepreneurs</span>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn-large btn-black">Contact Us</a>
+                        <a href="https://crm.wealthempires.in/" class="btn-large btn-primary"
+                            style="color: white;">Start Registration</a>
+                    </div>
+                    <div class="pagination-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <div class="glassmorphism-card">
-                        <div class="glass-content">
-                            <div style="background: white; padding: 30px; border-radius: 16px; text-align: center;">
-                                <div style="font-size: 48px; margin-bottom: 16px;">📞</div>
-                                <h3 style="margin: 0 0 8px 0; color: #1a1a1a;">Quick Response</h3>
-                                <p style="margin: 0; color: #64748b;">We typically respond within 24 hours</p>
-                            </div>
-                        </div>
+                <div class="hero-right">
+                    <img src="https://raw.githubusercontent.com/user-attachments/assets/placeholder-image.png"
+                        alt="Wealth Empires Project Management Illustration" class="hero-image"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div>
+                        <img src="contact.jpg" alt="heroimage" width="80%" height=auto>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Visit Our Office Section -->
-<section class="gst-section" style="padding: 80px 0; background: #f8fafc;">
+    <section class="gst-section" style="padding: 80px 0; background: #f8fafc;">
     <div class="container">
-        <div class="contact-wrapper" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: start; max-width: 1400px; margin: 0 auto;">
+        <div class="contact-wrapper" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: center; max-width: 1400px; margin: 0 auto;">
 
             <!-- Left Side - Contact Information -->
-            <div class="contact-info-card" style="background: white; border-radius: 24px; padding: 60px 50px; box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
-                <h2 style="font-size: 3.5rem; font-weight: 700; line-height: 1.1; margin-bottom: 30px; color: #1a1a1a; letter-spacing: -1px;">
-                    Let's get<br>in touch
-                </h2>
+            <div class="contact-info-card" style="background: white; border-radius: 24px; padding: 50px 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); position: relative; border: 2px solid #f1f5f9; height: 630px; display: flex; flex-direction: column; justify-content: center;">
+                <!-- Decorative dots pattern -->
+                <div style="position: absolute; top: 30px; right: 30px; display: grid; grid-template-columns: repeat(3, 6px); gap: 8px; opacity: 0.3;">
+                    <div style="width: 6px; height: 6px; background: #3b82f6; border-radius: 50%;"></div>
+                    <div style="width: 6px; height: 6px; background: #3b82f6; border-radius: 50%;"></div>
+                    <div style="width: 6px; height: 6px; background: #3b82f6; border-radius: 50%;"></div>
+                    <div style="width: 6px; height: 6px; background: #3b82f6; border-radius: 50%;"></div>
+                    <div style="width: 6px; height: 6px; background: #3b82f6; border-radius: 50%;"></div>
+                    <div style="width: 6px; height: 6px; background: #3b82f6; border-radius: 50%;"></div>
+                    <div style="width: 6px; height: 6px; background: #3b82f6; border-radius: 50%;"></div>
+                    <div style="width: 6px; height: 6px; background: #3b82f6; border-radius: 50%;"></div>
+                    <div style="width: 6px; height: 6px; background: #3b82f6; border-radius: 50%;"></div>
+                </div>
                 
-                <p style="font-size: 1.25rem; color: #1a1a1a; margin-bottom: 50px; font-weight: 500; line-height: 1.5;">
-                 say hello with us!
-                </p>
-
-                <div style="display: flex; flex-direction: column; gap: 32px;">
-                    <!-- Phone -->
-                    <div class="contact-item">
-                        <p style="margin: 0 0 8px 0; color: #6b7280; font-size: 0.95rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;">Phone</p>
-                        <a href="tel:+919884521264" style="color: #1a1a1a; text-decoration: none; font-size: 1.15rem; font-weight: 600; transition: color 0.3s;">+91 9884521264</a>
+                <div style="position: relative; z-index: 1;">
+                    <div style="display: inline-block; background: #eff6ff; color: #3b82f6; padding: 8px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 20px; border: 2px solid #dbeafe;">
+                        GET IN TOUCH
                     </div>
+                    
+                    <h2 style="font-size: 3rem; font-weight: 700; line-height: 1.1; margin-bottom: 15px; color: #1a1a1a; letter-spacing: -1px;">
+                        Let's get<br>in touch
+                    </h2>
+                    
+                    <p style="font-size: 1.1rem; color: #64748b; margin-bottom: 35px; font-weight: 500; line-height: 1.5;">
+                        Say hello with us!
+                    </p>
 
-                    <!-- Email -->
-                    <div class="contact-item">
-                        <p style="margin: 0 0 8px 0; color: #6b7280; font-size: 0.95rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;">Email</p>
-                        <a href="mailto:support@wealthempires.in" style="color: #1a1a1a; text-decoration: none; font-size: 1.15rem; font-weight: 600; transition: color 0.3s;">support@wealthempires.in</a>
-                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <!-- Phone -->
+                        <div class="contact-item" style="background: #f8fafc; padding: 20px 24px; border-radius: 14px; border: 2px solid #e2e8f0; transition: all 0.3s;">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: white; border-radius: 12px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); border: 2px solid #e2e8f0;">
+                                    <span style="font-size: 1.3rem;">📞</span>
+                                </div>
+                                <div>
+                                    <p style="margin: 0 0 3px 0; color: #64748b; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Phone</p>
+                                    <a href="tel:+919884521264" style="color: #1a1a1a; text-decoration: none; font-size: 1.05rem; font-weight: 700; transition: color 0.3s;">+91 9884521264</a>
+                                </div>
+                            </div>
+                        </div>
 
-                    <!-- Office -->
-                    <div class="contact-item">
-                        <p style="margin: 0 0 8px 0; color: #6b7280; font-size: 0.95rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;">Office</p>
-                        <p style="margin: 0; color: #1a1a1a; font-size: 1.15rem; font-weight: 600; line-height: 1.6;">
-                            Greenways Business Park<br>Chennai, Tamil Nadu (India)
-                        </p>
+                        <!-- Email -->
+                        <div class="contact-item" style="background: #f8fafc; padding: 20px 24px; border-radius: 14px; border: 2px solid #e2e8f0; transition: all 0.3s;">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: white; border-radius: 12px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); border: 2px solid #e2e8f0;">
+                                    <span style="font-size: 1.3rem;">✉️</span>
+                                </div>
+                                <div style="flex: 1;">
+                                    <p style="margin: 0 0 3px 0; color: #64748b; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Email</p>
+                                    <a href="mailto:support@wealthempires.in" style="color: #1a1a1a; text-decoration: none; font-size: 1.05rem; font-weight: 700; transition: color 0.3s; word-break: break-word;">support@wealthempires.in</a>
+                                </div>
+                            </div>
+                        </div>
 
+                        <!-- Office -->
+                        <div class="contact-item" style="background: #f8fafc; padding: 20px 24px; border-radius: 14px; border: 2px solid #e2e8f0; transition: all 0.3s;">
+                            <div style="display: flex; align-items: flex-start; gap: 14px;">
+                                <div style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: white; border-radius: 12px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); border: 2px solid #e2e8f0;">
+                                    <span style="font-size: 1.3rem;">📍</span>
+                                </div>
+                                <div>
+                                    <p style="margin: 0 0 3px 0; color: #64748b; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Office</p>
+                                    <p style="margin: 0; color: #1a1a1a; font-size: 1.05rem; font-weight: 700; line-height: 1.5;">
+                                        Greenways Business Park<br>Chennai, Tamil Nadu (India)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,6 +429,67 @@
         </div>
     </div>
 </section>
+
+<style>
+.contact-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15) !important;
+    border-color: #3b82f6 !important;
+    background: white !important;
+}
+
+.contact-item a:hover {
+    color: #3b82f6 !important;
+}
+</style> 
+
+    <style>
+        .contact-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15) !important;
+            border-color: #3b82f6 !important;
+            background: white !important;
+        }
+
+        .contact-item a:hover {
+            color: #3b82f6 !important;
+        }
+    </style>
+
+    <style>
+        .contact-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15) !important;
+            border-color: #3b82f6 !important;
+            background: white !important;
+        }
+
+        .contact-item a:hover {
+            color: #3b82f6 !important;
+        }
+    </style>
+
+    <style>
+        .contact-item:hover {
+            border-left-color: #60a5fa !important;
+            padding-left: 30px !important;
+        }
+
+        .contact-item a:hover {
+            color: #3b82f6 !important;
+        }
+    </style>
+
+    <style>
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.25) !important;
+            transform: translateX(5px);
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+    </style>
 
     <!-- FAQ Section -->
     <section class="advantages" style="padding: 80px 0; background: white;">

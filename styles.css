@@ -302,7 +302,7 @@ nav {
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -573,7 +573,7 @@ nav {
 }
 
 .section-title h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 16px;
@@ -589,14 +589,14 @@ nav {
 
 /* Advantages Section */
 .advantages {
-  padding: 80px 0;
+  padding: 60px 0;
   background: #fff;
 }
 
 .advantages-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   gap: 32px;
   max-width: 1200px;
   margin: 0 auto;
