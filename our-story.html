@@ -8,7 +8,448 @@
     <link rel="icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="stylesheet" href="styles.css?v=3">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f8f5;
+            padding: 80px 20px;
+        }
+
+        .solution-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 60px;
+            align-items: start;
+            padding: 50px;
+        }
+
+ 
+        .section-label {
+            font-family: 'Brush Script MT', 'Dancing Script', cursive;
+            font-size: 36px;
+            color: #c9a961;
+            margin-bottom: 8px;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .main-heading {
+            font-size: 58px;
+            line-height: 1.1;
+            color: #1a1a1a;
+            margin-bottom: 80px;
+            font-weight: 400;
+            letter-spacing: -1.5px;
+        }
+
+        .feature-block {
+            display: flex;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .surfboard-icon {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+        }
+
+        .surfboard-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: #1a1a1a;
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .feature-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .feature-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 220px 220px;
+            gap: 20px;
+        }
+
+        .image-card {
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+        .image-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-card.tall {
+            grid-row: span 2;
+        }
+
+        .image-card.dark-overlay {
+            background: #0d3d3d;
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 28px;
+            color: white;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+        }
+
+        .card-content h3 {
+            font-size: 23px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            line-height: 1.2;
+        }
+
+        .card-content p {
+            font-size: 15px;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+
+        .image-card.surfboards {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .image-card.materials {
+            grid-column: 1;
+            grid-row: 2;
+            background: #0d3d3d;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .image-card.beach {
+            grid-column: 2;
+            grid-row: 1 / 3;
+        }
+
+        @media (max-width: 1200px) {
+            .solution-section {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .content-left {
+                padding-right: 0;
+                max-width: 600px;
+            }
+
+            .main-heading {
+                font-size: 52px;
+                margin-bottom: 60px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .images-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: 250px 250px 350px;
+            }
+
+            .image-card.surfboards {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .image-card.materials {
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            .image-card.beach {
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            .main-heading {
+                font-size: 44px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 50px 16px;
+            }
+
+            .main-heading {
+                font-size: 36px;
+                margin-bottom: 50px;
+            }
+
+            .section-label {
+                font-size: 28px;
+            }
+
+            .feature-block {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .surfboard-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .images-grid {
+                grid-template-rows: 220px 220px 300px;
+            }
+
+            .card-content {
+                padding: 24px;
+            }
+
+            .card-content h3 {
+                font-size: 18px;
+            }
+
+            .card-content p {
+                font-size: 14px;
+            }
+        }
+        .story-section {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .story-card {
+            margin-top: 30px;
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .story-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Purple Card - Brand Awareness */
+        .card-brand {
+            background: linear-gradient(165deg, #7851A9 0%, #7851A9 100%);
+            color: white;
+            padding: 30px 35px;
+            justify-content: space-between;
+        }
+
+        .card-brand h2 {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            letter-spacing: -1px;
+        }
+
+        .card-brand p {
+            font-size: 20px;
+            line-height: 1.5;
+            opacity: 0.85;
+            margin-bottom: auto;
+        }
+
+
+        /* Center Card - Image */
+        .card-image {
+            background: #f5f5f0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .card-image:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Yellow Card - Sales Growth */
+        .card-sales {
+            background: linear-gradient(165deg, #d8dbf0 0%, #d8dbf0 100%);
+            color: black;
+            padding: 30px 35px;
+            justify-content: space-between;
+        }
+
+        .card-sales .card-icon {
+            align-self: flex-end;
+            margin-bottom: 60px;
+        }
+
+        .card-sales h2 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            letter-spacing: -1px;
+        }
+
+        .card-sales p {
+            font-size: 20px;
+            line-height: 1.5;
+            opacity: 0.75;
+        }
+
+        /* Hover effects */
+        .story-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .story-card:hover::before {
+            opacity: 1;
+        }
+
+        @media (max-width: 1200px) {
+            .cards-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+
+            .card-brand,
+            .card-sales {
+                padding: 50px 40px;
+            }
+
+            .card-brand h2,
+            .card-sales h2 {
+                font-size: 56px;
+            }
+
+            .story-card {
+                min-height: 550px;
+            }
+
+            .card-image {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .story-card {
+                min-height: 500px;
+            }
+
+            .card-brand,
+            .card-sales {
+                padding: 45px 35px;
+            }
+
+            .card-brand h2,
+            .card-sales h2 {
+                font-size: 48px;
+            }
+
+            .card-brand p,
+            .card-sales p {
+                font-size: 18px;
+            }
+
+            .card-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            .card-image {
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 40px 16px;
+            }
+
+            .story-card {
+                border-radius: 30px;
+                min-height: 450px;
+            }
+
+            .card-brand,
+            .card-sales {
+                padding: 40px 30px;
+            }
+
+            .card-brand h2,
+            .card-sales h2 {
+                font-size: 40px;
+            }
+
+            .card-brand p,
+            .card-sales p {
+                font-size: 16px;
+            }
+
+            .card-icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -66,7 +507,7 @@
                         <div class="header-buttons">
                             <a href="contact.html" class="btn-demo">Contact Us</a>
                             <a href="https://crm.wealthempires.in/" class="btn-primary" style="color: white;">Start
-                                Registration</a>
+                                Incorporation</a>
                         </div>
                     </li>
                 </ul>
@@ -74,59 +515,72 @@
             </nav>
         </div>
     </header>
-    <!-- Hero Section -->
-    <section class="hero"
-        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; padding: 120px 0 80px 0; margin-top: -120px; padding-top: 200px;">
-        <div class="container" style="position: relative; z-index: 2;">
-            <!-- Content Section -->
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 60px auto;">
-                <div style="margin-bottom: 20px;">
-                    <span
-                        style="background: rgba(255, 255, 255, 0.1); color: #FFD700; padding: 6px 20px; border-radius: 30px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255, 215, 0, 0.2);">
-                        Our Story
-                    </span>
+
+    <!--Hero Section Updated-->
+        <section class="solution-section">
+        <div class="content-left">
+            <h3 class="section-label">Wealth Empires</h3>
+            <h1 class="main-heading">Stay Legally Sound In One Click!</h1>
+            
+            <div class="feature-block">
+                <div class="surfboard-icon">
+                    <svg viewBox="0 0 50 50">
+                        <ellipse cx="25" cy="25" rx="8" ry="22" />
+                        <line x1="25" y1="5" x2="25" y2="45" />
+                    </svg>
                 </div>
-
-                <h1 style="color: white; font-size: 3.2rem; font-weight: 700; margin-bottom: 24px; line-height: 1.2;">
-                    Made in Chennai,<br>
-                    <span style="color: #FFD700;">Made for the World</span>
-                </h1>
-
-                <p
-                    style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; line-height: 1.6; margin-bottom: 60px; max-width: 650px; margin-left: auto; margin-right: auto;">
-                    At Wealth Empires, we believe that entrepreneurship is the backbone of progress. Yet, for thousands
-                    of first-time founders and business owners, navigating India's legal and compliance maze becomes a
-                    nightmare.
-                </p>
-            </div>
-
-            <!-- Image Section -->
-            <div
-                style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 24px;">
-                <div style="max-width: 700px; width: 100%;">
-                    <img src="my story.png" alt="Our Story - Wealth Empires Team"
-                        style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); border: 2px solid rgba(255, 255, 255, 0.1);">
-                </div>
-
-                <!-- Rating moved below image -->
-                <div style="display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 0.9rem;">
-                    <span style="color: #FFD700;">★★★★★</span>
-                    <span style="color: rgba(255, 255, 255, 0.8);">Trusted by 10,000+ entrepreneurs</span>
+                <div class="feature-content">
+                    <h3>Streamline Your Business Success with Our Expert Services</h3>
+                    <p>Our mission at Wealth Empires is to provide personalized financial solutions that address each client's unique challenges.</p>
                 </div>
             </div>
         </div>
+
+        <div class="images-grid">
+            <div class="image-card surfboards">
+                <img src="our-story2.jpg" alt="Surfboards rack with gone surfing sign">
+            </div>
+
+            <div class="image-card materials">
+                <div class="card-content">
+                    <h3>We Help You To Grow Your Business.</h3>
+                    <p>We are dedicated to delivering outstanding results through strategic expertise and unwavering commitment.</p>
+                </div>
+            </div>
+
+            <div class="image-card beach tall">
+                <img src="our-story1.jpg" alt="Surfers walking on beach at sunset">
+            </div>
+        </div>
     </section>
+    <!-- Hero Section -->
+ 
+    
 
     <!-- Our Story Content Section -->
-    <section class="gst-section" style="padding: 80px 0; background: #ffffff;">
-        <div class="container">
-            <div class="section-title" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 30px; color: #1a1a1a;">The Challenge We Solve</h2>
-                <p style="font-size: 1.1rem; line-height: 1.7; color: #4a5568; text-align: center;">From company
-                    incorporation, GST, and MCA filings to trademarks and tax returns—many entrepreneurs give up not
-                    because their ideas lack potential, but because compliance drains their time, money, and energy.</p>
-                <p style="margin-top: 25px; font-weight: 600; color: #667eea; font-size: 1.2rem; text-align: center;">We
-                    were born to solve that.</p>
+    <section class="story-section">
+        <div class="cards-container">
+            <!-- Brand Awareness Card -->
+            <div class="story-card card-brand">
+                <div>
+                    <h2>The Challenge We Solve</h2>
+                    <p>From company incorporation, GST, and MCA filings to trademarks and tax returns—many entrepreneurs give up not because their ideas lack potential, but because compliance drains their time, money, and energy.</p><br><br>
+                    <h4 style="font-size: 25px;">We  were born to solve that.</h4>
+                </div>
+            </div>
+
+            <!-- Image Card -->
+            <div class="story-card card-image">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=1000&fit=crop&q=80" alt="Business professionals collaborating">
+            </div>
+
+            <!-- Sales Growth Card -->
+            <div class="story-card card-sales">
+                <div>
+                    <h2>What We Do</h2>
+                    <p>We simplify business incorporation, auditing, accounting, taxation, GST, MCA compliance, trademark & IP filings, ISO certifications, and legal consulting—with transparent pricing, technology-driven solutions, and expert guidance.</p><br><br>
+                    <h4 style="font-size: 20px;">Our mission is simple: help entrepreneurs grow without worrying about legal roadblocks.</h4>
+                </div>
             </div>
         </div>
     </section>
@@ -166,20 +620,8 @@
         </div>
     </section>
 
-    <!-- What We Do Section -->
-    <section class="gst-section" style="padding: 80px 0; background: #ffffff;">
-        <div class="container">
-            <div class="section-title" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 30px; color: #1a1a1a;">What We Do</h2>
-                <p style="font-size: 1.1rem; line-height: 1.7; color: #4a5568; text-align: center;">We simplify business
-                    incorporation, auditing, accounting, taxation, GST, MCA compliance, trademark & IP filings, ISO
-                    certifications, and legal consulting—with transparent pricing, technology-driven solutions, and
-                    expert guidance.</p>
-                <p style="margin-top: 25px; font-weight: 600; color: #667eea; font-size: 1.2rem; text-align: center;">
-                    Our mission is simple: help entrepreneurs grow without worrying about legal roadblocks.</p>
-            </div>
-        </div>
-    </section>
+
+
 
     <!-- Our Impact Section -->
     <section class="advantages" style="background: #f8fafc;">
@@ -202,10 +644,10 @@
                 </div>
                 <div class="advantage-card" style="background: #E5E8F5;">
                     <div style="text-align: center; margin-bottom: 20px;">
-                    <div
-                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <span style="font-size: 28px;">🎯</span>
-                    </div>
+                        <div
+                            style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <span style="font-size: 28px;">🎯</span>
+                        </div>
                     </div>
                     <h3>Risk Prevention</h3>
                     <p>We've helped founders avoid penalties and non-compliance risks through proactive guidance and
@@ -213,10 +655,10 @@
                 </div>
                 <div class="advantage-card" style="background: #E5E8F5;">
                     <div style="text-align: center; margin-bottom: 20px;">
-                    <div
-                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <span style="font-size: 28px;">💼</span>
-                    </div>
+                        <div
+                            style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <span style="font-size: 28px;">💼</span>
+                        </div>
                     </div>
                     <h3>Growth Focus</h3>
                     <p>We've given entrepreneurs the peace of mind to focus on growth, not paperwork, enabling them to
@@ -282,6 +724,377 @@
             </div>
         </div>
     </section>
+
+    <section class="testimonials-section" style="background: #ffffff; padding: 48px 0; margin-top: 80px;">
+        <div class="container" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 64px;">
+                <div
+                    style="display: inline-flex; align-items: center; padding: 8px 16px; background: rgba(153, 13, 213, 0.1); border-radius: 9999px; color: #990dd5; font-size: 14px; font-weight: 500; margin-bottom: 24px;">
+                    10,000+ Founders
+                </div>
+                <h2 style="font-size: 2.5rem; font-weight: 700; color: #1a1a1a; line-height: 1.2; margin-bottom: 0;">
+                    Built for Founders.<br>
+                    <span style="color: #990dd5;">Loved by Founders.</span>
+                </h2>
+            </div>
+
+            <!-- Mobile Slider View -->
+            <div class="mobile-slider" style="display: none;">
+                <div style="position: relative; overflow: hidden; border-radius: 16px;">
+                    <div class="slider-container" style="display: flex; transition: transform 0.3s ease-in-out;">
+                        <!-- Card 1 -->
+                        <div class="slide" style="min-width: 100%; padding: 0 8px;">
+                            <div
+                                style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+                                    <div
+                                        style="width: 64px; height: 64px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: #00b6bc;">
+                                        <img src="person1.png" alt="Adam Fuller"
+                                            style="width: 100%; height: 100%; object-fit: cover;"
+                                            onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;background:#00b6bc;display:flex;align-items:center;justify-content:center;color:white;font-weight:600;\'>AF</div>'">
+                                    </div>
+                                    <div>
+                                        <h3
+                                            style="font-weight: 700; font-size: 18px; color: #1a1a1a; margin: 0 0 4px 0;">
+                                            Adam Fuller</h3>
+                                        <p style="color: #666; font-size: 14px; margin: 0;">Co-Founder of Flagaholics
+                                        </p>
+                                    </div>
+                                </div>
+                                <div style="font-size: 32px; color: #d1d5db; margin-bottom: 8px;">"</div>
+                                <blockquote style="color: #4b5563; font-size: 16px; line-height: 1.6; margin: 0;">
+                                    doola handled Flagaholics' legal and financial setup so we could focus on growth &
+                                    delivering a great customer experience.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="slide" style="min-width: 100%; padding: 0 8px;">
+                            <div
+                                style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+                                    <div
+                                        style="width: 64px; height: 64px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: #dabfa5;">
+                                        <img src="person2.png" alt="Deon Bryan"
+                                            style="width: 100%; height: 100%; object-fit: cover;"
+                                            onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;background:#dabfa5;display:flex;align-items:center;justify-content:center;color:white;font-weight:600;\'>DB</div>'">
+                                    </div>
+                                    <div>
+                                        <h3
+                                            style="font-weight: 700; font-size: 18px; color: #1a1a1a; margin: 0 0 4px 0;">
+                                            Deon Bryan</h3>
+                                        <p style="color: #666; font-size: 14px; margin: 0;">CEO at Viteranz</p>
+                                    </div>
+                                </div>
+                                <div style="font-size: 32px; color: #d1d5db; margin-bottom: 8px;">"</div>
+                                <blockquote style="color: #4b5563; font-size: 16px; line-height: 1.6; margin: 0;">
+                                    The ease of setup, combined with the resources available through doola, helped me
+                                    get things done efficiently.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="slide" style="min-width: 100%; padding: 0 8px;">
+                            <div
+                                style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+                                    <div
+                                        style="width: 64px; height: 64px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: #ffa979;">
+                                        <img src="person1.png" alt="Alex Lieberman"
+                                            style="width: 100%; height: 100%; object-fit: cover;"
+                                            onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;background:#ffa979;display:flex;align-items:center;justify-content:center;color:white;font-weight:600;\'>AL</div>'">
+                                    </div>
+                                    <div>
+                                        <h3
+                                            style="font-weight: 700; font-size: 18px; color: #1a1a1a; margin: 0 0 4px 0;">
+                                            Alex Lieberman</h3>
+                                        <p style="color: #666; font-size: 14px; margin: 0;">Founder of <span
+                                                style="color: #f97316;">storyarb</span></p>
+                                    </div>
+                                </div>
+                                <div style="font-size: 32px; color: #d1d5db; margin-bottom: 8px;">"</div>
+                                <blockquote style="color: #4b5563; font-size: 16px; line-height: 1.6; margin: 0;">
+                                    I thought it was very smooth, it was done within a day and all I hit was like 5
+                                    buttons.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div style="display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 24px;">
+                    <button class="prev-btn"
+                        style="padding: 12px; background: white; border: none; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;"
+                        aria-label="Previous testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="dots" style="display: flex; gap: 8px;">
+                        <button class="dot active" data-index="0"
+                            style="width: 8px; height: 8px; border-radius: 50%; border: none; cursor: pointer; background: #990dd5; transition: background 0.2s;"></button>
+                        <button class="dot" data-index="1"
+                            style="width: 8px; height: 8px; border-radius: 50%; border: none; cursor: pointer; background: #d1d5db; transition: background 0.2s;"></button>
+                        <button class="dot" data-index="2"
+                            style="width: 8px; height: 8px; border-radius: 50%; border: none; cursor: pointer; background: #d1d5db; transition: background 0.2s;"></button>
+                    </div>
+
+                    <button class="next-btn"
+                        style="padding: 12px; background: white; border: none; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;"
+                        aria-label="Next testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Desktop Expandable Cards -->
+            <div class="desktop-cards" style="display: flex; gap: 16px; justify-content: center; align-items: stretch;">
+                <!-- Card 1 -->
+                <div class="testimonial-card" data-id="1"
+                    style="flex: 0 0 120px; min-height: 564px; background: #007e82; border-radius: 16px; cursor: pointer; overflow: hidden; position: relative; transition: flex 0.4s ease;">
+                    <div class="card-collapsed" style="position: relative; width: 100%; height: 100%;">
+                        <img src="person1.png" alt="Adam Fuller"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;"
+                            onerror="this.style.display='none'; this.parentElement.style.background='#007e82';">
+                        <div
+                            style="position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 10; display: flex; align-items: end; gap: 16px;">
+                            <div
+                                style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font-weight: 600; font-size: 16px; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                                Adam Fuller</div>
+                            <div
+                                style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font-size: 14px; color: rgba(255,255,255,0.9); text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                                Flagaholics</div>
+                        </div>
+                    </div>
+                    <div class="card-expanded"
+                        style="display: none; padding: 24px; height: 100%; align-items: center; justify-content: center; gap: 24px;">
+                        <div
+                            style="width: 380px; height: 460px; border-radius: 16px; overflow: hidden; flex-shrink: 0; background: #00b6bc;">
+                            <img src="person1.png" alt="Adam Fuller"
+                                style="width: 100%; height: 100%; object-fit: cover;"
+                                onerror="this.style.display='none';">
+                        </div>
+                        <div
+                            style="background: #fed7aa; border-radius: 16px; padding: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 380px; height: 250px; display: flex; flex-direction: column; justify-content: center;">
+                            <div style="font-size: 48px; color: #fb923c; margin-bottom: 12px; line-height: 1;">"</div>
+                            <blockquote
+                                style="font-size: 18px; margin-bottom: 16px; line-height: 1.6; font-weight: 500; color: #1f2937;">
+                                doola handled Flagaholics' legal and financial setup so we could focus on growth &
+                                delivering a great customer experience.
+                            </blockquote>
+                            <div style="font-weight: 700; font-size: 18px; color: #1a1a1a; margin-bottom: 4px;">Adam
+                                Fuller</div>
+                            <div style="color: #666; font-size: 14px;">Co-Founder of Flagaholics</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testimonial-card" data-id="2"
+                    style="flex: 0 0 120px; min-height: 564px; background: #f3eae1; border-radius: 16px; cursor: pointer; overflow: hidden; position: relative; transition: flex 0.4s ease;">
+                    <div class="card-collapsed" style="position: relative; width: 100%; height: 100%;">
+                        <img src="person2.png" alt="Deon Bryan"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;"
+                            onerror="this.style.display='none'; this.parentElement.style.background='#dabfa5';">
+                        <div
+                            style="position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 10; display: flex; align-items: end; gap: 16px;">
+                            <div
+                                style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font-weight: 600; font-size: 16px; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                                Deon Bryan</div>
+                            <div
+                                style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font-size: 14px; color: rgba(255,255,255,0.9); text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                                Viteranz</div>
+                        </div>
+                    </div>
+                    <div class="card-expanded"
+                        style="display: none; padding: 24px; height: 100%; align-items: center; justify-content: center; gap: 24px;">
+                        <div
+                            style="width: 380px; height: 460px; border-radius: 16px; overflow: hidden; flex-shrink: 0; background: #dabfa5;">
+                            <img src="person2.png" alt="Deon Bryan"
+                                style="width: 100%; height: 100%; object-fit: cover;"
+                                onerror="this.style.display='none';">
+                        </div>
+                        <div
+                            style="background: #fed7aa; border-radius: 16px; padding: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 380px; height: 250px; display: flex; flex-direction: column; justify-content: center;">
+                            <div style="font-size: 48px; color: #fb923c; margin-bottom: 12px; line-height: 1;">"</div>
+                            <blockquote
+                                style="font-size: 18px; margin-bottom: 16px; line-height: 1.6; font-weight: 500; color: #1f2937;">
+                                The ease of setup, combined with the resources available through doola, helped me get
+                                things done efficiently.
+                            </blockquote>
+                            <div style="font-weight: 700; font-size: 18px; color: #1a1a1a; margin-bottom: 4px;">Deon
+                                Bryan</div>
+                            <div style="color: #666; font-size: 14px;">CEO at Viteranz</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 (Default Expanded) -->
+                <div class="testimonial-card expanded" data-id="3"
+                    style="flex: 0 0 800px; min-height: 564px; background: #f3eae1; border-radius: 16px; cursor: pointer; overflow: hidden; position: relative; transition: flex 0.4s ease;">
+                    <div class="card-collapsed" style="display: none; position: relative; width: 100%; height: 100%;">
+                        <img src="person1.png" alt="Alex Lieberman"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;"
+                            onerror="this.style.display='none'; this.parentElement.style.background='#ffa979';">
+                        <div
+                            style="position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 10; display: flex; align-items: end; gap: 16px;">
+                            <div
+                                style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font-weight: 600; font-size: 16px; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                                Alex Lieberman</div>
+                            <div
+                                style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font-size: 14px; color: rgba(255,255,255,0.9); text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                                storyarb</div>
+                        </div>
+                    </div>
+                    <div class="card-expanded"
+                        style="display: flex; padding: 24px; height: 100%; align-items: center; justify-content: center; gap: 24px;">
+                        <div
+                            style="width: 380px; height: 460px; border-radius: 16px; overflow: hidden; flex-shrink: 0; background: #ffa979;">
+                            <img src="person1.png" alt="Alex Lieberman"
+                                style="width: 100%; height: 100%; object-fit: cover;"
+                                onerror="this.style.display='none';">
+                        </div>
+                        <div
+                            style="background: #fed7aa; border-radius: 16px; padding: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 380px; height: 250px; display: flex; flex-direction: column; justify-content: center;">
+                            <div style="font-size: 48px; color: #fb923c; margin-bottom: 12px; line-height: 1;">"</div>
+                            <blockquote
+                                style="font-size: 18px; margin-bottom: 16px; line-height: 1.6; font-weight: 500; color: #1f2937;">
+                                I thought it was very smooth, it was done within a day and all I hit was like 5 buttons.
+                            </blockquote>
+                            <div style="font-weight: 700; font-size: 18px; color: #1a1a1a; margin-bottom: 4px;">Alex
+                                Lieberman</div>
+                            <div style="color: #666; font-size: 14px;">Founder of <span
+                                    style="color: #f97316;">storyarb</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @media (max-width: 767px) {
+            .mobile-slider {
+                display: block !important;
+            }
+
+            .desktop-cards {
+                display: none !important;
+            }
+
+            .testimonials-section h2 {
+                font-size: 1.875rem !important;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mobile-slider {
+                display: none !important;
+            }
+
+            .desktop-cards {
+                display: flex !important;
+            }
+        }
+
+        .testimonial-card:hover {
+            opacity: 0.95;
+        }
+
+        .prev-btn:hover,
+        .next-btn:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .dot:hover {
+            opacity: 0.7;
+        }
+    </style>
+
+    <script>
+        (function () {
+            // Mobile Slider
+            let currentSlide = 0;
+            const sliderContainer = document.querySelector('.slider-container');
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+
+            function updateSlider() {
+                if (sliderContainer) {
+                    sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    dots.forEach((dot, index) => {
+                        dot.style.background = index === currentSlide ? '#990dd5' : '#d1d5db';
+                        if (index === currentSlide) {
+                            dot.classList.add('active');
+                        } else {
+                            dot.classList.remove('active');
+                        }
+                    });
+                }
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    updateSlider();
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    updateSlider();
+                });
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateSlider();
+                });
+            });
+
+            // Desktop Expandable Cards
+            const cards = document.querySelectorAll('.testimonial-card');
+
+            cards.forEach(card => {
+                card.addEventListener('click', function () {
+                    const wasExpanded = this.classList.contains('expanded');
+
+                    // Collapse all cards
+                    cards.forEach(c => {
+                        c.classList.remove('expanded');
+                        c.style.flex = '0 0 120px';
+                        const collapsed = c.querySelector('.card-collapsed');
+                        const expanded = c.querySelector('.card-expanded');
+                        if (collapsed) collapsed.style.display = 'block';
+                        if (expanded) expanded.style.display = 'none';
+                    });
+
+                    // Expand clicked card if it wasn't already expanded
+                    if (!wasExpanded) {
+                        this.classList.add('expanded');
+                        this.style.flex = '0 0 800px';
+                        const collapsed = this.querySelector('.card-collapsed');
+                        const expanded = this.querySelector('.card-expanded');
+                        if (collapsed) collapsed.style.display = 'none';
+                        if (expanded) expanded.style.display = 'flex';
+                    }
+                });
+            });
+        })();
+    </script>
 
     <!-- Our Promise Section -->
     <section style="background: #ffffff; padding: 120px 0; position: relative; overflow: hidden;">
