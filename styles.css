@@ -596,7 +596,10 @@ nav {
 .advantages-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Mobile responsive for advantages grid */
@@ -698,8 +701,10 @@ nav {
 
 .requirements-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .requirement-item {
@@ -1597,10 +1602,12 @@ footer {
   max-width: 100%;
 }
 
-.perks-grid {
-  grid-template-columns: 1fr;
-  gap: 40px;
-  /* Reduce the gap slightly for a better mobile look */
+@media (max-width: 768px) {
+  .perks-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    /* Reduce the gap slightly for a better mobile look */
+  }
 }
 
 /* Section Titles Mobile */
@@ -1613,21 +1620,23 @@ footer {
 }
 
 /* Advantages Grid Mobile */
-.advantages {
-  padding: 60px 0;
-}
+@media (max-width: 768px) {
+  .advantages {
+    padding: 60px 0;
+  }
 
-.advantages-grid {
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
+  .advantages-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-.advantage-card {
-  padding: 24px;
-}
+  .advantage-card {
+    padding: 24px;
+  }
 
-.advantage-card h3 {
-  font-size: 1.3rem;
+  .advantage-card h3 {
+    font-size: 1.3rem;
+  }
 }
 
 .btn-demo {
@@ -1636,12 +1645,14 @@ footer {
 }
 
 /* Requirements Mobile */
-.requirements {
-  padding: 60px 0;
-}
+@media (max-width: 768px) {
+  .requirements {
+    padding: 60px 0;
+  }
 
-.requirements-content {
-  grid-template-columns: 1fr;
+  .requirements-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Process Mobile */
@@ -2012,5 +2023,54 @@ footer {
 @media (max-width: 480px) {
   .footer-content {
     grid-template-columns: 1fr;
+  }
+}
+/* Compliance Content Responsive Styles */
+@media (max-width: 768px) {
+  .compliance-content {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .compliance-left h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .compliance-right > div {
+    padding: 24px !important;
+  }
+
+  .compliance-right h4 {
+    font-size: 1.3rem !important;
+    margin-bottom: 24px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .compliance-content {
+    gap: 30px !important;
+  }
+
+  .compliance-left {
+    padding: 0 !important;
+  }
+
+  .compliance-left h3 {
+    font-size: 1.4rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  .compliance-left p {
+    font-size: 1rem !important;
+    margin-bottom: 24px !important;
+  }
+
+  .note-box {
+    padding: 20px !important;
+  }
+
+  .compliance-right > div {
+    padding: 20px !important;
   }
 }
