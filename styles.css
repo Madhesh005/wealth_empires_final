@@ -299,6 +299,13 @@ nav {
   padding-top: 120px; /* Reduced padding for closer navbar-content gap */
 }
 
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
 .hero-text h1 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -2111,97 +2118,5 @@ footer {
   .partner-card > div:first-child {
     width: 70px !important;
     height: 70px !important;
-  }
-}
-/* Our Story Hero Section - Desktop Alignment Fix */
-@media (min-width: 769px) {
-  .hero-section .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 70vh;
-  }
-
-  .hero-section .hero-content {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .hero-section .availability-badge {
-    margin: 0 auto 40px auto;
-  }
-
-  .hero-section .hero-title {
-    margin: 0 auto 24px auto;
-  }
-
-  .hero-section .hero-description {
-    margin: 0 auto 40px auto;
-  }
-
-  .hero-section .cta-buttons {
-    margin: 0 auto;
-    width: fit-content;
-  }
-}
-
-/* Ensure mobile responsiveness is preserved */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 100px 20px 60px 20px !important;
-  }
-
-  .hero-section .container {
-    max-width: 100% !important;
-  }
-
-  .hero-section .hero-content {
-    display: block !important;
-  }
-}
-/* Our Story Hero Section - Reduced Gaps */
-@media (min-width: 769px) {
-  .hero-section .availability-badge {
-    margin-bottom: 24px !important;
-  }
-
-  .hero-section .hero-title {
-    margin-bottom: 16px !important;
-  }
-
-  .hero-section .hero-description {
-    margin-bottom: 32px !important;
-  }
-
-  .hero-section .cta-buttons {
-    gap: 16px !important;
-  }
-}
-
-/* Mobile gap adjustments */
-@media (max-width: 768px) {
-  .hero-section .availability-badge {
-    margin-bottom: 20px !important;
-  }
-
-  .hero-section .hero-title {
-    margin-bottom: 16px !important;
-  }
-
-  .hero-section .hero-description {
-    margin-bottom: 28px !important;
-  }
-}
-/* Our Story Hero Section - Badge to Title Spacing Fix */
-@media (min-width: 769px) {
-  .hero-section .availability-badge {
-    margin-bottom: 16px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-section .availability-badge {
-    margin-bottom: 16px !important;
   }
 }
