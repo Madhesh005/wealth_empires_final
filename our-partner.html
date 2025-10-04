@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,234 @@
     <link rel="icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="stylesheet" href="styles.css?v=3">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #ffffff;
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 10% 40px 60px 40px;
+            background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-left {
+            padding-right: 20px;
+        }
+
+        .hero-left h1 {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-left p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #4a4a4a;
+            margin-bottom: 36px;
+            max-width: 540px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14p x 32px;
+            background-color: #2383E2;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(35, 131, 226, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #1a6ec4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(35, 131, 226, 0.3);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .hero-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            object-fit: contain;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .pagination-dots {
+            display: flex;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #d1d1d1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #2383E2;
+            width: 32px;
+            border-radius: 5px;
+        }
+
+        .dot:hover {
+            background-color: #a0a0a0;
+        }
+
+        /* Tablet Styles */
+        @media (max-width: 1024px) {
+            .hero-content {
+                gap: 50px;
+            }
+
+            .hero-left h1 {
+                font-size: 52px;
+            }
+
+            .hero-left p {
+                font-size: 18px;
+            }
+
+            .hero-image {
+                max-width: 500px;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 40px 20px;
+                min-height: auto;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-left {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .hero-left h1 {
+                font-size: 42px;
+            }
+
+            .hero-left p {
+                font-size: 17px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-right {
+                display: none;
+                padding-left: 0;
+                order: -1;
+            }
+
+            .hero-image {
+                max-width: 100%;
+            }
+
+            .pagination-dots {
+                justify-content: center;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 30px 16px;
+            }
+
+            .hero-left h1 {
+                font-size: 36px;
+            }
+
+            .hero-left p {
+                font-size: 16px;
+                margin-bottom: 28px;
+            }
+
+            .cta-button {
+                padding: 12px 28px;
+                font-size: 15px;
+            }
+
+            .pagination-dots {
+                margin-top: 30px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <!-- Header -->
-     <div class="nav-overlay" id="navOverlay"></div>
+    <div class="nav-overlay" id="navOverlay"></div>
     <header>
         <div class="nav-container">
             <nav>
@@ -72,32 +297,31 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Our Partners<br><span class="highlight">Growing Together</span></h1>
-                    <p>Building strong partnerships with industry leaders, technology providers, and business experts to deliver exceptional value to our clients.</p>
+                <div class="hero-right">
+                    <div>
+                        <img src="home.png" alt="heroimage" width="80%" height=auto>
+                    </div>
+                </div>
+                <div class="hero-left">
+                    <h1>Our Partners Growing Together</h1>
+                    <p>Building strong partnerships with industry leaders, technology providers, and business experts to
+                        deliver exceptional value to our clients.</p>
                     <div class="hero-buttons">
                         <a href="contact.html" class="btn-large btn-black">Contact Us</a>
-                        <a href="https://crm.wealthempires.in/" class="btn-large btn-white">Start Registration</a>
+                        <a href="https://crm.wealthempires.in/" class="btn-large btn-primary">Start Registration</a>
                     </div>
-                    <div class="trustpilot">
-                        <div class="stars">★★★★★</div>
-                        <span>Excellent</span>
-                        <span>Trustpilot</span>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="glassmorphism-card">
-                        <div class="glass-content">
-                            <div class="professional-image">
-                                <img src="Wealth Empires.jpg" alt="Our Partners - Growing Together" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px;">
-                            </div>
-                        </div>
+                    <div class="pagination-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
                 </div>
+
             </div>
+        </div>
         </div>
     </section>
 
@@ -106,78 +330,96 @@
         <div class="container">
             <div class="section-title" style="text-align: center; margin-bottom: 60px;">
                 <h2>Our Partners</h2>
-                <p style="color: #667eea; font-size: 16px;">Meet our trusted partners who help us deliver exceptional service</p>
+                <p style="color: #667eea; font-size: 16px;">Meet our trusted partners who help us deliver exceptional
+                    service</p>
             </div>
 
             <!-- Partners Grid -->
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
                 <!-- Partner 1 -->
-                <div class="partner-card creators" style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
-                    <div style="width: 100px; height: 100px; border-radius: 50%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                        <img src="img/1 Software Development.jpg" alt="Software Development" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="partner-card creators"
+                    style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
+                    <div
+                        style="width: 100px; height: 100px; border-radius: 50%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                        <img src="img/1 Software Development.jpg" alt="Software Development"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div>
                         <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">Softrate</h3>
-                            <p style="margin: 0; color: #667eea; font-weight: 500;">TechCorp Solutions →</p>
-                        </div>
+                        <p style="margin: 0; color: #667eea; font-weight: 500;">TechCorp Solutions →</p>
                     </div>
+                </div>
 
-                    <!-- Partner 2 -->
-                    <div class="partner-card creators" style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
-                        <div style="width: 100px; height: 100px; border-radius: 50%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                            <img src="img/2 Pay roll.jpg" alt="Payroll Services" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <div>
-                            <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">DBS</h3>
-                            <p style="margin: 0; color: #667eea; font-weight: 500;">Payroll Services →</p>
-                        </div>
+                <!-- Partner 2 -->
+                <div class="partner-card creators"
+                    style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
+                    <div
+                        style="width: 100px; height: 100px; border-radius: 50%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                        <img src="dbs.jpg" alt="Payroll Services" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-
-                    <!-- Partner 3 -->
-                    <div class="partner-card tech" style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
-                        <div style="width: 100px; height: 100px; border-radius: 50%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                            <img src="img/3 Corporate banking.jpg" alt="Corporate Banking" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <div>
-                            <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">IDFC First Bank</h3>
-                            <p style="margin: 0; color: #667eea; font-weight: 500;">Corporate Bank Partners →</p>
-                        </div>
+                    <div>
+                        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">DBS</h3>
+                        <p style="margin: 0; color: #667eea; font-weight: 500;">Payroll Services →</p>
                     </div>
+                </div>
 
-                    <!-- Partner 4 -->
-                    <div class="partner-card ecommerce" style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
-                        <div style="width: 100px; height: 100px; border-radius: 50%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                            <img src="img/4 eCommerce.png" alt="eCommerce Platform" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <div>
-                            <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">FreshBook</h3>
-                            <p style="margin: 0; color: #667eea; font-weight: 500;">E-commerce →</p>
-                        </div>
+                <!-- Partner 3 -->
+                <div class="partner-card tech"
+                    style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
+                    <div
+                        style="width: 100px; height: 100px; border-radius: 50%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                        <img src="img/3 Corporate banking.jpg" alt="Corporate Banking"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-
-                    <!-- Partner 5 -->
-                    <div class="partner-card tech" style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
-                        <div style="width: 100px; height: 100px; border-radius: 50%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                            <img src="img/5 Office Space.png" alt="Office Space" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <div>
-                            <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">Greenways Business Park</h3>
-                            <p style="margin: 0; color: #667eea; font-weight: 500;">Office Space Solutions →</p>
-                        </div>
+                    <div>
+                        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">IDFC First Bank</h3>
+                        <p style="margin: 0; color: #667eea; font-weight: 500;">Corporate Bank Partners →</p>
                     </div>
+                </div>
 
-                    <!-- Partner 6 -->
-                    <div class="partner-card creators" style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
-                        <div style="width: 100px; height: 100px; border-radius: 50%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                            <img src="img/6 Legal.png" alt="Legal Services" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <div>
-                            <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">The Legal Empires</h3>
-                            <p style="margin: 0; color: #667eea; font-weight: 500;">Legal Services →</p>
-                        </div>
+                <!-- Partner 4 -->
+                <div class="partner-card ecommerce"
+                    style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
+                    <div
+                        style="width: 100px; height: 100px; border-radius: 50%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                        <img src="img/4 eCommerce.png" alt="eCommerce Platform"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">FreshBook</h3>
+                        <p style="margin: 0; color: #667eea; font-weight: 500;">E-commerce →</p>
+                    </div>
+                </div>
+
+                <!-- Partner 5 -->
+                <div class="partner-card tech"
+                    style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
+                    <div
+                        style="width: 100px; height: 100px; border-radius: 50%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                        <img src="img/5 Office Space.png" alt="Office Space"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">Greenways Business Park</h3>
+                        <p style="margin: 0; color: #667eea; font-weight: 500;">Office Space Solutions →</p>
+                    </div>
+                </div>
+
+                <!-- Partner 6 -->
+                <div class="partner-card creators"
+                    style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
+                    <div
+                        style="width: 100px; height: 100px; border-radius: 50%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+                        <img src="img/6 Legal.png" alt="Legal Services"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">The Legal Empires</h3>
+                        <p style="margin: 0; color: #667eea; font-weight: 500;">Legal Services →</p>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -197,7 +439,7 @@
         });
 
         // Add scroll effect to header (updated for new design)
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const navContainer = document.querySelector('.nav-container');
             if (window.scrollY > 100) {
                 navContainer.style.background = 'rgba(255, 255, 255, 0.98)';
@@ -214,123 +456,187 @@
         <div class="container">
             <div class="section-title" style="text-align: center; margin-bottom: 60px;">
                 <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #1a1a1a;">Why Partner With Us?</h2>
-                <p style="font-size: 1.1rem; color: #64748b; max-width: 700px; margin: 0 auto;">Join our growing network of partners and unlock new opportunities for your business</p>
+                <p style="font-size: 1.1rem; color: #64748b; max-width: 700px; margin: 0 auto;">Join our growing network
+                    of partners and unlock new opportunities for your business</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-bottom: 60px;">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-bottom: 60px;">
                 <!-- Benefit 1 -->
-                <div style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                    <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div
+                    style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                    <div
+                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                         <span style="font-size: 28px;">🤝</span>
                     </div>
                     <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: #1a1a1a;">Collaborative Growth</h3>
-                    <p style="color: #64748b; line-height: 1.6;">Work together to achieve mutual success and expand market reach</p>
+                    <p style="color: #64748b; line-height: 1.6;">Work together to achieve mutual success and expand
+                        market reach</p>
                 </div>
 
                 <!-- Benefit 2 -->
-                <div style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                    <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div
+                    style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                    <div
+                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                         <span style="font-size: 28px;">💼</span>
                     </div>
                     <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: #1a1a1a;">Business Resources</h3>
-                    <p style="color: #64748b; line-height: 1.6;">Access to our network, tools, and expertise to grow your business</p>
+                    <p style="color: #64748b; line-height: 1.6;">Access to our network, tools, and expertise to grow
+                        your business</p>
                 </div>
 
                 <!-- Benefit 3 -->
-                <div style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                    <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div
+                    style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                    <div
+                        style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                         <span style="font-size: 28px;">🎯</span>
                     </div>
                     <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: #1a1a1a;">Targeted Support</h3>
-                    <p style="color: #64748b; line-height: 1.6;">Dedicated support team to help you succeed in your partnership</p>
+                    <p style="color: #64748b; line-height: 1.6;">Dedicated support team to help you succeed in your
+                        partnership</p>
                 </div>
             </div>
         </div>
     </section>
-            
+
 
     <!-- Footer -->
-    <footer style="background: white; color: #1a1a1a; padding: 60px 0 0 0;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 40px;">
-                <!-- Our Office -->
-                <div>
-                    <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Our Office</h3>
-                    <div style="display: flex; flex-direction: column; gap: 20px;">
-                        <div style="display: flex; align-items: start; gap: 12px;">
-                            <span style="font-size: 20px;">📍</span>
-                            <p style="margin: 0; line-height: 1.6; color: #555;">Greenways Business Park</p>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                            <span style="font-size: 20px;">📞</span>
-                            <a href="tel:+919884521264" style="color: #555; text-decoration: none;">+91 9884521264</a>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                            <span style="font-size: 20px;">✉️</span>
-                            <a href="mailto:support@wealthempires.in" style="color: #555; text-decoration: none;">support@wealthempires.in</a>
-                        </div>
-                    </div>
+    <footer class="footer-container">
+        <!-- Top Header Section -->
+        <div class="footer-header">
+            <div class="footer-header-content">
+                <div class="logo-section">
+                    <img src="Wealth Empires.jpg" alt="Wealth Empires" class="footer-logo">
                 </div>
-
-                <!-- Services -->
-                <div>
-                    <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Services</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
-                        <li><a href="taxes.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Tax Planning</a></li>
-                        <li><a href="360-compliance.html" style="color: #555; text-decoration: none; transition: color 0.3s;">GST Compliance</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">Accounting</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">Financial Consultancy</a></li>
-                    </ul>
+                <div class="header-divider"></div>
+                <div class="contact-section">
+                    <a href="mailto:support@wealthempires.com" class="support-email">support@wealthempires.com</a>
                 </div>
-
-                <!-- Expertise -->
-                <div>
-                    <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Expertise</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
-                        <li><a href="trademark.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Trademark</a></li>
-                        <li><a href="incorporation.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Business Incorporation</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">FSSAI Certification</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">ISO Certification</a></li>
-                    </ul>
-                </div>
-
-                <!-- Reach Us - QR Code -->
-                <div>
-                    <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Reach Us</h3>
-                    <div style="background: #f5f5f5; padding: 15px; border-radius: 12px; display: inline-block; border: 1px solid #e0e0e0;">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wealthempires.in" alt="QR Code" style="width: 180px; height: 180px; display: block;">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Social Media Icons - Moved to bottom -->
-            <div style="display: flex; justify-content: center; gap: 15px; margin: 40px 0; padding: 30px 0; border-top: 1px solid #e0e0e0;">
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
-                    <span style="font-size: 20px;">𝕏</span>
-                </a>
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
-                    <span style="font-size: 20px;">📷</span>
-                </a>
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
-                    <span style="font-size: 20px;">▶️</span>
-                </a>
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
-                    <span style="font-size: 20px;">in</span>
-                </a>
             </div>
         </div>
 
-        <!-- Footer Bottom -->
-        <div style="border-top: 1px solid #e0e0e0; padding: 25px 0; margin-top: 0; background: #f8f8f8;">
-            <div class="container">
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-                    <p style="margin: 0; color: #555; font-size: 14px;">© Wealth Empires Private Limited | All Rights Reserved.</p>
-                    <p style="margin: 0; color: #555; font-size: 14px;">Designed & Developed By <span style="color: #667eea; font-weight: 600;">Softrate Global</span></p>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Platform</h3>
+                <ul>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Why Wealth Empires?</a></li>
+                    <li><a href="#">Low-Code Development Platform</a></li>
+                    <li><a href="#">No-Code Development Platform</a></li>
+                    <li><a href="#">New feature releases</a></li>
+                </ul>
+                <h3 style="margin-top: 32px;">Quick links</h3>
+                <ul>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Schedule a demo</a></li>
+                    <li><a href="#">App store</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Use cases</h3>
+                <ul>
+                    <li><a href="#">Application development</a></li>
+                    <li><a href="#">Process management</a></li>
+                    <li><a href="#">Case management</a></li>
+                    <li><a href="#">BPM software</a></li>
+                    <li><a href="#">Workflow software</a></li>
+                    <li><a href="#">Citizen development</a></li>
+                    <li><a href="#">Digital transformation</a></li>
+                    <li><a href="#">Application Modernization Platform</a></li>
+                    <li><a href="#">Lotus Notes migration</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Industries</h3>
+                <ul>
+                    <li><a href="#">Oil & Gas</a></li>
+                    <li><a href="#">Banking</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Manufacturing</a></li>
+                    <li><a href="#">Retail</a></li>
+                </ul>
+                <h3 style="margin-top: 32px;">Templates</h3>
+                <ul>
+                    <li><a href="#">Leave management app</a></li>
+                    <li><a href="#">Expense management app</a></li>
+                    <li><a href="#">Performance management system</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">eBooks</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">App integrations</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <h3 style="margin-top: 32px;">Developer Hub</h3>
+                <ul>
+                    <li><a href="#">API docs</a></li>
+                    <li><a href="#">Help docs</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Life at Wealth Empires</a></li>
+                    <li><a href="#">Analyst Reports</a></li>
+                    <li><a href="#">News & Media</a></li>
+                    <li><a href="#">Brand assets</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-links">
+                    <a href="#">Terms of Service</a>
+                    <span>|</span>
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Compliance</a>
+                    <span>|</span>
+                    <a href="#">Security</a>
+                    <span>|</span>
+                    <a href="#">GDPR</a>
+                    <span>|</span>
+                    <a href="#">Responsible Disclosure</a>
+                    <span>|</span>
+                    <a href="#">End of Life (EoL)</a>
+                </div>
+
+                <div class="footer-right">
+                    <div class="copyright">
+                        Copyright © 2025 Wealth Empires Inc.
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-        <script>
+    <script>
         // --- Hamburger Menu, Overlay, and Dropdown Logic ---
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
@@ -396,5 +702,5 @@
         });
     </script>
 </body>
-</html>
 
+</html>

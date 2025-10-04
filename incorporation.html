@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,231 @@
     <link rel="icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="stylesheet" href="styles.css?v=3">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #ffffff;
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 10% 40px 60px 40px;
+            background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-left {
+            padding-right: 20px;
+        }
+
+        .hero-left h1 {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-left p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #4a4a4a;
+            margin-bottom: 36px;
+            max-width: 540px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14p x 32px;
+            background-color: #2383E2;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(35, 131, 226, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #1a6ec4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(35, 131, 226, 0.3);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .hero-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            object-fit: contain;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .pagination-dots {
+            display: flex;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #d1d1d1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #2383E2;
+            width: 32px;
+            border-radius: 5px;
+        }
+
+        .dot:hover {
+            background-color: #a0a0a0;
+        }
+
+        /* Tablet Styles */
+        @media (max-width: 1024px) {
+            .hero-content {
+                gap: 50px;
+            }
+
+            .hero-left h1 {
+                font-size: 52px;
+            }
+
+            .hero-left p {
+                font-size: 18px;
+            }
+
+            .hero-image {
+                max-width: 500px;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 40px 20px;
+                min-height: auto;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-left {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .hero-left h1 {
+                font-size: 42px;
+            }
+
+            .hero-left p {
+                font-size: 17px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-right {
+                display: none;
+                padding-left: 0;
+                order: -1;
+            }
+
+            .hero-image {
+                max-width: 100%;
+            }
+
+            .pagination-dots {
+                justify-content: center;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 30px 16px;
+            }
+
+            .hero-left h1 {
+                font-size: 36px;
+            }
+
+            .hero-left p {
+                font-size: 16px;
+                margin-bottom: 28px;
+            }
+
+            .cta-button {
+                padding: 12px 28px;
+                font-size: 15px;
+            }
+
+            .pagination-dots {
+                margin-top: 30px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="nav-overlay" id="navOverlay"></div>
     <header>
@@ -61,7 +286,8 @@
                     <li class="header-buttons-li">
                         <div class="header-buttons">
                             <a href="contact.html" class="btn-demo">Contact Us</a>
-                            <a href="https://crm.wealthempires.in/" class="btn-demo">Start Registration</a>
+                            <a href="https://crm.wealthempires.in/" class="btn-primary" style="color: white;">Start
+                                Registration</a>
                         </div>
                     </li>
                 </ul>
@@ -71,31 +297,32 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Company Incorporation<br><span class="highlight">Made Simple</span></h1>
-                    <p>Start your business journey with confidence. We provide comprehensive incorporation services for all types of business entities in India, ensuring legal compliance and professional setup.</p>
+                <div class="hero-right">
+
+                    <div>
+                        <img src="home.png" alt="heroimage" width="80%" height=100%>
+                    </div>
+                </div>
+                <div class="hero-left">
+                    <h1>Company Incorporation Made Simple</h1>
+                    <p>Start your business journey with confidence. We provide comprehensive incorporation services for
+                        all types of business entities in India, ensuring legal compliance and professional setup.</p>
                     <div class="hero-buttons">
                         <a href="contact.html" class="btn-large btn-black">Contact Us</a>
-                        <a href="https://crm.wealthempires.in/" class="btn-large btn-white">Start Registration</a>
+                        <a href="https://crm.wealthempires.in/" class="btn-large btn-primary">Start Registration</a>
                     </div>
-                    <div class="trustpilot">
-                        <span class="stars">★★★★★</span>
-                        <span>Successfully incorporated 8,000+ companies</span>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="glassmorphism-card">
-                        <div class="glass-content">
-                            <div class="professional-image">
-                                <img src="home.png" alt="Professional Incorporation Services" style="width: 100%; height: auto; object-fit: cover; border-radius: 12px;">
-                            </div>
-                        </div>
+                    <div class="pagination-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
                 </div>
+
             </div>
+        </div>
         </div>
     </section>
 
@@ -104,32 +331,41 @@
         <div class="container">
             <div class="section-title">
                 <h2>Why Choose Private Limited Company?</h2>
-                <p>A Private Limited Company Incorporation is one of India's most popular business structures. It offers several advantages, let us explain.</p>
+                <p>A Private Limited Company Incorporation is one of India's most popular business structures. It offers
+                    several advantages, let us explain.</p>
             </div>
             <div class="advantages-grid">
                 <div class="advantage-card">
                     <h3>Distinct Legal Identity</h3>
-                    <p>A Private Limited Company possesses an independent legal entity distinct from its proprietors. It has the capacity to own assets, engage in contractual agreements, and initiate or defend legal actions under its own name.</p>
+                    <p>A Private Limited Company possesses an independent legal entity distinct from its proprietors. It
+                        has the capacity to own assets, engage in contractual agreements, and initiate or defend legal
+                        actions under its own name.</p>
                 </div>
                 <div class="advantage-card">
                     <h3>Continuous Existence</h3>
-                    <p>The company's existence persists irrespective of shifts in shareholders or directors. Its existence is not contingent upon the lifespan of its associates.</p>
+                    <p>The company's existence persists irrespective of shifts in shareholders or directors. Its
+                        existence is not contingent upon the lifespan of its associates.</p>
                 </div>
                 <div class="advantage-card">
                     <h3>Ease of Funding & Investments</h3>
-                    <p>Raising capital by issuing shares to investors, venture capitalists, or angel investors is easier. This structure attracts external investment and removes capital worries when an entrepreneur starts a company.</p>
+                    <p>Raising capital by issuing shares to investors, venture capitalists, or angel investors is
+                        easier. This structure attracts external investment and removes capital worries when an
+                        entrepreneur starts a company.</p>
                 </div>
                 <div class="advantage-card">
                     <h3>Tax Benefits</h3>
-                    <p>Private Limited Companies may qualify for various tax benefits and exemptions, making them tax-efficient entities.</p>
+                    <p>Private Limited Companies may qualify for various tax benefits and exemptions, making them
+                        tax-efficient entities.</p>
                 </div>
                 <div class="advantage-card">
                     <h3>Credibility and Trust</h3>
-                    <p>Having "Pvt. Ltd." in your company name often instills more confidence and trust in clients, customers, suppliers, and partners.</p>
+                    <p>Having "Pvt. Ltd." in your company name often instills more confidence and trust in clients,
+                        customers, suppliers, and partners.</p>
                 </div>
                 <div class="advantage-card">
                     <h3>Regulatory Compliance</h3>
-                    <p>Private Limited Companies follow well-defined compliance and governance norms, which ensures transparency.</p>
+                    <p>Private Limited Companies follow well-defined compliance and governance norms, which ensures
+                        transparency.</p>
                 </div>
             </div>
         </div>
@@ -169,7 +405,7 @@
                         <li>You can use your home address if no office available</li>
                     </ul>
                 </div>
-            
+
             </div>
         </div>
     </section>
@@ -179,7 +415,8 @@
         <div class="container">
             <div class="section-title">
                 <h2>Company Registration Process</h2>
-                <p>Our streamlined 5-step process makes company registration simple and efficient with innovative solutions</p>
+                <p>Our streamlined 5-step process makes company registration simple and efficient with innovative
+                    solutions</p>
                 <div class="process-timeline"></div>
             </div>
             <div class="process-steps">
@@ -190,7 +427,9 @@
                     </div>
                     <div class="step-content">
                         <h3>Name Reservation (SPICe+ Part A)</h3>
-                        <p>Begin by completing the SPICe+ Part A form to secure a unique company name. This entails selecting the company type, class, category, and sub-category, specifying the primary division of industrial activity and offering a comprehensive business description.</p>
+                        <p>Begin by completing the SPICe+ Part A form to secure a unique company name. This entails
+                            selecting the company type, class, category, and sub-category, specifying the primary
+                            division of industrial activity and offering a comprehensive business description.</p>
                         <div class="step-badge">Creative</div>
                     </div>
                 </div>
@@ -201,7 +440,9 @@
                     </div>
                     <div class="step-content">
                         <h3>Acquire Digital Signature Certificate (DSC)</h3>
-                        <p>Every director and shareholder must secure a Digital Signature Certificate (DSC) issued by the Controller of Certification Agencies (CCA). This involves providing essential details such as passport-sized photos, PAN, Aadhaar Card, phone number, and email address.</p>
+                        <p>Every director and shareholder must secure a Digital Signature Certificate (DSC) issued by
+                            the Controller of Certification Agencies (CCA). This involves providing essential details
+                            such as passport-sized photos, PAN, Aadhaar Card, phone number, and email address.</p>
                         <div class="step-badge">Essential</div>
                     </div>
                 </div>
@@ -212,7 +453,8 @@
                     </div>
                     <div class="step-content">
                         <h3>Director Identification Number (DIN)</h3>
-                        <p>Obtain a Director Identification Number (DIN) if you intend to be a director in the company. DIN is essential for directors and needs to be provided in the registration form.</p>
+                        <p>Obtain a Director Identification Number (DIN) if you intend to be a director in the company.
+                            DIN is essential for directors and needs to be provided in the registration form.</p>
                         <div class="step-badge">Required</div>
                     </div>
                 </div>
@@ -223,7 +465,9 @@
                     </div>
                     <div class="step-content">
                         <h3>MOA and AOA Submission</h3>
-                        <p>Draft the Memorandum of Association (MOA) and Articles of Association (AOA) containing crucial company details. Obtain digital signatures from subscribers and professionals before submitting to MCA. Additionally, file AGILE-PRO-S form for GST, EPFO, ESIC registration.</p>
+                        <p>Draft the Memorandum of Association (MOA) and Articles of Association (AOA) containing
+                            crucial company details. Obtain digital signatures from subscribers and professionals before
+                            submitting to MCA. Additionally, file AGILE-PRO-S form for GST, EPFO, ESIC registration.</p>
                         <div class="step-badge">Detailed</div>
                     </div>
                 </div>
@@ -234,7 +478,9 @@
                     </div>
                     <div class="step-content">
                         <h3>Submit Company Details (SPICe+ Part B)</h3>
-                        <p>Provide comprehensive information concerning capital, registered office address, subscriber and directors' details, stamp duty, PAN and TAN application, and necessary attachments for company registration.</p>
+                        <p>Provide comprehensive information concerning capital, registered office address, subscriber
+                            and directors' details, stamp duty, PAN and TAN application, and necessary attachments for
+                            company registration.</p>
                         <div class="step-badge">Final</div>
                     </div>
                 </div>
@@ -258,14 +504,15 @@
         </div>
     </section>
 
-  
+
 
     <!-- Deliverables Section -->
     <section class="deliverables">
         <div class="container">
             <div class="section-title">
                 <h2>What You'll Receive</h2>
-                <p>Upon successful document verification, the Ministry Of Corporate Affairs (MCA) will issue the following</p>
+                <p>Upon successful document verification, the Ministry Of Corporate Affairs (MCA) will issue the
+                    following</p>
             </div>
             <div class="deliverables-grid">
                 <div class="deliverable-item">
@@ -284,7 +531,7 @@
                     <h3>TAN</h3>
                     <p>Tax Deduction and Collection Account Number</p>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -306,7 +553,7 @@
         });
 
         // Add scroll effect to header
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.background = 'rgba(255, 255, 255, 0.95)';
@@ -319,126 +566,231 @@
     </script>
 
     <!-- Footer -->
-    <footer style="background: white; color: #1a1a1a; padding: 60px 0 0 0;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 40px;">
-                <!-- Our Office -->
-                <div>
-                    <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Our Office</h3>
-                    <div style="display: flex; flex-direction: column; gap: 20px;">
-                        <div style="display: flex; align-items: start; gap: 12px;">
-                            <span style="font-size: 20px;">📍</span>
-                            <p style="margin: 0; line-height: 1.6; color: #555;">Greenways Business Park</p>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                            <span style="font-size: 20px;">📞</span>
-                            <a href="tel:+919884521264" style="color: #555; text-decoration: none;">+91 9884521264</a>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                            <span style="font-size: 20px;">✉️</span>
-                            <a href="mailto:support@wealthempires.in" style="color: #555; text-decoration: none;">support@wealthempires.in</a>
-                        </div>
-                    </div>
+    <footer class="footer-container">
+        <!-- Top Header Section -->
+        <div class="footer-header">
+            <div class="footer-header-content">
+                <div class="logo-section">
+                    <img src="Wealth Empires.jpg" alt="Wealth Empires" class="footer-logo">
                 </div>
-
-                <!-- Services -->
-                <div>
-                    <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Services</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
-                        <li><a href="taxes.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Tax Planning</a></li>
-                        <li><a href="360-compliance.html" style="color: #555; text-decoration: none; transition: color 0.3s;">GST Compliance</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">Accounting</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">Financial Consultancy</a></li>
-                    </ul>
+                <div class="header-divider"></div>
+                <div class="contact-section">
+                    <a href="mailto:support@wealthempires.com" class="support-email">support@wealthempires.com</a>
                 </div>
-
-                <!-- Expertise -->
-                <div>
-                    <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Expertise</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
-                        <li><a href="trademark.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Trademark</a></li>
-                        <li><a href="incorporation.html" style="color: #555; text-decoration: none; transition: color 0.3s;">Business Incorporation</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">FSSAI Certification</a></li>
-                        <li><a href="#" style="color: #555; text-decoration: none; transition: color 0.3s;">ISO Certification</a></li>
-                    </ul>
-                </div>
-
-                <!-- Reach Us - QR Code -->
-                <div>
-                    <h3 style="color: #1a1a1a; font-size: 24px; margin-bottom: 25px; font-weight: 600;">Reach Us</h3>
-                    <div style="background: #f5f5f5; padding: 15px; border-radius: 12px; display: inline-block; border: 1px solid #e0e0e0;">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wealthempires.in" alt="QR Code" style="width: 180px; height: 180px; display: block;">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Social Media Icons - Moved to bottom -->
-            <div style="display: flex; justify-content: center; gap: 15px; margin: 40px 0; padding: 30px 0; border-top: 1px solid #e0e0e0;">
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
-                    <span style="font-size: 20px;">𝕏</span>
-                </a>
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
-                    <span style="font-size: 20px;">📷</span>
-                </a>
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
-                    <span style="font-size: 20px;">▶️</span>
-                </a>
-                <a href="#" style="width: 45px; height: 45px; border: 2px solid #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; text-decoration: none; transition: all 0.3s;">
-                    <span style="font-size: 20px;">in</span>
-                </a>
             </div>
         </div>
 
-        <!-- Footer Bottom -->
-        <div style="border-top: 1px solid #e0e0e0; padding: 25px 0; margin-top: 0; background: #f8f8f8;">
-            <div class="container">
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-                    <p style="margin: 0; color: #555; font-size: 14px;">© Wealth Empires Private Limited | All Rights Reserved.</p>
-                    <p style="margin: 0; color: #555; font-size: 14px;">Designed & Developed By <span style="color: #667eea; font-weight: 600;">Softrate Global</span></p>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Platform</h3>
+                <ul>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Why Wealth Empires?</a></li>
+                    <li><a href="#">Low-Code Development Platform</a></li>
+                    <li><a href="#">No-Code Development Platform</a></li>
+                    <li><a href="#">New feature releases</a></li>
+                </ul>
+                <h3 style="margin-top: 32px;">Quick links</h3>
+                <ul>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Schedule a demo</a></li>
+                    <li><a href="#">App store</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Use cases</h3>
+                <ul>
+                    <li><a href="#">Application development</a></li>
+                    <li><a href="#">Process management</a></li>
+                    <li><a href="#">Case management</a></li>
+                    <li><a href="#">BPM software</a></li>
+                    <li><a href="#">Workflow software</a></li>
+                    <li><a href="#">Citizen development</a></li>
+                    <li><a href="#">Digital transformation</a></li>
+                    <li><a href="#">Application Modernization Platform</a></li>
+                    <li><a href="#">Lotus Notes migration</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Industries</h3>
+                <ul>
+                    <li><a href="#">Oil & Gas</a></li>
+                    <li><a href="#">Banking</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Manufacturing</a></li>
+                    <li><a href="#">Retail</a></li>
+                </ul>
+                <h3 style="margin-top: 32px;">Templates</h3>
+                <ul>
+                    <li><a href="#">Leave management app</a></li>
+                    <li><a href="#">Expense management app</a></li>
+                    <li><a href="#">Performance management system</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">eBooks</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">App integrations</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <h3 style="margin-top: 32px;">Developer Hub</h3>
+                <ul>
+                    <li><a href="#">API docs</a></li>
+                    <li><a href="#">Help docs</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Life at Wealth Empires</a></li>
+                    <li><a href="#">Analyst Reports</a></li>
+                    <li><a href="#">News & Media</a></li>
+                    <li><a href="#">Brand assets</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-links">
+                    <a href="#">Terms of Service</a>
+                    <span>|</span>
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Compliance</a>
+                    <span>|</span>
+                    <a href="#">Security</a>
+                    <span>|</span>
+                    <a href="#">GDPR</a>
+                    <span>|</span>
+                    <a href="#">Responsible Disclosure</a>
+                    <span>|</span>
+                    <a href="#">End of Life (EoL)</a>
+                </div>
+
+                <div class="footer-right">
+                    <div class="copyright">
+                        Copyright © 2025 Wealth Empires Inc.
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-        <script>
+    <script>
         // --- Hamburger Menu, Overlay, and Dropdown Logic ---
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
         const navOverlay = document.getElementById('navOverlay');
         const dropdowns = document.querySelectorAll('.dropdown');
 
+        // Toggle mobile menu
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
             navOverlay.classList.toggle('active');
+            document.body.style.overflow = hamburger.classList.contains('active') ? 'hidden' : '';
         });
 
+        // Close menu when overlay is clicked
         navOverlay.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
             navOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+
+            // Close all dropdowns
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
         });
 
+        // Handle dropdown clicks
         dropdowns.forEach(dropdown => {
             const toggle = dropdown.querySelector('.dropdown-toggle');
+
             toggle.addEventListener('click', (e) => {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
+                    e.stopPropagation();
+
+                    // Close other dropdowns
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current dropdown
                     dropdown.classList.toggle('active');
                 }
             });
         });
 
-        document.querySelectorAll('.nav-links a:not(.dropdown-toggle)').forEach(link => {
+        // Close menu when clicking regular nav links (not dropdowns)
+        document.querySelectorAll('.nav-links > li > a:not(.dropdown-toggle)').forEach(link => {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 768) {
                     hamburger.classList.remove('active');
                     navLinks.classList.remove('active');
                     navOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
                 }
             });
         });
 
-        // --- Original Smooth Scrolling Logic ---
+        // Close menu when clicking dropdown items
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Handle window resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (window.innerWidth > 768) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            }, 250);
+        });
+
+        // --- Smooth Scrolling ---
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -452,7 +804,7 @@
             });
         });
 
-        // --- Original Scroll Effect for Header ---
+        // --- Scroll Effect for Header ---
         window.addEventListener('scroll', function () {
             const navContainer = document.querySelector('.nav-container');
             if (window.scrollY > 100) {
@@ -465,4 +817,5 @@
         });
     </script>
 </body>
+
 </html>
