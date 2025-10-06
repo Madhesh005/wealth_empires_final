@@ -1142,7 +1142,8 @@ nav {
 }
 
 .document-item {
-  background: #fff;
+  background: #181717;
+  color: white;
   padding: 32px;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -1157,12 +1158,13 @@ nav {
 .document-item h4 {
   font-size: 1.3rem;
   margin-bottom: 12px;
-  color: #1a1a1a;
+  font-weight: 700;
+  color: white;
   font-weight: 600;
 }
 
 .doc-description {
-  color: #667eea;
+  color: #7851a9;
   font-weight: 500;
   margin-bottom: 16px;
 }
@@ -1175,7 +1177,7 @@ nav {
 .document-item ul li {
   padding: 8px 0 8px 24px;
   position: relative;
-  color: #64748b;
+  color: white;
 }
 
 .document-item ul li::before {

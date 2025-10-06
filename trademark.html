@@ -230,6 +230,139 @@
                 margin-top: 30px;
             }
         }
+
+        /*How it Works*/
+        .impact-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 56px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #000000;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-description {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            color: black;
+            max-width: 100%;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .stat-card {
+            background-color: #eeede8;
+            border-radius: 8px;
+            padding: 48px 30px;
+            transition: transform 0.2s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #0c3737;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+        }
+
+        .stat-description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: black;
+            font-weight: 600;
+        }
+
+        /* Tablet */
+        @media (max-width: 968px) {
+            .section-title {
+                font-size: 44px;
+            }
+
+            .section-description {
+                font-size: 17px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat-card {
+                padding: 40px 32px;
+            }
+
+            .stat-number {
+                font-size: 64px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 640px) {
+            body {
+                padding: 40px 16px;
+            }
+
+            .section-header {
+                margin-bottom: 32px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .section-description {
+                font-size: 16px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .stat-card {
+                padding: 36px 28px;
+            }
+
+            .stat-number {
+                font-size: 56px;
+            }
+
+            .stat-description {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 32px;
+            }
+
+            .stat-number {
+                font-size: 48px;
+            }
+
+            .stat-card {
+                padding: 32px 24px;
+            }
+        }
     </style>
 </head>
 
@@ -395,27 +528,27 @@
             <div class="section-title">
                 <h2>Trademark Symbols</h2>
                 <p>Understanding the different trademark symbols and their meanings</p>
-            </div>
+            </div><br>
             <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; max-width: 900px; margin: 0 auto;">
-                <div class="advantage-card" style="background: #E5E8F5; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px; color: #1a1a1a;">™</div>
-                    <h3>TM Symbol (™)</h3>
-                    <p>The TM symbol stands for "trademark" and can be used by the owner, even though the trademark is
+                style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; max-width: 900px; margin: 0px auto;">
+                <div class="advantage-card" style="background: #7851a9; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 0px; color: wheat; " >™</div>
+                    <h3 style="color: whitesmoke;">TM Symbol (™)</h3>
+                    <p style="color: white;">The TM symbol stands for "trademark" and can be used by the owner, even though the trademark is
                         not yet registered. It provides basic rights to the owner.</p>
                 </div>
-                <div class="advantage-card" style="background: #E5E8F5; text-align: center;">
+                <div class="advantage-card" style="background: #0d3535; text-align: center;">
                     <div
-                        style="font-size: 3rem; margin-bottom: 16px; color: #1a1a1a; border: 2px solid #1a1a1a; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+                        style="font-size: 3rem; margin-bottom: 16px; color: wheat; border: 2px solid wheat; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
                         ®</div>
-                    <h3>® Symbol (®)</h3>
-                    <p>The ® symbol indicates that the trademark is officially registered with the relevant authority.
+                    <h3 style="color: whitesmoke;">® Symbol (®)</h3>
+                    <p style="color: white;">The ® symbol indicates that the trademark is officially registered with the relevant authority.
                         It provides full legal protection against unauthorized use.</p>
                 </div>
-                <div class="advantage-card" style="background: #E5E8F5; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px; color: #1a1a1a;">℠</div>
-                    <h3>SM Symbol (℠)</h3>
-                    <p>The SM symbol stands for "service mark" and is used to represent services, even if they are not
+                <div class="advantage-card" style="background: #0d4d4d; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 0px; color: wheat;">℠</div>
+                    <h3 style="color:whitesmoke;">SM Symbol (℠)</h3>
+                    <p style="color: white;">The SM symbol stands for "service mark" and is used to represent services, even if they are not
                         registered. Like TM, it helps indicate rights to the service.</p>
                 </div>
             </div>
@@ -458,122 +591,32 @@
     </section>
 
     <!-- How it Works Process Section -->
-    <section class="process">
-        <div class="container">
-            <div class="section-title">
-                <h2>How it works?</h2>
-                <p>Process to Register a Trademark</p>
+    <section class="impact-section">
+        <div class="section-header">
+            <h1 class="section-title">How it works?</h1>
+            <p class="section-description">Process to Register a Trademark</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">TM search by our experts</div>
+                <p class="stat-description">Result within 24 hours</p>
             </div>
 
-            <!-- Process Steps Visual -->
-            <div style="text-align: center; margin: 40px 0;">
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
-                    <div style="text-align: center;">
-                        <div
-                            style="width: 80px; height: 80px; background: #E5F5FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">
-                            🔍</div>
-                        <h4>TM search by our experts</h4>
-                        <p style="font-size: 14px; color: #64748b;">Result within 24 hours</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <div
-                            style="width: 80px; height: 80px; background: #FFE5F5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">
-                            📝</div>
-                        <h4>TM application filing & start using TM</h4>
-                        <p style="font-size: 14px; color: #64748b;">1 - 2 days process</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <div
-                            style="width: 80px; height: 80px; background: #E5FFE5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px;">
-                            📜</div>
-                        <h4>TM registration certificate (10 years validity)</h4>
-                        <p style="font-size: 14px; color: #64748b;">Upon approval</p>
-                    </div>
-                </div>
+            <div class="stat-card">
+                <div class="stat-number">TM application filing & start using TM</div>
+                <p class="stat-description">1 - 2 days process</p>
             </div>
 
-            <div class="process-timeline"></div>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">
-                        <span>1</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Search for Existing Trademarks (TM search)</h3>
-                        <p>Before applying, search for existing trademarks on the IP India website. This helps ensure
-                            your chosen trademark isn't already in use.</p>
-                        <span class="step-badge">Initial Research</span>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">
-                        <span>2</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Submit Your Trademark Application</h3>
-                        <p>Once the search is complete, you can file your trademark application in two ways: Manual
-                            filing (Submit application forms at the trademark office) or Online filing (Use the
-                            trademark registration portal for a faster process). You can apply for one class of goods or
-                            services or for multiple classes, depending on your business. Fees vary based on the number
-                            of classes.</p>
-                        <span class="step-badge">Application Filing</span>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">
-                        <span>3</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Examination of Your Application</h3>
-                        <p>After submission, your application is reviewed by the Indian Trademark Registry. The
-                            registrar officer will issue an examination report to check if your trademark follows the
-                            rules of the Trademark Act 1999. If everything is in order, the trademark will be published
-                            in the Trademark Journal.</p>
-                        <span class="step-badge">Review Process</span>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">
-                        <span>4</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Publication in the Trademark Journal</h3>
-                        <p>Your trademark will be published in the Trademark Journal. After publication, there is a
-                            four-month opposition period where others can oppose your application. If no one objects
-                            during these months from the date of publication, your application moves forward.</p>
-                        <span class="step-badge">Opposition Period</span>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">
-                        <span>5</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Receive Your Trademark Certificate</h3>
-                        <p>If there is no opposition, or if it is resolved, you will receive your trademark registration
-                            certificate. Once you get the certificate, your brand is officially protected, and you can
-                            use the TM symbol (TM).</p>
-                        <span class="step-badge">Certificate Issued</span>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">
-                        <span>6</span>
-                        <div class="step-icon">📊</div>
-                    </div>
-                    <div class="step-content">
-                        <h3>Monitor Your Application</h3>
-                        <p>Throughout the process, you can check the trademark status on the India portal. It's
-                            important to stay updated as the registration process can take several months. By following
-                            these steps, you can complete the trademark registration process in India and ensure your
-                            brand is legally protected.</p>
-                        <span class="step-badge">Ongoing Monitoring</span>
-                    </div>
-                </div>
+            <div class="stat-card">
+                <div class="stat-number">TM registration certificate (10 years validity)</div>
+                <p class="stat-description">Upon approval</p>
             </div>
         </div>
     </section>
+
+
+
 
     <!-- Sample Certificate Section -->
     <section class="gst-section">
@@ -628,12 +671,12 @@
     <style>
         .gst-section {
             background: #f8fafc;
-            padding: 80px 0;
+            padding: 80px 0 30px 0px;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 10px;
         }
 
         .section-title h2 {
@@ -705,6 +748,7 @@
             width: 80%;
             height: auto;
         }
+
         .certificate-image .image-box {
             background: white;
             padding: 30px;
