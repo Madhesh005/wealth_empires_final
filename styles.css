@@ -274,7 +274,6 @@ nav {
 }
 
 .btn-primary:hover {
-  background: #0c0101fd;
   transform: translateY(-1px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
@@ -705,7 +704,7 @@ nav {
 /* Section Styles */
 .section-title {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 34px;
 }
 
 .section-title h2 {
@@ -725,7 +724,7 @@ nav {
 
 /* Advantages Section */
 .advantages {
-  padding: 60px 0;
+  padding: 30px 0;
   background: #fff;
 }
 
@@ -922,7 +921,7 @@ nav {
 .step-number span {
   width: 48px;
   height: 48px;
-  background: #667eea;
+  background: #0c3737;
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -953,7 +952,7 @@ nav {
   display: inline-block;
   padding: 6px 16px;
   background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
+  color: #0c3737;
   border-radius: 20px;
   font-size: 14px;
   font-weight: 600;
@@ -986,7 +985,7 @@ nav {
 
 .stat-item h4 {
   font-size: 2rem;
-  color: #667eea;
+  color: #0c3737;
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -1844,7 +1843,7 @@ footer {
 /* GST Section Mobile */
 .gst-section {
   align-items: center;
-  padding: 0px 0px 40px 0px;
+  padding: 20px;
 }
 
 .gst-info-grid {

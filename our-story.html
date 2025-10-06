@@ -7,6 +7,8 @@
     <title>Our Story | Wealth Empires</title>
     <link rel="icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Wealth Empires.jpg">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=rocket_launch" />
     <link rel="stylesheet" href="styles.css?v=3">
     <style>
         * {
@@ -28,10 +30,10 @@
             grid-template-columns: 1fr 1.3fr;
             gap: 60px;
             align-items: start;
-            padding: 50px;
+            padding: 70px;
         }
 
- 
+
         .section-label {
             font-family: 'Brush Script MT', 'Dancing Script', cursive;
             font-size: 36px;
@@ -132,7 +134,7 @@
         .card-content h3 {
             font-size: 23px;
             font-weight: 600;
-            margin-bottom: 32px;
+            margin-bottom: 19px;
             line-height: 1.2;
         }
 
@@ -243,6 +245,7 @@
                 font-size: 14px;
             }
         }
+
         .story-section {
             max-width: 1400px;
             width: 100%;
@@ -469,20 +472,20 @@
             .impact-showcase {
                 padding: 80px 0 !important;
             }
-            
+
             .impact-showcase h2 {
                 font-size: 2.8rem !important;
             }
-            
-            .impact-showcase > div > div:nth-child(2) > div {
+
+            .impact-showcase>div>div:nth-child(2)>div {
                 grid-template-columns: 1fr !important;
                 gap: 40px !important;
             }
-            
-            .impact-showcase > div > div:nth-child(2) > div > div:nth-child(2) {
+
+            .impact-showcase>div>div:nth-child(2)>div>div:nth-child(2) {
                 display: none !important;
             }
-            
+
             .impact-timeline-card {
                 transform: none !important;
             }
@@ -492,29 +495,29 @@
             .impact-showcase {
                 padding: 60px 0 !important;
             }
-            
+
             .impact-showcase h2 {
                 font-size: 2.2rem !important;
                 line-height: 1.2 !important;
             }
-            
+
             .impact-showcase p {
                 font-size: 1.1rem !important;
             }
-            
+
             .impact-timeline-card {
                 padding: 30px 20px !important;
             }
-            
-            .impact-timeline-card > div > div:first-child {
+
+            .impact-timeline-card>div>div:first-child {
                 width: 60px !important;
                 height: 60px !important;
             }
-            
+
             .impact-timeline-card h3 {
                 font-size: 1.5rem !important;
             }
-            
+
             .impact-timeline-card p {
                 font-size: 1rem !important;
             }
@@ -524,24 +527,284 @@
             .impact-showcase h2 {
                 font-size: 1.8rem !important;
             }
-            
+
             .impact-timeline-card {
                 padding: 24px 16px !important;
             }
-            
-            .impact-timeline-card > div {
+
+            .impact-timeline-card>div {
                 flex-direction: column !important;
                 text-align: center !important;
             }
-            
-            .impact-timeline-card > div > div:first-child {
+
+            .impact-timeline-card>div>div:first-child {
                 width: 50px !important;
                 height: 50px !important;
                 margin-bottom: 20px !important;
             }
-            
+
             .impact-timeline-card h3 {
                 font-size: 1.3rem !important;
+            }
+        }
+
+        .impact-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 56px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #000000;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-description {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #37352f;
+            max-width: 100%;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .stat-card {
+            background-color: #eeede8;
+            border-radius: 8px;
+            padding: 48px 40px;
+            transition: transform 0.2s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .stat-number {
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #000000;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+        }
+
+        .stat-description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #37352f;
+        }
+
+        /* Tablet */
+        @media (max-width: 968px) {
+            .section-title {
+                font-size: 44px;
+            }
+
+            .section-description {
+                font-size: 17px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat-card {
+                padding: 40px 32px;
+            }
+
+            .stat-number {
+                font-size: 64px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 640px) {
+            body {
+                padding: 40px 16px;
+            }
+
+            .section-header {
+                margin-bottom: 32px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .section-description {
+                font-size: 16px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .stat-card {
+                padding: 36px 28px;
+            }
+
+            .stat-number {
+                font-size: 56px;
+            }
+
+            .stat-description {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 32px;
+            }
+
+            .stat-number {
+                font-size: 48px;
+            }
+
+            .stat-card {
+                padding: 32px 24px;
+            }
+        }
+
+        .enterprise-section {
+            max-width: 1000px;
+            margin: 80px auto;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+
+        .section-label {
+            font-size: 32px;
+            font-weight: 400;
+            color: #37352f;
+            margin-bottom: 24px;
+            letter-spacing: 0.01em;
+        }
+
+        .main-heading {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #000000;
+            margin-bottom: 32px;
+            letter-spacing: -0.03em;
+        }
+
+        .description {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #37352f;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 14px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #2c2c2c;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        /* Tablet */
+        @media (max-width: 968px) {
+            body {
+                padding: 60px 20px;
+            }
+
+            .section-label {
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+
+            .main-heading {
+                font-size: 64px;
+            }
+
+            .description {
+                font-size: 19px;
+                margin-bottom: 36px;
+            }
+
+            .cta-button {
+                font-size: 15px;
+                padding: 13px 28px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 640px) {
+            body {
+                padding: 48px 16px;
+            }
+
+            .section-label {
+                font-size: 14px;
+                margin-bottom: 16px;
+            }
+
+            .main-heading {
+                font-size: 48px;
+                margin-bottom: 24px;
+            }
+
+            .description {
+                font-size: 17px;
+                margin-bottom: 32px;
+            }
+
+            .cta-button {
+                font-size: 15px;
+                padding: 12px 24px;
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-heading {
+                font-size: 40px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .main-heading {
+                font-size: 36px;
             }
         }
     </style>
@@ -612,11 +875,11 @@
     </header>
 
     <!--Hero Section Updated-->
-        <section class="solution-section">
+    <section class="solution-section">
         <div class="content-left">
             <h3 class="section-label">Wealth Empires</h3>
             <h1 class="main-heading">Stay Legally Sound In One Click!</h1>
-            
+            <br><br>
             <div class="feature-block">
                 <div class="surfboard-icon">
                     <svg viewBox="0 0 50 50">
@@ -626,20 +889,22 @@
                 </div>
                 <div class="feature-content">
                     <h3>Streamline Your Business Success with Our Expert Services</h3>
-                    <p>Our mission at Wealth Empires is to provide personalized financial solutions that address each client's unique challenges.</p>
+                    <p>Our mission at Wealth Empires is to provide personalized financial solutions that address each
+                        client's unique challenges.</p>
                 </div>
             </div>
         </div>
 
         <div class="images-grid">
             <div class="image-card surfboards">
-                <img src="our-story2.jpg" alt="Surfboards rack with gone surfing sign">
+                <img src="flag.jpg " alt="Surfboards rack with gone surfing sign">
             </div>
 
             <div class="image-card materials">
                 <div class="card-content">
                     <h3>We Help You To Grow Your Business.</h3>
-                    <p>We are dedicated to delivering outstanding results through strategic expertise and unwavering commitment.</p>
+                    <p>We are dedicated to delivering outstanding results through strategic expertise and unwavering
+                        commitment.</p>
                 </div>
             </div>
 
@@ -649,8 +914,8 @@
         </div>
     </section>
     <!-- Hero Section -->
- 
-    
+
+
 
     <!-- Our Story Content Section -->
     <section class="story-section">
@@ -659,67 +924,53 @@
             <div class="story-card card-brand">
                 <div>
                     <h2>The Challenge We Solve</h2>
-                    <p>From company incorporation, GST, and MCA filings to trademarks and tax returns—many entrepreneurs give up not because their ideas lack potential, but because compliance drains their time, money, and energy.</p><br><br>
-                    <h4 style="font-size: 25px;">We  were born to solve that.</h4>
+                    <p>From company incorporation, GST, and MCA filings to trademarks and tax returns—many entrepreneurs
+                        give up not because their ideas lack potential, but because compliance drains their time, money,
+                        and energy.</p><br><br>
+                    <h4 style="font-size: 25px;">We were born to solve that.</h4>
                 </div>
             </div>
 
             <!-- Image Card -->
             <div class="story-card card-image">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=1000&fit=crop&q=80" alt="Business professionals collaborating">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=1000&fit=crop&q=80"
+                    alt="Business professionals collaborating">
             </div>
 
             <!-- Sales Growth Card -->
             <div class="story-card card-sales">
                 <div>
                     <h2>What We Do</h2>
-                    <p>We simplify business incorporation, auditing, accounting, taxation, GST, MCA compliance, trademark & IP filings, ISO certifications, and legal consulting—with transparent pricing, technology-driven solutions, and expert guidance.</p><br><br>
-                    <h4 style="font-size: 20px;">Our mission is simple: help entrepreneurs grow without worrying about legal roadblocks.</h4>
+                    <p>We simplify business incorporation, auditing, accounting, taxation, GST, MCA compliance,
+                        trademark & IP filings, ISO certifications, and legal consulting—with transparent pricing,
+                        technology-driven solutions, and expert guidance.</p><br><br>
+                    <h4 style="font-size: 17px;">Our mission is simple: help entrepreneurs grow without worrying about
+                        legal roadblocks.</h4>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why We Started Section -->
-    <section id="why-we-started" class="advantages" style="background: #f8fafc; padding: 80px 0;">
-        <div class="container">
-            <div class="section-title" style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 30px; color: #1a1a1a;">Why We Started</h2>
-                <p style="font-size: 1.1rem; line-height: 1.7; color: #4a5568; text-align: center;">In Chennai, we
-                    witnessed countless entrepreneurs struggling in their earliest days. We asked ourselves a simple
-                    question:</p>
-            </div>
-            <div
-                style="max-width: 900px; margin: 0 auto; background: white; border-radius: 16px; border-left: 6px solid #667eea; padding: 50px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
-                <div style="position: relative;">
-                    <div
-                        style="position: absolute; left: -70px; top: 50%; transform: translateY(-50%); width: 8px; height: 80%; background: #667eea; border-radius: 4px;">
-                    </div>
-                    <div style="display: flex; justify-content: center; margin-bottom: 28px;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="#667eea" style="opacity: 0.7;">
-                            <path
-                                d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35l.539-.222.474-.197-.485-1.938-.597.144c-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.318.142-.686.238-1.028.466-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.945-.33.358-.656.734-.909 1.162-.293.408-.492.856-.702 1.299-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539l.025.168.026-.006A4.5 4.5 0 1 0 6.5 10zm7 0c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35l.539-.222.474-.197-.485-1.938-.597.144c-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.318.142-.686.238-1.028.466-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.945-.33.358-.656.734-.909 1.162-.293.408-.492.856-.702 1.299-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539l.025.168.026-.006A4.5 4.5 0 1 0 13.5 10z" />
-                        </svg>
-                    </div>
-                    <blockquote
-                        style="font-size: 28px; font-weight: 600; color: #1a1a1a; margin: 0; font-style: italic; line-height: 1.5; text-align: center;">
-                        What if legal, accounting, and compliance became simple, affordable, and transparent for every
-                        entrepreneur—so they can focus on building their dream?
-                    </blockquote>
-                </div>
-                <p style="margin-top: 30px; color: #667eea; font-weight: 600; text-align: center; font-size: 1.2rem;">
-                    With that passion, Wealth Empires was founded.</p>
-                <p style="margin-top: 15px; color: #1a1a1a; font-weight: 700; font-size: 1.25rem; text-align: center;">
-                    Made in Chennai, built for the world.</p>
-            </div>
-        </div>
+    <section class="enterprise-section">
+        <p class="section-label">Why We Started</p>
+
+        <h1 class="main-heading">Made in Chennai, built for the world.</h1>
+
+        <p class="description">What if legal, accounting, and compliance became simple, affordable, and transparent for
+            every entrepreneur so they can focus on building their dream?</p>
     </section>
+
+    <!-- Why We Started Section -->
+
     <!-- Our Impact Section - Timeline Design -->
-    <section class="impact-showcase" style="background: #f8fafc; padding: 100px 0; position: relative; overflow: hidden;">
-        <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;">
+    <section class="impact-showcase"
+        style="background: #f8fafc; padding: 40px 0; position: relative; overflow: hidden;">
+        <div class="container"
+            style="max-width: 1400px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;">
             <!-- Section Header -->
             <div style="text-align: center; margin-bottom: 80px;">
-                <h2 style="font-size: 3.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -2px; line-height: 1.1;">
+                <h2
+                    style="font-size: 3rem; font-weight: 500; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -2px; line-height: 1.1;">
                     Empowering Dreams,<br>
                     <span style="color: #1a1a1a;">Delivering Results</span>
                 </h2>
@@ -729,42 +980,46 @@
             </div>
 
             <!-- Impact Timeline Layout -->
-            <div style="display: grid; grid-template-columns: 1fr 2px 1fr; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto;">
-                
+            <div
+                style="display: grid; grid-template-columns: 1fr 2px 1fr; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto;">
+
                 <!-- Left Side - Cost Savings & Risk Prevention -->
                 <div style="display: flex; flex-direction: column; gap: 40px;">
-                    
+
                     <!-- Cost Savings Card -->
-                    <div class="impact-timeline-card" style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(-20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div class="impact-timeline-card"
+                        style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(-20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                         <div style="display: flex; align-items: flex-start; gap: 20px;">
-                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 10px 30px rgba(252, 211, 77, 0.3);">
-                                <svg width="36" height="36" viewBox="0 0 24 24" fill="#d97706">
-                                    <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L13.5 2.5L16.17 5.17L10.58 10.76C10.22 11.12 10 11.6 10 12.1V16L8.83 17.17L10.24 18.59L12 16.83L13.76 18.59L15.17 17.17L14 16V12.1C14 11.6 13.78 11.12 13.42 10.76L17.83 6.34L20.5 9H21Z"/>
-                                </svg>
+                            <div>
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
                             </div>
                             <div style="flex: 1;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">Cost Savings</h3>
-                                <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Saved startups in hidden legal costs through transparent pricing and smart solutions.</p>
-                                <div style="margin-top: 16px; padding: 12px 20px; background: #fefce8; border-radius: 12px; border-left: 4px solid #fde68a;">
-                                    <span style="color: #a16207; font-weight: 600; font-size: 0.9rem;">💰 Average 60% cost reduction per client</span>
+                                <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">
+                                    Cost Savings</h3>
+                                <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Saved
+                                    startups in hidden legal costs through transparent pricing and smart solutions.</p>
+                                <div><br>
+                                    <p style="color: #a16207; font-weight: 500; font-size: 0.9rem;">Average 60% cost
+                                        reduction per client</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Risk Prevention Card -->
-                    <div class="impact-timeline-card" style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(-20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div class="impact-timeline-card"
+                        style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(-20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                         <div style="display: flex; align-items: flex-start; gap: 20px;">
-                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 10px 30px rgba(129, 140, 248, 0.3);">
-                                <svg width="36" height="36" viewBox="0 0 24 24" fill="#6366f1">
-                                    <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16V18H8V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.4,8.7 10.4,10V11H13.6V10C13.6,8.7 12.8,8.2 12,8.2Z"/>
-                                </svg>
-                            </div>
                             <div style="flex: 1;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">Risk Prevention</h3>
-                                <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Protected <strong>500+ businesses</strong> from compliance penalties through proactive guidance and expert consultation.</p>
-                                <div style="margin-top: 16px; padding: 12px 20px; background: #f0f4ff; border-radius: 12px; border-left: 4px solid #c7d2fe;">
-                                    <span style="color: #4338ca; font-weight: 600; font-size: 0.9rem;">🛡️ Zero compliance violations for our clients</span>
+                                <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">
+                                    Risk Prevention</h3>
+                                <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Protected
+                                    <strong>500+ businesses</strong> from compliance penalties through proactive
+                                    guidance and expert consultation.
+                                </p><br>
+                                <div>
+                                    <span style="color: #4338ca; font-weight: 600; font-size: 0.9rem;">Zero
+                                        compliance violations for our clients</span>
                                 </div>
                             </div>
                         </div>
@@ -773,45 +1028,56 @@
 
                 <!-- Center Timeline -->
                 <div style="position: relative; height: 400px; display: flex; justify-content: center;">
-                    <div style="width: 4px; height: 100%; background: linear-gradient(to bottom, #fde68a, #c7d2fe, #a7f3d0); border-radius: 2px; position: relative;">
+                    <div
+                        style="width: 4px; height: 100%; background: linear-gradient(to bottom, #fde68a, #c7d2fe, #a7f3d0); border-radius: 2px; position: relative;">
                         <!-- Timeline Dots -->
-                        <div style="position: absolute; top: 15%; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; background: #fde68a; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(252, 211, 77, 0.3);"></div>
-                        <div style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; background: #c7d2fe; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);"></div>
-                        <div style="position: absolute; top: 85%; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; background: #a7f3d0; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);"></div>
+                        <div
+                            style="position: absolute; top: 15%; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; background: #fde68a; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(252, 211, 77, 0.3);">
+                        </div>
+                        <div
+                            style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; background: #c7d2fe; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);">
+                        </div>
+                        <div
+                            style="position: absolute; top: 85%; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; background: #a7f3d0; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);">
+                        </div>
                     </div>
                 </div>
 
                 <!-- Right Side - Growth Focus -->
                 <div style="display: flex; flex-direction: column; justify-content: center;">
-                    
+
                     <!-- Growth Focus Card -->
-                    <div class="impact-timeline-card" style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div class="impact-timeline-card"
+                        style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                         <div style="display: flex; align-items: flex-start; gap: 20px;">
-                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 10px 30px rgba(52, 211, 153, 0.3);">
-                                <svg width="36" height="36" viewBox="0 0 24 24" fill="#059669" stroke="#059669" stroke-width="2">
-                                    <path d="m3 3 3 9-3 9 19-9Z"/>
-                                    <path d="M6 12h16"/>
-                                </svg>
-                            </div>
                             <div style="flex: 1;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">Growth Focus</h3>
-                                <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Enabled <strong>1000+ entrepreneurs</strong> to focus on scaling their business while we handle the paperwork complexities.</p>
-                                <div style="margin-top: 16px; padding: 12px 20px; background: #f0fdf4; border-radius: 12px; border-left: 4px solid #a7f3d0;">
-                                    <span style="color: #047857; font-weight: 600; font-size: 0.9rem;">📈 3x faster business scaling average</span>
+                                <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">
+                                    Growth Focus</h3>
+                                <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Enabled
+                                    <strong>1000+ entrepreneurs</strong> to focus on scaling their business while we
+                                    handle the paperwork complexities.
+                                </p><br>
+                                <div>
+                                    <span style="color: #047857; font-weight: 600; font-size: 0.9rem;">3x faster
+                                        business scaling average</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Impact Statistics -->
-                    <div style="margin-top: 40px; background: #ffffff; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); border: 1px solid rgba(226, 232, 240, 0.8);">
-                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; text-align: center;">
+                    <div
+                        style="margin-top: 40px; background: #ffffff; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); border: 1px solid rgba(226, 232, 240, 0.8);">
+                        <div
+                            style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; text-align: center;">
                             <div>
-                                <div style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">2500+</div>
+                                <div style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">
+                                    2500+</div>
                                 <div style="color: #64748b; font-size: 0.9rem; font-weight: 500;">Dreams Realized</div>
                             </div>
                             <div>
-                                <div style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">99.8%</div>
+                                <div style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">
+                                    99.8%</div>
                                 <div style="color: #64748b; font-size: 0.9rem; font-weight: 500;">Success Rate</div>
                             </div>
                         </div>
@@ -821,65 +1087,8 @@
         </div>
     </section>
 
-    <!-- Statistics Section -->
-    <section class="gst-section" style="background: #f8fafc; padding: 0px;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Impact in Numbers</h2>
-                <p>Talent is everywhere. But opportunity is not.</p>
-            </div>
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-top: 40px;">
-                <div
-                    style="background: #fff; padding: 40px 24px; border-radius: 16px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                    <div
-                        style="width: 60px; height: 60px; background: #E8F4FD; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px;">
-                        👥</div>
-                    <h3 class="counter" data-target="10000"
-                        style="font-size: 36px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px 0;">0k+</h3>
-                    <p style="color: #667eea; font-weight: 500; margin: 0;">Happy customers</p>
-                </div>
-                <div
-                    style="background: #fff; padding: 40px 24px; border-radius: 16px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                    <div
-                        style="width: 60px; height: 60px; background: #FFF4E6; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px;">
-                        ⭐</div>
-                    <h3 class="counter" data-target="1200"
-                        style="font-size: 36px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px 0;">0+</h3>
-                    <p style="color: #667eea; font-weight: 500; margin: 0;">5 star reviews</p>
-                </div>
-                <div
-                    style="background: #fff; padding: 40px 24px; border-radius: 16px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                    <div
-                        style="width: 60px; height: 60px; background: #E8F6F3; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px;">
-                        🌍</div>
-                    <h3 class="counter" data-target="175"
-                        style="font-size: 36px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px 0;">0+</h3>
-                    <p style="color: #667eea; font-weight: 500; margin: 0;">Countries</p>
-                </div>
-                <div
-                    style="background: #fff; padding: 40px 24px; border-radius: 16px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                    <div
-                        style="width: 60px; height: 60px; background: #FDF2F8; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px;">
-                        📍</div>
-                    <h3 class="counter" data-target="6"
-                        style="font-size: 36px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px 0;">0</h3>
-                    <p style="color: #667eea; font-weight: 500; margin: 0;">Continents</p>
-                </div>
-            </div>
-            <div
-                style="text-align: center; margin-top: 40px; padding: 32px; background: #FFF9E6; border-radius: 16px; border-left: 4px solid #FFD700;">
-                <p style="font-size: 18px; color: #1a1a1a; margin: 0; font-weight: 500;">Wealth Empires is on a mission
-                    to help <strong>1B people turn their dream idea into their dream business</strong></p>
-                <p style="margin: 16px 0 0 0; color: #667eea; font-style: italic;">With our Business-in-a-Box™ solution,
-                    we can single-handedly increase entrepreneurship globally by making it click button easy to start a
-                    business, from anywhere in the world.</p>
-            </div>
-        </div>
-    </section>
-       
     <!-- Our Promise Section -->
-    <section style="background: #ffffff; padding: 120px 0; position: relative; overflow: hidden;">
+    <section style="background: #ffffff; padding: 0px 0px 70px 0px; position: relative; overflow: hidden;">
         <div class="container">
             <!-- Background Elements -->
             <div
@@ -941,6 +1150,31 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="impact-section">
+        <div class="section-header">
+            <h1 class="section-title">Our Impact in numbers</h1>
+            <p class="section-description">Talent is everywhere. But opportunity is not.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">10k+</div>
+                <p class="stat-description">Happy Customers</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">1,200+</div>
+                <p class="stat-description">5 star reviews</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">175+</div>
+                <p class="stat-description">Countries</p>
             </div>
         </div>
     </section>

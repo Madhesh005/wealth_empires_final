@@ -27,7 +27,7 @@
             display: flex;
             align-items: center;
             padding: 10% 40px 60px 40px;
-            background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
         }
 
         .container {
@@ -230,6 +230,236 @@
                 margin-top: 30px;
             }
         }
+
+        .story-section {
+            padding: 0px 50px 0px 50px;
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .story-card {
+            margin-top: 30px;
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .story-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Purple Card - Brand Awareness */
+        .card-brand {
+            background: linear-gradient(165deg, #7851A9 0%, #7851A9 100%);
+            color: white;
+            padding: 30px 35px;
+            justify-content: space-between;
+        }
+
+        .card-brand2 {
+            background: linear-gradient(165deg, #0b3232 0%, #184444 100%);
+            color: white;
+            padding: 30px 35px;
+            justify-content: space-between;
+        }
+
+
+        .card-brand h2 {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            letter-spacing: -1px;
+        }
+
+        .card-brand2 h2 {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            letter-spacing: -1px;
+        }
+
+        .card-brand p {
+            font-size: 20px;
+            line-height: 1.5;
+            opacity: 0.85;
+            margin-bottom: auto;
+        }
+
+        .card-brand2 p {
+            font-size: 20px;
+            line-height: 1.5;
+            opacity: 0.85;
+            margin-bottom: auto;
+        }
+
+        /* Center Card - Image */
+        .card-image {
+            background: #f5f5f0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .card-image:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Yellow Card - Sales Growth */
+        .card-sales {
+            background: linear-gradient(165deg, #d8dbf0 0%, #d8dbf0 100%);
+            color: black;
+            padding: 30px 35px;
+            justify-content: space-between;
+        }
+
+        .card-sales .card-icon {
+            align-self: flex-end;
+            margin-bottom: 60px;
+        }
+
+        .card-sales h2 {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            letter-spacing: -1px;
+        }
+
+        .card-sales p {
+            font-size: 20px;
+            line-height: 1.5;
+            opacity: 0.75;
+        }
+
+        /* Hover effects */
+        .story-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .story-card:hover::before {
+            opacity: 1;
+        }
+
+        @media (max-width: 1200px) {
+            .cards-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+
+            .card-brand,
+            .card-sales {
+                padding: 50px 40px;
+            }
+
+            .card-brand h2,
+            .card-sales h2 {
+                font-size: 56px;
+            }
+
+            .story-card {
+                min-height: 550px;
+            }
+
+            .card-image {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .story-card {
+                min-height: 500px;
+            }
+
+            .card-brand,
+            .card-sales {
+                padding: 45px 35px;
+            }
+
+            .card-brand h2,
+            .card-sales h2 {
+                font-size: 48px;
+            }
+
+            .card-brand p,
+            .card-sales p {
+                font-size: 18px;
+            }
+
+            .card-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            .card-image {
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 40px 16px;
+            }
+
+            .story-card {
+                border-radius: 30px;
+                min-height: 450px;
+            }
+
+            .card-brand,
+            .card-sales {
+                padding: 40px 30px;
+            }
+
+            .card-brand h2,
+            .card-sales h2 {
+                font-size: 40px;
+            }
+
+            .card-brand p,
+            .card-sales p {
+                font-size: 16px;
+            }
+
+            .card-icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
     </style>
 </head>
 
@@ -378,35 +608,42 @@
                 <h2>Requirements for Company Registration</h2>
                 <p>The following requirements must be considered when you set out to register your new company</p>
             </div>
-            <div class="requirements-content">
-                <div class="requirement-item">
-                    <h3>Directors and Members</h3>
-                    <ul>
-                        <li>Minimum of two directors required</li>
-                        <li>Directors must have Director Identification Number (DIN)</li>
-                        <li>At least one director must be Indian resident</li>
-                        <li>Indian resident must have spent 182 days in India in previous calendar year</li>
-                    </ul>
-                </div>
-                <div class="requirement-item">
-                    <h3>Company Name</h3>
-                    <ul>
-                        <li>Name should reflect the principal activity of the business</li>
-                        <li>Name should be unique</li>
-                        <li>Must comply with MCA naming guidelines</li>
-                    </ul>
-                </div>
-                <div class="requirement-item">
-                    <h3>Registered Office Address</h3>
-                    <ul>
-                        <li>Permanent address required for company registrar</li>
-                        <li>Business operations occur in this office</li>
-                        <li>All company documentation maintained here</li>
-                        <li>You can use your home address if no office available</li>
-                    </ul>
-                </div>
+            <section class="story-section">
+                <div class="cards-container">
+                    <!-- Brand Awareness Card -->
+                    <div class="story-card card-brand">
+                        <div>
+                            <h2>Directors and Member</h2>
+                            <p>• Minimum of two directors required <br>
+                                • Directors must have Director Identification Number (DIN) <br>
+                                • At least one director must be Indian resident <br>
+                                • Indian resident must have spent 182 days in India in previous calendar year</p>
+                        </div>
+                    </div>
 
-            </div>
+                    <!-- Image Card -->
+                    <div class="story-card card-brand2" style="background-color: #0b3333;">
+                        <div>
+                            <h2>Company <br>name</h2>
+                            <p>• Name should reflect the principal activity of the business <br>
+                                • Name should be unique <br>
+                                • Must comply with MCA naming guidelines
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sales Growth Card -->
+                    <div class="story-card card-sales">
+                        <div>
+                            <h2>Registered Office Address</h2>
+                            <p>•Permanent address required for company registeration <br>
+                                •Business operations occur in this office <br>
+                                •All company documentation maintained here <br>
+                                •You can use your home address if no office available</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
 
@@ -423,7 +660,6 @@
                 <div class="step">
                     <div class="step-number">
                         <span>1</span>
-                        <div class="step-icon">📋</div>
                     </div>
                     <div class="step-content">
                         <h3>Name Reservation (SPICe+ Part A)</h3>
@@ -436,7 +672,7 @@
                 <div class="step">
                     <div class="step-number">
                         <span>2</span>
-                        <div class="step-icon">🆔</div>
+                        <div class="step-icon"></div>
                     </div>
                     <div class="step-content">
                         <h3>Acquire Digital Signature Certificate (DSC)</h3>
@@ -449,7 +685,7 @@
                 <div class="step">
                     <div class="step-number">
                         <span>3</span>
-                        <div class="step-icon">📝</div>
+                        <div class="step-icon"></div>
                     </div>
                     <div class="step-content">
                         <h3>Director Identification Number (DIN)</h3>
@@ -461,7 +697,7 @@
                 <div class="step">
                     <div class="step-number">
                         <span>4</span>
-                        <div class="step-icon">📊</div>
+                        <div class="step-icon"></div>
                     </div>
                     <div class="step-content">
                         <h3>MOA and AOA Submission</h3>
@@ -474,7 +710,7 @@
                 <div class="step">
                     <div class="step-number">
                         <span>5</span>
-                        <div class="step-icon">✅</div>
+                        <div class="step-icon"></div>
                     </div>
                     <div class="step-content">
                         <h3>Submit Company Details (SPICe+ Part B)</h3>
