@@ -33,6 +33,136 @@
             padding: 70px;
         }
 
+        /* ============================================
+   OUR PROMISE SECTION MOBILE STYLES (max-width: 768px)
+   ============================================ */
+        @media (max-width: 768px) {
+
+            /* 1. Adjust Section Padding/Margin */
+            section[style*="padding: 0px 0px 70px 0px"] {
+                padding-top: 50px !important;
+                padding-bottom: 50px !important;
+            }
+
+            /* 2. Section Header Adjustments */
+            .promise-header {
+                margin-bottom: 40px !important;
+                /* Reduce gap */
+            }
+
+            .promise-heading {
+                font-size: 2.2rem !important;
+                /* Smaller main heading */
+            }
+
+            .promise-subtext {
+                font-size: 1rem !important;
+                /* Smaller subtext */
+                padding: 0 16px;
+                /* Add slight horizontal padding to subtext */
+            }
+
+            /* 3. Main Grid Layout - Stack columns */
+            .promise-grid {
+                grid-template-columns: 1fr !important;
+                /* Single column layout */
+                gap: 40px !important;
+                /* Reduced gap between elements */
+            }
+
+            /* 4. Visual/Image (Left Side) - Place the image first and adjust size */
+            .promise-visual-container {
+                order: -1;
+                /* Move image to the top on mobile */
+                width: 100%;
+            }
+
+            .promise-image-box {
+                width: 100% !important;
+                /* Max width to fit container */
+                max-width: 350px !important;
+                /* Cap the max width */
+                height: 350px !important;
+                /* Reduce height */
+                margin: 0 auto;
+                /* Center the box */
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05) !important;
+            }
+
+            .promise-image {
+                width: 250px !important;
+                /* Smaller image inside the box */
+                height: 250px !important;
+            }
+
+            /* 5. Text Content (Right Side) - Center text and remove padding */
+            .promise-text-content {
+                padding-left: 0 !important;
+                /* Remove desktop padding */
+                text-align: center;
+                /* Center the text content */
+            }
+
+            .promise-title-group {
+                margin-bottom: 30px !important;
+            }
+
+            .promise-h3-1,
+            .promise-h3-2 {
+                font-size: 1.6rem !important;
+                /* Reduce heading size */
+                margin-bottom: 15px !important;
+                text-align: center;
+            }
+
+            /* 6. Quote Box Adjustment */
+            .promise-quote-box {
+                padding: 24px !important;
+                /* Smaller padding */
+                margin: 0 16px;
+                /* Add margin to prevent edge-to-edge touch */
+            }
+
+            .promise-quote {
+                font-size: 1rem !important;
+                /* Smaller quote font size */
+            }
+
+            /* 7. Hide/Adjust Background Elements for Simplicity */
+            .promise-content-wrap>div[style*="position: absolute"] {
+                display: none;
+            }
+        }
+
+        /* ============================================
+   OUR PROMISE SECTION MOBILE STYLES (max-width: 480px)
+   ============================================ */
+        @media (max-width: 480px) {
+            .promise-heading {
+                font-size: 1.8rem !important;
+            }
+
+            .promise-h3-1,
+            .promise-h3-2 {
+                font-size: 1.4rem !important;
+            }
+
+            .promise-image-box {
+                max-width: 300px !important;
+                height: 300px !important;
+            }
+
+            .promise-image {
+                width: 200px !important;
+                height: 200px !important;
+            }
+
+            .promise-quote-box {
+                margin: 0 0px;
+                /* Remove horizontal margin if needed for full width look */
+            }
+        }
+
 
         .section-label {
             font-family: 'Brush Script MT', 'Dancing Script', cursive;
@@ -786,14 +916,18 @@
                 .description {
                     font-size: 16px;
                 }
-            }
 
-            @media (max-width: 380px) {
-                .main-heading {
-                    font-size: 36px;
+                .solution-section {
+                    padding: 100px 20px 0px 20px;
+                    gap: 40px;
+                }
+
+                @media (max-width: 380px) {
+                    .main-heading {
+                        font-size: 36px;
+                    }
                 }
             }
-        }
     </style>
 </head>
 
@@ -950,134 +1084,124 @@
     <!-- Why We Started Section -->
 
     <!-- Our Impact Section - Timeline Design -->
-    <section class="impact-showcase"
-        style="background: #f8fafc; padding: 40px 0; position: relative; overflow: hidden;">
-        <div class="container"
-            style="max-width: 1400px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;">
-            <!-- Section Header -->
-            <div style="text-align: center; margin-bottom: 80px;">
-                <h2
-                    style="font-size: 3rem; font-weight: 500; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -2px; line-height: 1.1;">
-                    Empowering Dreams,<br>
-                    <span style="color: #1a1a1a;">Delivering Results</span>
-                </h2>
-                <p style="color: #64748b; font-size: 1.3rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-                    Every milestone achieved is a testament to our commitment to your success
-                </p>
+<section class="impact-showcase"
+    style="background: #f8fafc; padding: 40px 0; position: relative; overflow: hidden;">
+    <div class="container"
+        style="max-width: 1400px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;">
+        <div style="text-align: center; margin-bottom: 80px;" class="impact-header">
+            <h2 class="impact-heading"
+                style="font-size: 3rem; font-weight: 500; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -2px; line-height: 1.1;">
+                Empowering Dreams,<br>
+                <span style="color: #1a1a1a;">Delivering Results</span>
+            </h2>
+            <p class="impact-subtext"
+                style="color: #64748b; font-size: 1.3rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                Every milestone achieved is a testament to our commitment to your success
+            </p>
+        </div>
+
+        <div class="impact-grid"
+            style="display: grid; grid-template-columns: 1fr 2px 1fr; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto;">
+
+            <div style="display: flex; flex-direction: column; gap: 40px;" class="timeline-column-left">
+
+                <div class="impact-timeline-card cost-savings-card"
+                    style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(-20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div style="display: flex; align-items: flex-start; gap: 20px;">
+                        <div>
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </div>
+                        <div style="flex: 1;">
+                            <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">
+                                Cost Savings</h3>
+                            <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Saved
+                                startups in hidden legal costs through transparent pricing and smart solutions.</p>
+                            <div><br>
+                                <p style="color: #a16207; font-weight: 500; font-size: 0.9rem;">Average 60% cost
+                                    reduction per client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="impact-timeline-card risk-prevention-card"
+                    style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(-20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div style="display: flex; align-items: flex-start; gap: 20px;">
+                        <div style="flex: 1;">
+                            <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">
+                                Risk Prevention</h3>
+                            <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Protected
+                                <strong>500+ businesses</strong> from compliance penalties through proactive
+                                guidance and expert consultation.
+                            </p><br>
+                            <div>
+                                <span style="color: #4338ca; font-weight: 600; font-size: 0.9rem;">Zero
+                                    compliance violations for our clients</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Impact Timeline Layout -->
-            <div
-                style="display: grid; grid-template-columns: 1fr 2px 1fr; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto;">
-
-                <!-- Left Side - Cost Savings & Risk Prevention -->
-                <div style="display: flex; flex-direction: column; gap: 40px;">
-
-                    <!-- Cost Savings Card -->
-                    <div class="impact-timeline-card"
-                        style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(-20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                        <div style="display: flex; align-items: flex-start; gap: 20px;">
-                            <div>
-                                <i class="fa-solid fa-indian-rupee-sign"></i>
-                            </div>
-                            <div style="flex: 1;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">
-                                    Cost Savings</h3>
-                                <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Saved
-                                    startups in hidden legal costs through transparent pricing and smart solutions.</p>
-                                <div><br>
-                                    <p style="color: #a16207; font-weight: 500; font-size: 0.9rem;">Average 60% cost
-                                        reduction per client</p>
-                                </div>
-                            </div>
-                        </div>
+            <div style="position: relative; height: 400px; display: flex; justify-content: center;" class="timeline-center">
+                <div class="timeline-line-desktop"
+                    style="width: 4px; height: 100%; background: linear-gradient(to bottom, #fde68a, #c7d2fe, #a7f3d0); border-radius: 2px; position: relative;">
+                    <div class="timeline-dot dot-1"
+                        style="position: absolute; top: 15%; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; background: #fde68a; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(252, 211, 77, 0.3);">
                     </div>
+                    <div class="timeline-dot dot-2"
+                        style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; background: #c7d2fe; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);">
+                    </div>
+                    <div class="timeline-dot dot-3"
+                        style="position: absolute; top: 85%; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; background: #a7f3d0; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);">
+                    </div>
+                </div>
+            </div>
 
-                    <!-- Risk Prevention Card -->
-                    <div class="impact-timeline-card"
-                        style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(-20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                        <div style="display: flex; align-items: flex-start; gap: 20px;">
-                            <div style="flex: 1;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">
-                                    Risk Prevention</h3>
-                                <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Protected
-                                    <strong>500+ businesses</strong> from compliance penalties through proactive
-                                    guidance and expert consultation.
-                                </p><br>
-                                <div>
-                                    <span style="color: #4338ca; font-weight: 600; font-size: 0.9rem;">Zero
-                                        compliance violations for our clients</span>
-                                </div>
+            <div style="display: flex; flex-direction: column; justify-content: center;" class="timeline-column-right">
+
+                <div class="impact-timeline-card growth-focus-card"
+                    style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div style="display: flex; align-items: flex-start; gap: 20px;">
+                        <div style="flex: 1;">
+                            <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">
+                                Growth Focus</h3>
+                            <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Enabled
+                                <strong>1000+ entrepreneurs</strong> to focus on scaling their business while we
+                                handle the paperwork complexities.
+                            </p><br>
+                            <div>
+                                <span style="color: #047857; font-weight: 600; font-size: 0.9rem;">3x faster
+                                    business scaling average</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Center Timeline -->
-                <div style="position: relative; height: 400px; display: flex; justify-content: center;">
-                    <div
-                        style="width: 4px; height: 100%; background: linear-gradient(to bottom, #fde68a, #c7d2fe, #a7f3d0); border-radius: 2px; position: relative;">
-                        <!-- Timeline Dots -->
-                        <div
-                            style="position: absolute; top: 15%; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; background: #fde68a; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(252, 211, 77, 0.3);">
+                <div class="impact-stats-box"
+                    style="margin-top: 40px; background: #ffffff; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); border: 1px solid rgba(226, 232, 240, 0.8);">
+                    <div class="impact-stats-grid"
+                        style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; text-align: center;">
+                        <div>
+                            <div style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">
+                                2500+</div>
+                            <div style="color: #64748b; font-size: 0.9rem; font-weight: 500;">Dreams Realized</div>
                         </div>
-                        <div
-                            style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; background: #c7d2fe; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);">
-                        </div>
-                        <div
-                            style="position: absolute; top: 85%; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; background: #a7f3d0; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Side - Growth Focus -->
-                <div style="display: flex; flex-direction: column; justify-content: center;">
-
-                    <!-- Growth Focus Card -->
-                    <div class="impact-timeline-card"
-                        style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                        <div style="display: flex; align-items: flex-start; gap: 20px;">
-                            <div style="flex: 1;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">
-                                    Growth Focus</h3>
-                                <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Enabled
-                                    <strong>1000+ entrepreneurs</strong> to focus on scaling their business while we
-                                    handle the paperwork complexities.
-                                </p><br>
-                                <div>
-                                    <span style="color: #047857; font-weight: 600; font-size: 0.9rem;">3x faster
-                                        business scaling average</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Impact Statistics -->
-                    <div
-                        style="margin-top: 40px; background: #ffffff; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); border: 1px solid rgba(226, 232, 240, 0.8);">
-                        <div
-                            style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; text-align: center;">
-                            <div>
-                                <div style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">
-                                    2500+</div>
-                                <div style="color: #64748b; font-size: 0.9rem; font-weight: 500;">Dreams Realized</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">
-                                    99.8%</div>
-                                <div style="color: #64748b; font-size: 0.9rem; font-weight: 500;">Success Rate</div>
-                            </div>
+                        <div>
+                            <div style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">
+                                99.8%</div>
+                            <div style="color: #64748b; font-size: 0.9rem; font-weight: 500;">Success Rate</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Our Promise Section -->
     <section style="background: #ffffff; padding: 0px 0px 70px 0px; position: relative; overflow: hidden;">
         <div class="container">
-            <!-- Background Elements -->
             <div
                 style="position: absolute; top: 10%; right: 5%; width: 120px; height: 120px; background: #c084fc; border-radius: 50%; opacity: 0.05; z-index: 1;">
             </div>
@@ -1085,29 +1209,27 @@
                 style="position: absolute; bottom: 15%; left: 8%; width: 80px; height: 80px; background: #10b981; border-radius: 50%; opacity: 0.05; z-index: 1;">
             </div>
 
-            <div style="position: relative; z-index: 2;">
-                <!-- Section Header -->
-                <div style="text-align: center; margin-bottom: 80px;">
-                    <h2
-                        style="font-size: 2.8rem; margin-bottom: 24px; color: #1a1a1a; font-weight: 700; letter-spacing: -1px;">
+            <div style="position: relative; z-index: 2;" class="promise-content-wrap">
+                <div style="text-align: center; margin-bottom: 80px;" class="promise-header">
+                    <h2 style="font-size: 2.8rem; margin-bottom: 24px; color: #1a1a1a; font-weight: 700; letter-spacing: -1px;"
+                        class="promise-heading">
                         Our Promise</h2>
-                    <p style="font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 0 auto;">Building lasting
+                    <p style="font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 0 auto;"
+                        class="promise-subtext">Building lasting
                         partnerships through trust, transparency, and unwavering commitment to your success.</p>
                 </div>
 
-                <!-- Main Content Grid -->
-                <div
-                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1100px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1100px; margin: 0 auto;"
+                    class="promise-grid">
 
-                    <!-- Left Side - Partnership Image -->
-                    <div style="display: flex; justify-content: center; align-items: flex-start;">
-                        <div
-                            style="position: relative; width: 450px; height: 500px; background: #f8fafc; border-radius: 24px; display: flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);">
-                            <!-- Partnership Hands Image -->
+                    <div style="display: flex; justify-content: center; align-items: flex-start;"
+                        class="promise-visual-container">
+                        <div style="position: relative; width: 450px; height: 500px; background: #f8fafc; border-radius: 24px; display: flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);"
+                            class="promise-image-box">
                             <img src="ourpromise.jpg" alt="Partnership Handshake"
-                                style="width: 350px; height: 350px; opacity: 0.8; object-fit: contain;">
+                                style="width: 350px; height: 350px; opacity: 0.8; object-fit: contain;"
+                                class="promise-image">
 
-                            <!-- Decorative Elements -->
                             <div
                                 style="position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; background: #c084fc; border-radius: 50%; opacity: 0.1;">
                             </div>
@@ -1117,21 +1239,20 @@
                         </div>
                     </div>
 
-                    <!-- Right Side - Promise Content -->
-                    <div style="padding-left: 20px;">
-                        <div style="margin-bottom: 40px;">
-                            <h3
-                                style="font-size: 2.2rem; color: #1a1a1a; margin-bottom: 20px; font-weight: 700; line-height: 1.2;">
+                    <div style="padding-left: 20px;" class="promise-text-content">
+                        <div style="margin-bottom: 40px;" class="promise-title-group">
+                            <h3 style="font-size: 2.2rem; color: #1a1a1a; margin-bottom: 20px; font-weight: 700; line-height: 1.2;"
+                                class="promise-h3-1">
                                 We are not just accountants or auditors.</h3>
-                            <h3
-                                style="font-size: 2.2rem; color: #667eea; margin-bottom: 32px; font-weight: 700; line-height: 1.2;">
+                            <h3 style="font-size: 2.2rem; color: #667eea; margin-bottom: 32px; font-weight: 700; line-height: 1.2;"
+                                class="promise-h3-2">
                                 We are partners in your growth journey.</h3>
                         </div>
 
-                        <div
-                            style="background: #f8fafc; padding: 32px; border-radius: 16px; border-left: 4px solid #667eea;">
-                            <p
-                                style="font-size: 1.2rem; color: #1a1a1a; margin: 0; line-height: 1.7; font-weight: 500;">
+                        <div style="background: #f8fafc; padding: 32px; border-radius: 16px; border-left: 4px solid #667eea;"
+                            class="promise-quote-box">
+                            <p style="font-size: 1.2rem; color: #1a1a1a; margin: 0; line-height: 1.7; font-weight: 500;"
+                                class="promise-quote">
                                 At Wealth Empires, we measure our success not by balance sheets, but by the number of
                                 dreams that take flight because we made compliance simple.</p>
                         </div>
