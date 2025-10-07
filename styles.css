@@ -427,6 +427,7 @@ nav {
 
 /* CTA Sections Mobile Responsive */
 @media (max-width: 768px) {
+
   /* Services section CTA buttons */
   .gst-section div[style*="display: flex; justify-content: center"] {
     flex-direction: column !important;
@@ -444,6 +445,7 @@ nav {
 }
 
 @media (max-width: 480px) {
+
   /* Additional CTA mobile styles for smaller screens */
   .gst-section div[style*="display: flex; justify-content: center"] {
     padding: 0 16px !important;
@@ -458,6 +460,7 @@ nav {
 
 /* #WE People First Company CTA Section Mobile Responsive */
 @media (max-width: 768px) {
+
   /* Main CTA section container */
   section[style*="background: #ffebd0"] {
     margin: 0 20px !important;
@@ -472,7 +475,7 @@ nav {
   }
 
   /* Left content padding */
-  .hero-grid > div:first-child {
+  .hero-grid>div:first-child {
     padding-left: 0 !important;
   }
 
@@ -505,7 +508,7 @@ nav {
   }
 
   /* Right side image container */
-  .hero-grid > div:last-child {
+  .hero-grid>div:last-child {
     margin-left: 0 !important;
     width: 100% !important;
     max-width: 350px !important;
@@ -522,6 +525,7 @@ nav {
 }
 
 @media (max-width: 480px) {
+
   /* Additional styles for smaller mobile screens - #WE People First Company section */
   section[style*="background: #ffebd0"] {
     margin: 0 16px !important;
@@ -538,7 +542,7 @@ nav {
     font-size: 15px !important;
   }
 
-  .hero-grid > div:last-child {
+  .hero-grid>div:last-child {
     height: 250px !important;
   }
 }
@@ -586,11 +590,9 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
   border-radius: 20px;
   pointer-events: none;
 }
@@ -623,11 +625,9 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(52, 152, 219, 0.3) 0%,
-    rgba(52, 152, 219, 0.1) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(52, 152, 219, 0.3) 0%,
+      rgba(52, 152, 219, 0.1) 100%);
   border-radius: 15px;
   pointer-events: none;
 }
@@ -793,7 +793,7 @@ nav {
   letter-spacing: -0.5px;
 }
 
-.mandatory-section > p {
+.mandatory-section>p {
   text-align: center;
   color: #1a1a1a;
   font-size: 16px;
@@ -895,6 +895,13 @@ nav {
   margin-top: 48px;
   grid-template-columns: 1fr 1fr;
 }
+
+@media (max-width: 768px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .step {
   display: grid;
@@ -1125,7 +1132,7 @@ nav {
   text-align: center;
 }
 
-.documents-section > p {
+.documents-section>p {
   text-align: center;
   color: #64748b;
   margin-bottom: 32px;
@@ -1353,7 +1360,7 @@ footer {
     margin-bottom: 0;
   }
 
-  .nav-links > li > a {
+  .nav-links>li>a {
     width: 100%;
     padding: 16px 24px;
     font-size: 16px;
@@ -1361,7 +1368,7 @@ footer {
     border-radius: 0;
   }
 
-  .nav-links > li > a:hover {
+  .nav-links>li>a:hover {
     background: rgba(102, 126, 234, 0.08);
   }
 
@@ -1570,7 +1577,7 @@ footer {
     margin-bottom: 0;
   }
 
-  .nav-links > li > a {
+  .nav-links>li>a {
     width: 100%;
     padding: 16px 24px;
     font-size: 16px;
@@ -1578,7 +1585,7 @@ footer {
     border-radius: 0;
   }
 
-  .nav-links > li > a:hover {
+  .nav-links>li>a:hover {
     background: rgba(102, 126, 234, 0.08);
   }
 
@@ -2205,7 +2212,7 @@ footer {
     font-size: 1.5rem !important;
   }
 
-  .compliance-right > div {
+  .compliance-right>div {
     padding: 24px !important;
   }
 
@@ -2238,7 +2245,7 @@ footer {
     padding: 20px !important;
   }
 
-  .compliance-right > div {
+  .compliance-right>div {
     padding: 20px !important;
   }
 }
@@ -2262,7 +2269,7 @@ footer {
     padding: 20px !important;
   }
 
-  .partner-card > div:first-child {
+  .partner-card>div:first-child {
     width: 80px !important;
     height: 80px !important;
   }
@@ -2284,7 +2291,7 @@ footer {
     gap: 16px !important;
   }
 
-  .partner-card > div:first-child {
+  .partner-card>div:first-child {
     width: 70px !important;
     height: 70px !important;
   }
