@@ -8,6 +8,7 @@
     <link rel="icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="Wealth Empires.jpg">
     <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -66,7 +67,7 @@
 
         .cta-button {
             display: inline-block;
-            padding: 14p x 32px;
+            padding: 14px 32px;
             background-color: #2383E2;
             color: #ffffff;
             font-size: 16px;
@@ -141,103 +142,95 @@
             background-color: #a0a0a0;
         }
 
-        /* Tablet Styles */
-        @media (max-width: 1024px) {
-            .hero-content {
-                gap: 50px;
-            }
-
-            .hero-left h1 {
-                font-size: 52px;
-            }
-
-            .hero-left p {
-                font-size: 18px;
-            }
-
-            .hero-image {
-                max-width: 500px;
-            }
+        /* Partners Section */
+        .gst-section {
+            padding: 80px 20px;
         }
 
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 40px 20px;
-                min-height: auto;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .hero-left {
-                padding-right: 0;
-                text-align: center;
-            }
-
-            .hero-left h1 {
-                font-size: 42px;
-            }
-
-            .hero-left p {
-                font-size: 17px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-right {
-                display: none;
-                padding-left: 0;
-                order: -1;
-            }
-
-            .hero-image {
-                max-width: 100%;
-            }
-
-            .pagination-dots {
-                justify-content: center;
-            }
-
-            .cta-button {
-                width: 100%;
-                max-width: 280px;
-            }
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
         }
 
-        @media (max-width: 480px) {
-            .hero-section {
-                padding: 30px 16px;
-            }
-
-            .hero-left h1 {
-                font-size: 36px;
-            }
-
-            .hero-left p {
-                font-size: 16px;
-                margin-bottom: 28px;
-            }
-
-            .cta-button {
-                padding: 12px 28px;
-                font-size: 15px;
-            }
-
-            .pagination-dots {
-                margin-top: 30px;
-            }
+        .section-title h2 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
         }
 
+        .section-title p {
+            color: #667eea;
+            font-size: 16px;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .partner-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .partner-logo {
+            width: 100px;
+            height: 100px;
+            min-width: 100px;
+            border-radius: 10%;
+            background: #f0f0f0;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .partner-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .partner-info h3 {
+            margin: 0 0 8px 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .partner-info a {
+            margin: 0;
+            color: #667eea;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .partner-info a:hover {
+            color: #4c5fd5;
+        }
+
+        /* Products Section */
         .products-section {
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1.2fr;
             gap: 40px;
-            padding: 30px 60px;
+            padding: 80px 60px;
             align-items: start;
         }
 
@@ -338,51 +331,33 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
-        .card-arrow {
-            position: absolute;
-            bottom: 24px;
-            right: 24px;
-            width: 40px;
-            height: 40px;
-            border: 2px solid rgba(0, 0, 0, 0.3);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
+        /* Tablet Styles */
+        @media (max-width: 1024px) {
+            .hero-content {
+                gap: 50px;
+            }
 
-        .dark-teal .card-arrow,
-        .darker-teal .card-arrow {
-            border-color: rgba(255, 255, 255, 0.4);
-        }
+            .hero-left h1 {
+                font-size: 52px;
+            }
 
-        .card-arrow::after {
-            content: '→';
-            font-size: 20px;
-            color: rgba(0, 0, 0, 0.6);
-            transform: rotate(45deg);
-        }
+            .hero-left p {
+                font-size: 18px;
+            }
 
-        .dark-teal .card-arrow::after,
-        .darker-teal .card-arrow::after {
-            color: rgba(255, 255, 255, 0.8);
-        }
+            .hero-image {
+                max-width: 500px;
+            }
 
-        .product-card:hover .card-arrow {
-            transform: translate(4px, 4px);
-            border-color: rgba(0, 0, 0, 0.6);
-        }
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
 
-        .dark-teal:hover .card-arrow,
-        .darker-teal:hover .card-arrow {
-            border-color: rgba(255, 255, 255, 0.8);
-        }
-
-        @media (max-width: 1200px) {
             .products-section {
                 grid-template-columns: 1fr;
                 gap: 50px;
+                padding: 60px 40px;
             }
 
             .content-left {
@@ -397,21 +372,99 @@
             .main-heading {
                 font-size: 48px;
             }
-        }
 
-        @media (max-width: 900px) {
             .cards-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .main-heading {
-                font-size: 42px;
-            }
         }
 
-        @media (max-width: 600px) {
-            .cards-grid {
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 120px 20px 40px 20px;
+                min-height: auto;
+            }
+
+            .hero-content {
                 grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-left {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .hero-left h1 {
+                font-size: 42px;
+            }
+
+            .hero-left p {
+                font-size: 17px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-right {
+                display: none;
+                padding-left: 0;
+                order: -1;
+            }
+
+            .hero-image {
+                max-width: 100%;
+            }
+
+            .pagination-dots {
+                justify-content: center;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            /* Partners Section Mobile */
+            .gst-section {
+                padding: 60px 16px;
+            }
+
+            .section-title h2 {
+                font-size: 36px;
+            }
+
+            .section-title p {
+                font-size: 14px;
+            }
+
+            .partners-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .partner-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px 20px;
+            }
+
+            .partner-logo {
+                width: 80px;
+                height: 80px;
+                min-width: 80px;
+            }
+
+            .partner-info h3 {
+                font-size: 16px;
+            }
+
+            .partner-info a {
+                font-size: 14px;
+            }
+
+            /* Products Section Mobile */
+            .products-section {
+                padding: 60px 16px;
             }
 
             .main-heading {
@@ -422,12 +475,70 @@
                 font-size: 26px;
             }
 
-            body {
-                padding: 40px 16px;
+            .cards-grid {
+                grid-template-columns: 1fr;
             }
 
             .card-image {
                 height: 200px;
+            }
+
+            .card-content {
+                padding: 24px 20px;
+            }
+
+            .card-title {
+                font-size: 20px;
+            }
+
+            .card-description {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 100px 16px 30px 16px;
+            }
+
+            .hero-left h1 {
+                font-size: 32px;
+            }
+
+            .hero-left p {
+                font-size: 16px;
+                margin-bottom: 28px;
+            }
+
+            .cta-button {
+                padding: 12px 28px;
+                font-size: 15px;
+            }
+
+            .pagination-dots {
+                margin-top: 30px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .main-heading {
+                font-size: 28px;
+            }
+
+            .section-label {
+                font-size: 22px;
+            }
+
+            .partner-card {
+                padding: 20px 16px;
+            }
+
+            .partner-logo {
+                width: 70px;
+                height: 70px;
+                min-width: 70px;
             }
         }
     </style>
@@ -454,7 +565,7 @@
                 </div>
                 <ul class="nav-links" id="navLinks">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
+                        <a href="#" class="dropdown-toggle">Services <i class="fa-solid fa-caret-down"></i></a>
                         <div class="dropdown-menu">
                             <a href="incorporation.html" class="dropdown-item">
                                 <span>Incorporation</span>
@@ -472,7 +583,7 @@
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">Our Product <span class="dropdown-arrow">▼</span></a>
+                        <a href="#" class="dropdown-toggle">Our Product <i class="fa-solid fa-caret-down"></i></a>
                         <div class="dropdown-menu">
                             <a href="hitworth.html" class="dropdown-item">
                                 <span>HitWorth</span>
@@ -488,7 +599,7 @@
                         <div class="header-buttons">
                             <a href="contact.html" class="btn-demo">Contact Us</a>
                             <a href="https://crm.wealthempires.in/" class="btn-primary" style="color: white;">Start
-                                Registration</a>
+                                Incorporation</a>
                         </div>
                     </li>
                 </ul>
@@ -503,14 +614,13 @@
             <div class="hero-content">
                 <div class="hero-right">
                     <div>
-                        <img src="our-partners3.jpg" alt="heroimage" width="100%" height=auto>
+                        <img src="our-partners3.jpg" alt="heroimage" width="100%" height="auto">
                     </div>
                 </div>
-                <div class=" hero-left">
+                <div class="hero-left">
                     <h1>Our Partners Growing Together</h1>
                     <p>Building strong partnerships with industry leaders, technology providers, and business
-                        experts to
-                        deliver exceptional value to our clients.</p>
+                        experts to deliver exceptional value to our clients.</p>
                     <div class="hero-buttons">
                         <a href="contact.html" class="btn-large btn-black">Contact Us</a>
                         <a href="https://crm.wealthempires.in/" class="btn-large btn-primary">Start Registration</a>
@@ -521,141 +631,90 @@
                         <span class="dot"></span>
                     </div>
                 </div>
-
             </div>
-        </div>
         </div>
     </section>
 
     <!-- Partners Section -->
-    <section class="gst-section" style="padding: 80px 0;" id="partnership">
+    <section class="gst-section" id="partnership">
         <div class="container">
-            <div class="section-title" style="text-align: center; margin-bottom: 60px;">
+            <div class="section-title">
                 <h2>Our Partners</h2>
-                <p style="color: #667eea; font-size: 16px;">Meet our trusted partners who help us deliver exceptional
-                    service</p>
+                <p>Meet our trusted partners who help us deliver exceptional service</p>
             </div>
 
             <!-- Partners Grid -->
-            <div
-                style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 32px;">
+            <div class="partners-grid">
                 <!-- Partner 1 -->
-                <div class="partner-card creators"
-                    style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
-                    <div
-                        style="width: 100px; height: 100px; border-radius: 10%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                        <img src="img/1 Software Development.jpg" alt="Software Development"
-                            style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="partner-card creators">
+                    <div class="partner-logo">
+                        <img src="img/1 Software Development.jpg" alt="Software Development">
                     </div>
-                    <div>
-                        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">Softrate</h3>
-                        <a style="margin: 0; color: #667eea; font-weight: 500; text-decoration: none;" href="https://www.softrateglobal.com/">Software Development →</a>
+                    <div class="partner-info">
+                        <h3>Softrate</h3>
+                        <a href="https://www.softrateglobal.com/">Software Development →</a>
                     </div>
                 </div>
 
                 <!-- Partner 2 -->
-                <div class="partner-card creators"
-                    style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
-                    <div
-                        style="width: 100px; height: 100px; border-radius: 10%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                        <img src="dbs.jpg" alt="Payroll Services" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="partner-card creators">
+                    <div class="partner-logo">
+                        <img src="dbs.jpg" alt="Payroll Services">
                     </div>
-                    <div>
-                        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">DBS</h3>
-                        <a style="margin: 0; color: #667eea; font-weight: 500;  text-decoration: none;"  href="https://www.dbs.com/in/">Payroll Services →</a>
+                    <div class="partner-info">
+                        <h3>DBS</h3>
+                        <a href="https://www.dbs.com/in/">Payroll Services →</a>
                     </div>
                 </div>
 
                 <!-- Partner 3 -->
-                <div class="partner-card tech"
-                    style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
-                    <div
-                        style="width: 100px; height: 100px; border-radius: 10%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                        <img src="img/3 Corporate banking.jpg" alt="Corporate Banking"
-                            style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="partner-card tech">
+                    <div class="partner-logo">
+                        <img src="img/3 Corporate banking.jpg" alt="Corporate Banking">
                     </div>
-                    <div>
-                        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">IDFC First Bank</h3>
-                        <a style="margin: 0; color: #667eea; font-weight: 500; text-decoration: none;"  href="https://www.idfcfirstbank.com/">Corporate Bank Partners →</a>
+                    <div class="partner-info">
+                        <h3>IDFC First Bank</h3>
+                        <a href="https://www.idfcfirstbank.com/">Corporate Bank Partners →</a>
                     </div>
                 </div>
 
                 <!-- Partner 4 -->
-                <div class="partner-card ecommerce"
-                    style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
-                    <div
-                        style="width: 100px; height: 100px; border-radius: 10%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                        <img src="img/4 eCommerce.png" alt="eCommerce Platform"
-                            style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="partner-card ecommerce">
+                    <div class="partner-logo">
+                        <img src="img/4 eCommerce.png" alt="eCommerce Platform">
                     </div>
-                    <div>
-                        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">freshbooks</h3>
-                        <a style="margin: 0; color: #667eea; font-weight: 500; text-decoration: none;"  href="https://www.freshbooks.com/">E-commerce →</a>
+                    <div class="partner-info">
+                        <h3>freshbooks</h3>
+                        <a href="https://www.freshbooks.com/">E-commerce →</a>
                     </div>
                 </div>
 
                 <!-- Partner 5 -->
-                <div class="partner-card tech"
-                    style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
-                    <div
-                        style="width: 100px; height: 100px; border-radius: 10%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                        <img src="img/5 Office Space.png" alt="Office Space"
-                            style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="partner-card tech">
+                    <div class="partner-logo">
+                        <img src="img/5 Office Space.png" alt="Office Space">
                     </div>
-                    <div>
-                        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">Greenways Business Park</h3>
-                        <a style="margin: 0; color: #667eea; font-weight: 500; text-decoration: none;"  href="https://greenwaysbusinesspark.com/">Office Space Solutions →</a>
+                    <div class="partner-info">
+                        <h3>Greenways Business Park</h3>
+                        <a href="https://greenwaysbusinesspark.com/">Office Space Solutions →</a>
                     </div>
                 </div>
 
                 <!-- Partner 6 -->
-                <div class="partner-card creators"
-                    style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 20px;">
-                    <div
-                        style="width: 100px; height: 100px; border-radius: 10%; background: #f0f0f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
-                        <img src="img/6 Legal.png" alt="Legal Services"
-                            style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="partner-card creators">
+                    <div class="partner-logo">
+                        <img src="img/6 Legal.png" alt="Legal Services">
                     </div>
-                    <div>
-                        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">The Legal Empires</h3>
-                        <a style="margin: 0; color: #667eea; font-weight: 500; text-decoration: none;"  href="#">Legal Services →</a>
+                    <div class="partner-info">
+                        <h3>The Legal Empires</h3>
+                        <a href="#">Legal Services →</a>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add scroll effect to header (updated for new design)
-        window.addEventListener('scroll', function () {
-            const navContainer = document.querySelector('.nav-container');
-            if (window.scrollY > 100) {
-                navContainer.style.background = 'rgba(255, 255, 255, 0.98)';
-                navContainer.style.backdropFilter = 'blur(20px)';
-            } else {
-                navContainer.style.background = 'rgba(255, 255, 255, 0.95)';
-                navContainer.style.backdropFilter = 'blur(20px)';
-            }
-        });
-    </script>
-
     <!-- Partnership Benefits Section -->
-
     <section class="products-section">
         <div class="content-left">
             <h3 class="section-label">Why Partner With Us?</h3>
@@ -677,26 +736,23 @@
             </div>
 
             <div class="product-card dark-teal">
-                <img src="businessmen.jpg"
-                    alt="Eco Accessories" class="card-image">
+                <img src="businessmen.jpg" alt="Eco Accessories" class="card-image">
                 <div class="card-content">
                     <h3 class="card-title">Personalized Services</h3>
-                    <p class="card-description">Targeted financial solutions designed for your company’s growth.</p>
+                    <p class="card-description">Targeted financial solutions designed for your company's growth.</p>
                 </div>
             </div>
 
             <div class="product-card darker-teal">
-                <img src="perso.jpg"
-                    alt="Customization" class="card-image">
+                <img src="perso.jpg" alt="Customization" class="card-image">
                 <div class="card-content">
                     <h3 class="card-title">Data Security</h3>
-                    <p class="card-description">Secure data handling practices for the protection of sensitive information</p>
+                    <p class="card-description">Secure data handling practices for the protection of sensitive
+                        information</p>
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <!-- Footer -->
     <footer class="footer-container">
@@ -832,6 +888,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         // --- Hamburger Menu, Overlay, and Dropdown Logic ---
         const hamburger = document.getElementById('hamburger');

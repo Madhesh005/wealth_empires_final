@@ -26,6 +26,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             background-color: #ffffff;
+            overflow-x: hidden;
         }
 
         /* Add this to your <style> section or main CSS file */
@@ -48,6 +49,7 @@
             max-width: 1400px;
             margin: 0 auto;
             width: 100%;
+            padding: 0 20px;
         }
 
         .hero-content {
@@ -78,9 +80,49 @@
             max-width: 540px;
         }
 
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-large {
+            display: inline-block;
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-black {
+            background-color: #000;
+            color: #ffffff;
+        }
+
+        .btn-black:hover {
+            background-color: #1f1f1f;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background-color: #2383E2;
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(35, 131, 226, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #1a6ec4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(35, 131, 226, 0.3);
+        }
+
         .cta-button {
             display: inline-block;
-            padding: 14p x 32px;
+            padding: 14px 32px;
             background-color: #2383E2;
             color: #ffffff;
             font-size: 16px;
@@ -177,7 +219,7 @@
         /* Mobile Styles */
         @media (max-width: 768px) {
             .hero-section {
-                padding: 40px 20px;
+                padding: 80px 20px 40px;
                 min-height: auto;
             }
 
@@ -201,9 +243,22 @@
                 margin-right: auto;
             }
 
+            .hero-buttons {
+                justify-content: center;
+            }
+
             .hero-right {
                 padding-left: 0;
                 order: -1;
+            }
+
+            .hero-right div {
+                text-align: center;
+            }
+
+            .hero-right img {
+                width: 100%;
+                max-width: 100%;
             }
 
             .hero-image {
@@ -214,19 +269,20 @@
                 justify-content: center;
             }
 
-            .cta-button {
+            .btn-large {
                 width: 100%;
                 max-width: 280px;
+                text-align: center;
             }
         }
 
         @media (max-width: 480px) {
             .hero-section {
-                padding: 30px 16px;
+                padding: 80px 16px 30px;
             }
 
             .hero-left h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
 
             .hero-left p {
@@ -234,9 +290,11 @@
                 margin-bottom: 28px;
             }
 
-            .cta-button {
+            .btn-large {
                 padding: 12px 28px;
                 font-size: 15px;
+                width: 100%;
+                max-width: 100%;
             }
 
             .pagination-dots {
@@ -438,6 +496,7 @@
             .btn {
                 padding: 12px 24px;
                 font-size: 15px;
+                width: 100%;
             }
         }
 
@@ -447,6 +506,570 @@
                 'wght' 400,
                 'GRAD' 0,
                 'opsz' 40
+        }
+
+        /* GST Section Responsive */
+        .gst-section {
+            background: #ffffff;
+            padding: 0px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+            margin-top: 50px;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-cta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0 60px 0;
+            flex-wrap: wrap;
+        }
+
+        .section-cta a {
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            padding: 0 20px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #d9dcf0, rgb(131, 195, 211));
+            border-radius: 20px;
+            padding: 36px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 14px;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #5a5a5a;
+            line-height: 1.6;
+            margin-bottom: auto;
+            font-size: 0.95rem;
+        }
+
+        .service-card a {
+            color: #8B7355;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 1024px) {
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title h2 {
+                font-size: 2rem;
+                margin-top: 30px;
+            }
+
+            .section-title p {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+
+            .section-cta {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                margin: 30px 0 40px 0;
+            }
+
+            .section-cta a {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .service-card {
+                padding: 28px;
+                min-height: auto;
+            }
+
+            .service-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .service-card p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+
+            .section-title p {
+                font-size: 0.9rem;
+            }
+
+            .section-cta a {
+                padding: 12px 24px;
+                font-size: 15px;
+            }
+
+            .service-card {
+                padding: 24px;
+            }
+        }
+
+        /* Perks Grid Responsive */
+        .perks-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @media (max-width: 968px) {
+            .perks-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .partner-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .perks-grid h2 {
+                font-size: 2rem !important;
+            }
+
+            .perks-grid p {
+                font-size: 1rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .perks-grid h2 {
+                font-size: 1.6rem !important;
+            }
+
+            .perks-grid > div:first-child {
+                padding-left: 0 !important;
+            }
+        }
+
+        /* FAQ Responsive */
+        @media (max-width: 768px) {
+            section[style*="padding: 80px 0"] {
+                padding: 60px 20px !important;
+            }
+
+            section h2 {
+                font-size: 2rem !important;
+            }
+
+            section div[style*="padding: 24px 28px"] {
+                padding: 20px !important;
+            }
+
+            section h3 {
+                font-size: 1rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section h2 {
+                font-size: 1.6rem !important;
+            }
+
+            section div[style*="padding: 24px 28px"] {
+                padding: 16px !important;
+            }
+        }
+
+        /* CTA Section Responsive */
+        @media (max-width: 768px) {
+            section[style*="margin: 0 50px"] {
+                margin: 0 20px !important;
+                padding: 40px 20px !important;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+
+            .hero-grid > div:first-child {
+                padding-left: 0 !important;
+                text-align: center;
+            }
+
+            .hero-grid h2 {
+                font-size: 2.2rem !important;
+            }
+
+            .hero-grid p {
+                font-size: 1rem !important;
+            }
+
+            .hero-grid div[style*="display: flex"] {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-grid div[style*="display: flex"] a {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .hero-grid > div:last-child {
+                margin-left: 0 !important;
+                width: 100% !important;
+                height: 300px !important;
+            }
+
+            .hero-grid img {
+                width: 300px !important;
+                height: 270px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section[style*="margin: 0 50px"] {
+                margin: 0 16px !important;
+                padding: 30px 16px !important;
+            }
+
+            .hero-grid h2 {
+                font-size: 1.8rem !important;
+            }
+
+            .hero-grid div[style*="display: flex"] a {
+                padding: 12px 24px !important;
+                font-size: 15px !important;
+            }
+
+            .hero-grid > div:last-child {
+                height: 250px !important;
+            }
+
+            .hero-grid img {
+                width: 250px !important;
+                height: 220px !important;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.4;
+            }
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section a[href*="crm.wealthempires.in"]:hover {
+            transform: translateY(-2px) !important;
+        }
+
+        section a[href*="crm.wealthempires.in"]:hover span {
+            transform: translateX(5px) !important;
+        }
+
+        section a[href*="contact.html"]:hover {
+            background: rgba(255, 255, 255, 1) !important;
+            border-color: rgba(255, 107, 53, 0.6) !important;
+            transform: translateY(-1px) !important;
+        }
+
+          @media (max-width: 480px) {
+            .footer-container {
+                padding: 40px 0 0;
+            }
+
+            /* Footer Header Small Mobile */
+            .footer-header {
+                padding: 0 16px 20px;
+            }
+
+            .footer-header-content {
+                gap: 16px;
+            }
+
+            .footer-logo {
+                height: 42px;
+            }
+
+            .contact-section {
+                gap: 8px;
+            }
+
+            .support-email,
+            .phone-link {
+                font-size: 13px;
+            }
+
+            /* Footer Content Small Mobile */
+            .footer-content {
+                grid-template-columns: 1fr;
+                padding: 30px 16px;
+                gap: 24px;
+            }
+
+            .footer-heading {
+                font-size: 14px;
+                margin-bottom: 14px;
+            }
+
+            .footer-heading-secondary {
+                margin-top: 24px;
+            }
+
+            .footer-list li {
+                margin-bottom: 9px;
+            }
+
+            .footer-list li a {
+                font-size: 12px;
+            }
+
+            /* Footer Bottom Small Mobile */
+            .footer-bottom {
+                padding: 20px 16px;
+            }
+
+            .footer-bottom-content {
+                gap: 16px;
+            }
+
+            .footer-links {
+                gap: 10px;
+            }
+
+            .footer-links a {
+                font-size: 11px;
+            }
+
+            .footer-right {
+                gap: 16px;
+            }
+
+            .copyright {
+                font-size: 11px;
+            }
+
+            .social-links {
+                gap: 12px;
+            }
+
+            .social-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 14px;
+            }
+        }
+
+        /* ============================================
+           EXTRA SMALL MOBILE (max-width: 360px)
+           ============================================ */
+        @media (max-width: 360px) {
+            .footer-header {
+                padding: 0 12px 18px;
+            }
+
+            .footer-logo {
+                height: 38px;
+            }
+
+            .footer-content {
+                padding: 24px 12px;
+                gap: 20px;
+            }
+
+            .footer-heading {
+                font-size: 13px;
+            }
+
+            .footer-list li a {
+                font-size: 11px;
+            }
+
+            .footer-bottom {
+                padding: 18px 12px;
+            }
+
+            .social-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 13px;
+            }
+        }
+
+        /* ============================================
+           LANDSCAPE MOBILE ORIENTATION
+           ============================================ */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+                padding: 30px 20px;
+            }
+
+            .footer-heading-secondary {
+                margin-top: 20px;
+            }
+        }
+
+        /* ============================================
+           TABLET LANDSCAPE (768px - 1024px)
+           ============================================ */
+        @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+            .footer-content {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* ============================================
+           TOUCH DEVICE OPTIMIZATIONS
+           ============================================ */
+        @media (hover: none) and (pointer: coarse) {
+            /* Larger touch targets for mobile */
+            .footer-list li a {
+                padding: 4px 0;
+                min-height: 32px;
+                display: flex;
+                align-items: center;
+            }
+
+            .social-icon {
+                min-width: 44px;
+                min-height: 44px;
+            }
+
+            .footer-links a {
+                padding: 4px 0;
+            }
+
+            /* Remove hover effects on touch devices */
+            .footer-list li a:hover::after {
+                width: 0;
+            }
+
+            /* Active states for touch feedback */
+            .footer-list li a:active {
+                color: #2383E2;
+                background: rgba(35, 131, 226, 0.1);
+                padding-left: 8px;
+                padding-right: 8px;
+                margin-left: -8px;
+                border-radius: 4px;
+            }
+
+            .social-icon:active {
+                transform: scale(0.95);
+            }
+
+            .footer-links a:active {
+                color: #ffffff;
+            }
+        }
+
+        /* ============================================
+           ACCESSIBILITY IMPROVEMENTS
+           ============================================ */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .footer-container {
+                border-top: 2px solid #ffffff;
+            }
+
+            .footer-list li a,
+            .footer-links a {
+                color: #ffffff;
+            }
+
+            .social-icon {
+                border: 2px solid #ffffff;
+            }
         }
     </style>
 </head>
@@ -472,7 +1095,7 @@
                 </div>
                 <ul class="nav-links" id="navLinks">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
+                        <a href="#" class="dropdown-toggle">Services <i class="fa-solid fa-caret-down"></i></a>
                         <div class="dropdown-menu">
                             <a href="incorporation.html" class="dropdown-item">
                                 <span>Incorporation</span>
@@ -490,7 +1113,7 @@
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">Our Product <span class="dropdown-arrow">▼</span></a>
+                        <a href="#" class="dropdown-toggle">Our Product <i class="fa-solid fa-caret-down"></i></a>
                         <div class="dropdown-menu">
                             <a href="hitworth.html" class="dropdown-item">
                                 <span>HitWorth</span>
@@ -520,13 +1143,13 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-left">
-                    <h1><span style="font-weight: 400;">Wealth empires</span> India's 1st Startup doctor
+                    <h1><span style="font-weight: 400;">Wealth empires</span> India's 1st Startup Doctor
                     </h1>
                     <p>Do health check for
                         your startup, its free!</p>
                     <div class="hero-buttons">
                         <a href="contact.html" class="btn-large btn-black">Contact Us</a>
-                        <a href="https://crm.wealthempires.in/" class="btn-large btn-primary" style="color: white; ">Try
+                        <a href="https://crm.wealthempires.in/" class="btn-large btn-primary" style="color: white;">Try
                             Now</a>
                     </div>
                     <div class="pagination-dots">
@@ -537,33 +1160,30 @@
                 </div>
                 <div class="hero-right">
                     <div>
-                        <img src="home.jpg" alt="" width="80%" height=auto>
+                        <img src="home.jpg" alt="" width="80%" height="auto">
                     </div>
                 </div>
             </div>
         </div>
-        </div>
     </section>
+
     <!-- Services Section -->
-    <section class="gst-section" style="background: #ffffff; padding: 0px 0;">
+    <section class="gst-section">
         <div class="container">
-            <div class="section-title" style="text-align: center; margin-bottom: 20px;">
-                <h2 style="font-size: 2.8rem; margin-bottom: 16px; margin-top: 50px; color: #1a1a1a; font-weight: 700;">Your Back Office.
-                    Simplified.</h2>
-                <p style="font-size: 1.1rem; color: #64748b; max-width: 600px; margin: 0 auto;">Each tool is powerful on
-                    its own, but together? Game-changing.</p>
+            <div class="section-title">
+                <h2>Your Back Office. Simplified.</h2>
+                <p>Each tool is powerful on its own, but together? Game-changing.</p>
             </div>
-            <div style="display: flex; justify-content: center; gap: 20px; margin: 40px 0 60px 0;">
+            <div class="section-cta">
                 <a href="https://crm.wealthempires.in/"
-                    style="background: #000; color: white; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;">Start
+                    style="background: #000; color: white;">Start
                     Incorporation<span>›</span></a>
                 <a href="contact.html"
-                    style="background: transparent; color: #1a1a1a; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 600; border: 2px solid #e5e7eb; transition: all 0.3s;">Contact
+                    style="background: transparent; color: #1a1a1a; border: 2px solid #e5e7eb;">Contact
                     Us</a>
             </div>
             <div class="service-grid">
-                <!-- U.S. Business Formation -->
-
+                <!-- Company Incorporation -->
                 <div
                     style="background: linear-gradient(135deg, #d9dcf0, rgb(131, 195, 211)); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
                     <img src="rocket_launch_34dp_000000_FILL0_wght400_GRAD0_opsz40.svg"
@@ -577,8 +1197,10 @@
                         style="color: #8B7355; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Start
                         Your Business <span>›</span></a>
                 </div>
+
+                <!-- 360° Compliance -->
                 <div
-                    style="background: linear-gradient(135deg, #d5ecd6, #d5ecd6);; border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
+                    style="background: linear-gradient(135deg, #d5ecd6, #d5ecd6); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
                     <div style="font-size: 44px;">
                         <i class="fa-solid fa-rocket"></i>
                     </div>
@@ -590,6 +1212,8 @@
                         style="color: #519ed1; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Stay
                         Compliant <span>›</span></a>
                 </div>
+
+                <!-- Trademark Registration -->
                 <div
                     style="background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%); border-radius: 20px; padding: 36px; transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.05); min-height: 280px; display: flex; flex-direction: column;">
                     <div
@@ -648,8 +1272,6 @@
                         style="color: #3949AB; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 0.95rem;">Track
                         Your Books <span>›</span></a>
                 </div>
-
-
             </div>
         </div>
     </section>
@@ -675,7 +1297,7 @@
             </div>
 
             <div class="card">
-                <h2 class="card-title">Do It Yourself</h2>
+                <h2 class="card-title">Do It Others</h2>
                 <p class="card-subtitle">Going solo? See how we compare.</p>
                 <a href="#" class="btn btn-secondary">
                     Compare
@@ -685,9 +1307,7 @@
         </div>
     </section>
 
-
     <!-- Process Section -->
-
     <section style="background: #f8fafc; padding: 80px 0;">
         <div class="container">
             <div class="perks-grid">
@@ -1119,94 +1739,6 @@
         </div>
     </section>
 
-    <!-- Enhanced CSS Animations -->
-    <style>
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-15px);
-            }
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-                opacity: 0.7;
-            }
-
-            50% {
-                transform: scale(1.1);
-                opacity: 0.4;
-            }
-        }
-
-        /* Desktop Grid */
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Hover effects for CTA buttons */
-        section a[href*="crm.wealthempires.in"]:hover {
-            transform: translateY(-2px) !important;
-        }
-
-        section a[href*="crm.wealthempires.in"]:hover span {
-            transform: translateX(5px) !important;
-        }
-
-        section a[href*="contact.html"]:hover {
-            background: rgba(255, 255, 255, 1) !important;
-            border-color: rgba(255, 107, 53, 0.6) !important;
-            transform: translateY(-1px) !important;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                /* single column */
-                gap: 40px;
-                text-align: center;
-            }
-
-            .hero-grid img {
-                max-width: 90%;
-            }
-
-            /* Hide image on mobile */
-            .hero-image {
-                display: none !important;
-            }
-
-            section h2 {
-                font-size: 2.2rem !important;
-            }
-
-            section div[style*="flex-wrap: wrap"] {
-                justify-content: center !important;
-            }
-
-            section {
-                margin: 0 20px !important;
-                /* reduce side margin on mobile */
-                padding: 60px 20px !important;
-                /* smaller padding */
-            }
-        }
-    </style>
-
     <!-- Footer -->
     <footer class="footer-container">
         <!-- Top Header Section -->
@@ -1232,28 +1764,22 @@
                     <li><a href="https://wealthempires.in">Health Check</a></li>
                     <li><a href="https://crm.wealthempires.in">WE CRM</a></li>
                 </ul>
-                <h3 style="margin-top: 32px;">Services</h3>
-                <ul>
-                    <li><a href="#">Business Incorporation</a></li>
-                    <li><a href="#">360 degree Compliance</a></li>
-                    <li><a href="#">360 degree Accounting</a></li>
-                    <li><a href="#">Trademark Registration Platform</a></li>
-                    <li><a href="#">GST Registration</a></li>
-                    <li><a href="#">Tax Planning</a></li>
-                    <li><a href="#">ISO Certification</a></li>
-                    <li><a href="#">Funding</a></li>
-                    <li><a href="#">Risk Mitigation</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Take To Experts</h3>
+                <h3 style="margin-top: 32px;">Templates</h3>
                 <ul>
                     <li><a href="#">Online CA Consultation</a></li>
                     <li><a href="#">Online Lawyer Consultation</a></li>
                     <li><a href="#">Online GST Consultation</a></li>
                     <li><a href="#">Online Business Consultation</a></li>
-                    <li><a href="#">Online Legal Consultation</a></li>
+                    <li><a href="#">Legal Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Partnership Agreement</a></li>
+                    <li><a href="#">Rental Agreement</a></li>
+                    <li><a href="#">Service Contract</a></li>
                 </ul>
                 <h3 style="margin-top: 32px;">Quick links</h3>
                 <ul>
@@ -1266,11 +1792,18 @@
             </div>
 
             <div class="footer-column">
-                <h3>Templates</h3>
+                <h3>Talk To Experts</h3>
                 <ul>
-                    <li><a href="#">Partnership Agreement</a></li>
-                    <li><a href="#">Rental Agreement</a></li>
-                    <li><a href="#">Service Contract</a></li>
+                    <li><a href="#">Business Incorporation </a></li>
+                    <li><a href="#">360 degree Compliance</a></li>
+                    <li><a href="#">360 degree Accounting </a></li>
+                    <li><a href="#">Trademark Registration Platform </a></li>
+                    <li><a href="#">GST Registration Online</a></li>
+                    <li><a href="#">Tax Planning</a></li>
+                    <li><a href="#">ISO Certification</a></li>
+                    <li><a href="#">Funding</a></li>
+                    <li><a href="#">Risk Mitigation</a></li>
+
                 </ul>
             </div>
 
