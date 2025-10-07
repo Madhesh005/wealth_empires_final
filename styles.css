@@ -1875,7 +1875,7 @@ footer {
 
 /* Documents Grid Mobile */
 .documents-grid {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .document-item {
