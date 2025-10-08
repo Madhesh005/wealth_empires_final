@@ -102,6 +102,65 @@
     </script>
 
     <!-- Footer -->
+    <style>
+        @media (max-width: 768px) {
+
+            /* Stack header items vertically */
+            .footer-header-content {
+                flex-direction: column;
+                gap: 20px;
+                /* Adds space between logo and contact info */
+            }
+
+            .header-divider {
+                display: none;
+                /* Hide the vertical divider line */
+            }
+
+            /* Stack the main content columns */
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                /* Center-aligns the text in columns */
+            }
+
+            .footer-column {
+                margin-bottom: 20px;
+                /* Adds space between stacked columns */
+            }
+
+            .footer-column h3 {
+                margin-top: 0;
+                /* Removes extra space for headings after the first one */
+            }
+
+            /* Stack bottom links and social media vertically */
+            .footer-bottom-content {
+                flex-direction: column-reverse;
+                /* Shows copyright at the bottom */
+                gap: 20px;
+                /* Adds space between elements */
+                text-align: center;
+            }
+
+            .footer-links {
+                display: flex;
+                flex-direction: column;
+                /* Stack policy links */
+                gap: 10px;
+            }
+
+            .footer-links span {
+                display: none;
+                /* Hide the pipe dividers */
+            }
+
+            .footer-right {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
     <footer class="footer-container">
         <!-- Top Header Section -->
         <div class="footer-header">
