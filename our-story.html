@@ -251,28 +251,6 @@
             background: #0d3d3d;
         }
 
-        .card-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 28px;
-            color: white;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
-        }
-
-        .card-content h3 {
-            font-size: 23px;
-            font-weight: 600;
-            margin-bottom: 19px;
-            line-height: 1.2;
-        }
-
-        .card-content p {
-            font-size: 15px;
-            line-height: 1.5;
-            opacity: 0.95;
-        }
 
         .image-card.surfboards {
             grid-column: 1;
@@ -283,8 +261,10 @@
             grid-column: 1;
             grid-row: 2;
             background: #0d3d3d;
+            color: white;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
+            padding: 15px;
         }
 
         .image-card.beach {
@@ -623,7 +603,7 @@
 
         @media (max-width: 768px) {
             .impact-showcase {
-                padding: 60px 0 !important;
+                padding: 0px 0 !important;
             }
 
             .impact-showcase h2 {
@@ -1000,14 +980,8 @@
         <div class="content-left">
             <h3 class="section-label">Wealth Empires</h3>
             <h1 class="main-heading">Stay Legally Sound In One Click!</h1>
-            <br><br>
             <div class="feature-block">
-                <div class="surfboard-icon">
-                    <svg viewBox="0 0 50 50">
-                        <ellipse cx="25" cy="25" rx="8" ry="22" />
-                        <line x1="25" y1="5" x2="25" y2="45" />
-                    </svg>
-                </div>
+
                 <div class="feature-content">
                     <h3>Streamline Your Business Success with Our Expert Services</h3>
                     <p>Our mission at Wealth Empires is to provide personalized financial solutions that address each
@@ -1088,7 +1062,7 @@
         style="background: #f8fafc; padding: 40px 0; position: relative; overflow: hidden;">
         <div class="container"
             style="max-width: 1400px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;">
-            <div style="text-align: center; margin-bottom: 80px;" class="impact-header">
+            <div style="text-align: center;" class="impact-header">
                 <h2 class="impact-heading"
                     style="font-size: 3rem; font-weight: 500; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -2px; line-height: 1.1;">
                     Empowering Dreams,<br>
@@ -1100,104 +1074,74 @@
                 </p>
             </div>
 
-            <div class="impact-grid"
-                style="display: grid; grid-template-columns: 1fr 2px 1fr; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto;">
+<section style="background: #fafafa; padding: 80px 0;">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 2.8rem; color: #2d2d2d; font-weight: 700;">Our Impact</h2>
+            <p style="font-size: 1.1rem; color: #5a5a5a; max-width: 600px; margin: 12px auto 0;">Transforming visions into successful, compliant businesses.</p>
+        </div>
 
-                <div style="display: flex; flex-direction: column; gap: 40px;" class="timeline-column-left">
-
-                    <div class="impact-timeline-card cost-savings-card"
-                        style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(-20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                        <div style="display: flex; align-items: flex-start; gap: 20px;">
-                            <div>
-                                <i class="fa-solid fa-indian-rupee-sign"></i>
-                            </div>
-                            <div style="flex: 1;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">
-                                    Cost Savings</h3>
-                                <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Saved
-                                    startups in hidden legal costs through transparent pricing and smart solutions.</p>
-                                <div><br>
-                                    <p style="color: #a16207; font-weight: 500; font-size: 0.9rem;">Average 60% cost
-                                        reduction per client</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="impact-timeline-card risk-prevention-card"
-                        style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(-20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                        <div style="display: flex; align-items: flex-start; gap: 20px;">
-                            <div style="flex: 1;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">
-                                    Risk Prevention</h3>
-                                <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Protected
-                                    <strong>500+ businesses</strong> from compliance penalties through proactive
-                                    guidance and expert consultation.
-                                </p><br>
-                                <div>
-                                    <span style="color: #4338ca; font-weight: 600; font-size: 0.9rem;">Zero
-                                        compliance violations for our clients</span>
-                                </div>
-                            </div>
+        <div class="impact-grid">
+            <div class="timeline-column-left">
+                <div class="impact-timeline-card">
+                    <div class="card-content">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                        <div class="text-content">
+                            <h3>Cost Savings</h3>
+                            <p>Saved startups in hidden legal costs through transparent pricing and smart solutions.</p>
+                            <div class="highlight-text" style="color: #a16207;">Average 60% cost reduction per client</div>
                         </div>
                     </div>
                 </div>
 
-                <div style="position: relative; height: 400px; display: flex; justify-content: center;"
-                    class="timeline-center">
-                    <div class="timeline-line-desktop"
-                        style="width: 4px; height: 100%; background: linear-gradient(to bottom, #fde68a, #c7d2fe, #a7f3d0); border-radius: 2px; position: relative;">
-                        <div class="timeline-dot dot-1"
-                            style="position: absolute; top: 15%; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; background: #fde68a; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(252, 211, 77, 0.3);">
-                        </div>
-                        <div class="timeline-dot dot-2"
-                            style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; background: #c7d2fe; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);">
-                        </div>
-                        <div class="timeline-dot dot-3"
-                            style="position: absolute; top: 85%; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; background: #a7f3d0; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);">
-                        </div>
-                    </div>
-                </div>
-
-                <div style="display: flex; flex-direction: column; justify-content: center;"
-                    class="timeline-column-right">
-
-                    <div class="impact-timeline-card growth-focus-card"
-                        style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; transform: translateX(20px); transition: all 0.4s ease; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                        <div style="display: flex; align-items: flex-start; gap: 20px;">
-                            <div style="flex: 1;">
-                                <h3 style="font-size: 1.8rem; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0;">
-                                    Growth Focus</h3>
-                                <p style="color: #4b5563; line-height: 1.6; font-size: 1.1rem; margin: 0;">Enabled
-                                    <strong>1000+ entrepreneurs</strong> to focus on scaling their business while we
-                                    handle the paperwork complexities.
-                                </p><br>
-                                <div>
-                                    <span style="color: #047857; font-weight: 600; font-size: 0.9rem;">3x faster
-                                        business scaling average</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="impact-stats-box"
-                        style="margin-top: 40px; background: #ffffff; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); border: 1px solid rgba(226, 232, 240, 0.8);">
-                        <div class="impact-stats-grid"
-                            style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; text-align: center;">
-                            <div>
-                                <div style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">
-                                    2500+</div>
-                                <div style="color: #64748b; font-size: 0.9rem; font-weight: 500;">Dreams Realized</div>
-                            </div>
-                            <div>
-                                <div style="font-size: 2.5rem; font-weight: 800; color: #1a1a1a; margin-bottom: 8px;">
-                                    99.8%</div>
-                                <div style="color: #64748b; font-size: 0.9rem; font-weight: 500;">Success Rate</div>
-                            </div>
+                <div class="impact-timeline-card">
+                    <div class="card-content">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div class="text-content">
+                            <h3>Risk Prevention</h3>
+                            <p>Protected <strong>500+ businesses</strong> from compliance penalties through proactive guidance.</p>
+                            <div class="highlight-text" style="color: #4338ca;">Zero compliance violations for our clients</div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="timeline-center">
+                <div class="timeline-line-desktop">
+                    <div class="timeline-dot dot-1"></div>
+                    <div class="timeline-dot dot-2"></div>
+                    <div class="timeline-dot dot-3"></div>
+                </div>
+            </div>
+
+            <div class="timeline-column-right">
+                <div class="impact-timeline-card">
+                    <div class="card-content">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        <div class="text-content">
+                            <h3>Growth Focus</h3>
+                            <p>Enabled <strong>1000+ entrepreneurs</strong> to focus on scaling while we handle complexities.</p>
+                            <div class="highlight-text" style="color: #047857;">3x faster business scaling average</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="impact-stats-box">
+                    <div class="impact-stats-grid">
+                        <div>
+                            <div class="stat-number">2500+</div>
+                            <div class="stat-label">Dreams Realized</div>
+                        </div>
+                        <div>
+                            <div class="stat-number">99.8%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         </div>
     </section>
 
