@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get More For Less - Pricing Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-top: 100px;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: #6b7280;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .subtitle-secondary {
+            font-size: 1.125rem;
+            color: #6b7280;
+            font-weight: 400;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .tab-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            color: #6b7280;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            bottom: -1px;
+        }
+
+        .tab-btn:hover {
+            color: #1a1a1a;
+        }
+
+        .tab-btn.active {
+            color: #1a1a1a;
+            border-bottom-color: #1a1a1a;
+        }
+
+        .tab-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .pricing-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card.featured {
+            background: #0d3d3d;
+            border-color: #F4E4A6;
+            position: relative;
+        }
+
+        .pricing-card.featured::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            background: linear-gradient(135deg, #F4E4A6 0%, #F4E4A6 100%);
+            border-radius: 12px;
+            z-index: -1;
+        }
+
+        .card-header {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .company-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #000000;
+            line-height: 1;
+        }
+
+        .period {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #4b5563;
+        }
+
+        .state-fees {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        .additional-fees {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        .additional-fees div {
+            margin: 2px 0;
+        }
+
+        .comparison-table {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr repeat(5, 1fr);
+            border-bottom: 1px solid #e5e7eb;
+            min-height: 80px;
+            align-items: center;
+        }
+
+        .comparison-row.no-border {
+            border-bottom: none;
+            min-height: 60px;
+        }
+
+        .comparison-row:nth-child(odd) {
+            background-color: #f9fafb;
+        }
+
+        .feature-name {
+            padding: 20px 24px;
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+        }
+
+        .feature-value {
+            padding: 20px 16px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            font-size: 0.9rem;
+            color: #1a1a1a;
+        }
+
+        .using {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        .check-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .x-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 40px 0 60px 0;
+        }
+
+        .btn-primary {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #1a1a1a;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            border: 1px solid #d1d5db;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: #9ca3af;
+            transform: translateY(-1px);
+        }
+
+        .deduction-section {
+            text-align: center;
+            background-color: #f9fafb;
+            padding: 60px 40px;
+            border-radius: 16px;
+            margin-top: 60px;
+        }
+
+        .deduction-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .highlight {
+            background-color: #F4E4A6;
+            padding: 4px 12px;
+            border-radius: 6px;
+        }
+
+        .deduction-text {
+            font-size: 1.0625rem;
+            color: #4b5563;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            line-height: 1.7;
+        }
+
+        .deduction-note {
+            font-size: 0.875rem;
+            color: #6b7280;
+            max-width: 800px;
+            margin: 0 auto 32px auto;
+            line-height: 1.6;
+        }
+
+        .btn-learn-more {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-learn-more:hover {
+            background-color: #1a1a1a;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 1024px) {
+            .pricing-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .comparison-row {
+                grid-template-columns: 1fr repeat(3, 1fr);
+            }
+
+            .comparison-row>div:nth-child(4),
+            .comparison-row>div:nth-child(5),
+            .comparison-row>div:nth-child(6) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.25rem;
+            }
+
+            .subtitle,
+            .subtitle-secondary {
+                font-size: 1rem;
+            }
+
+            .pricing-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .comparison-row {
+                grid-template-columns: 1.2fr 1fr 1fr;
+                font-size: 0.85rem;
+            }
+
+            .comparison-row>div:nth-child(3),
+            .comparison-row>div:nth-child(4),
+            .comparison-row>div:nth-child(5),
+            .comparison-row>div:nth-child(6) {
+                display: none;
+            }
+
+            .feature-name {
+                padding: 16px 12px;
+                font-size: 0.85rem;
+            }
+
+            .feature-value {
+                padding: 16px 8px;
+                font-size: 0.8rem;
+            }
+
+            .tabs {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .tab-btn {
+                padding: 10px 16px;
+                font-size: 0.875rem;
+            }
+
+            .deduction-title {
+                font-size: 1.75rem;
+            }
+
+            .deduction-section {
+                padding: 40px 24px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                padding: 16px 0;
+            }
+
+            .comparison-row>div:not(:first-child) {
+                display: none;
+            }
+
+            .feature-name {
+                text-align: center;
+            }
+
+            .main-title {
+                font-size: 1.875rem;
+            }
+
+            .deduction-title {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="nav-overlay" id="navOverlay"></div>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"
+                        style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                        <img src="Wealth Empires.jpg" alt="Wealth Empires Logo"
+                            style="height: 48px; width: auto; border-radius: 8px;">
+                        <div class="logo-text">Wealth Empires</div>
+                    </a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Services <i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="incorporation.html" class="dropdown-item">
+                                <span>Incorporation</span>
+                            </a>
+                            <a href="360-compliance.html" class="dropdown-item">
+                                <span>360° Compliance</span>
+                            </a>
+                            <a href="trademark.html" class="dropdown-item">
+                                <span>Trademark</span>
+                            </a>
+                            <a href="taxes.html" class="dropdown-item">
+                                <span>Taxes</span>
+                            </a>
+
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Our Product <i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="hitworth.html" class="dropdown-item">
+                                <span>HitWorth</span>
+                            </a>
+                            <a href="health-check.html" class="dropdown-item">
+                                <span>Health Check</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="our-partner.html">Our Partners</a></li>
+                    <li class="header-buttons-li">
+                        <div class="header-buttons">
+                            <a href="contact.html" class="btn-demo">Contact Us</a>
+                            <a href="https://crm.wealthempires.in/" class="btn-primary" style="color: white;">Start
+                                Incorporation</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <section class="hero-section">
+        <h1 class="main-title">Stay Legally Sound In One Click!.</h1>
+        <p class="subtitle">There's no reason to pay crazy high prices to start your business.</p>
+        <p class="subtitle-secondary">Wealth Empires does it worry-free, without the hidden fees.</p>
+    </section>
+
+    <div class="pricing-cards">
+        <div class="pricing-card featured">
+            <div class="card-header">
+                <div class="company-name" style="color: white;">Wealth Empires</div>
+            </div>
+        </div>
+
+        <div class="pricing-card">
+            <div class="card-header">
+                <div class="company-name">India filings</div>
+            </div>
+        </div>
+
+        <div class="pricing-card">
+            <div class="card-header">
+                <div class="company-name">Vakil Search</div>
+            </div>
+        </div>
+
+        <div class="pricing-card">
+            <div class="card-header">
+                <div class="company-name">Quick company</div>
+            </div>
+        </div>
+
+        <div class="pricing-card">
+            <div class="card-header">
+                <div class="company-name">Egnoil</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comparison-table">
+        <div class="comparison-row">
+            <div class="feature-name">MCA Compliance</div>
+            <div class="feature-value">22.5k</div>
+            <div class="feature-value">
+                <div>25.8k</div>
+            </div>
+            <div class="feature-value">28k</div>
+            <div class="feature-value">35k</div>
+            <div class="feature-value">30k</div>
+        </div>
+
+        <div class="comparison-row">
+            <div class="feature-name">Trademark</div>
+            <div class="feature-value">6.5k</div>
+            <div class="feature-value">
+                <div>8k</div>
+            </div>
+            <div class="feature-value">9k</div>
+            <div class="feature-value">8.5k</div>
+            <div class="feature-value">10k</div>
+        </div>
+
+        <div class="comparison-row">
+            <div class="feature-name">Company Incorporation</div>
+            <div class="feature-value">12.5k</div>
+            <div class="feature-value">
+                <div>15k</div>
+            </div>
+            <div class="feature-value">14k</div>
+            <div class="feature-value">17k</div>
+            <div class="feature-value">
+                <div>15.5k</div>
+            </div>
+        </div>
+
+
+
+        <div class="comparison-row no-border">
+            <div class="feature-name">Perks</div>
+            <div class="feature-value">6</div>
+            <div class="feature-value">
+                <div>3</div>
+            </div>
+            <div class="feature-value">4</div>
+            <div class="feature-value">
+                0
+            </div>
+            <div class="feature-value">
+                0
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-buttons">
+        <a href="/wealth-empires/index.html"><button class="btn-primary">Get Started</button></a>
+    </div>
+
+
+    </div>
+    <!-- FAQ Section -->
+    <section style="background: #ffffff; padding: 0px;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h2 style="font-size: 2.8rem; margin-bottom: 16px; color: #1a1a1a; font-weight: 700;">FAQs</h2>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <!-- FAQ Item 1 -->
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">What is Wealth
+                            Empires?</h3>
+                        <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
+                    </div>
+                    <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Wealth Empires is India's No.1 Startup-friendly Accounting Firm that provides comprehensive
+                            business services including company incorporation, tax compliance, trademark registration,
+                            and 360° compliance management. We simplify legal and financial processes so entrepreneurs
+                            can focus on building their business.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">How long does
+                            company incorporation take?</h3>
+                        <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
+                    </div>
+                    <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Company incorporation typically takes 7-14 days with our streamlined process. We handle all
+                            paperwork, MCA filings, and documentation to ensure quick and hassle-free business
+                            registration. The exact timeline may vary based on government processing and document
+                            verification.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">Why should I
+                            register a trademark for my business?</h3>
+                        <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
+                    </div>
+                    <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Trademark registration protects your brand identity, prevents others from using similar
+                            names or logos, builds customer trust, and gives you exclusive legal rights to your brand.
+                            It's essential for establishing your business presence and preventing brand confusion in the
+                            market.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">What information do
+                            you need from me to get started?</h3>
+                        <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
+                    </div>
+                    <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Depending on the service, we typically need basic information such as PAN card, Aadhaar
+                            card, business address proof, and bank account details. For company incorporation, we'll
+                            also need director details and proposed company names. Our team will guide you through the
+                            specific requirements for your chosen service.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">What is 360°
+                            Compliance service?</h3>
+                        <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
+                    </div>
+                    <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Our 360° Compliance service is a comprehensive package that includes MCA filing, accounting,
+                            RoC filing, government fees, stamp duties, and all necessary documentation. It's designed to
+                            ensure your business stays compliant with all regulatory requirements throughout the year
+                            without any hassle.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">Can you help me with
+                            GST registration and filing?</h3>
+                        <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
+                    </div>
+                    <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Yes! We provide complete GST registration and filing services. Our tax experts handle GST
+                            compliance, monthly/quarterly returns, and ensure you stay compliant with all tax
+                            regulations. We simplify the entire process so you never have to stress about tax season.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
+                    onclick="toggleFAQ(this)">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: 1.1rem; color: #1a1a1a; font-weight: 600; margin: 0;">Do you provide
+                            ongoing support after business registration?</h3>
+                        <span style="font-size: 1.5rem; color: #1a1a1a; transition: transform 0.3s;">+</span>
+                    </div>
+                    <div style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <p
+                            style="color: #64748b; line-height: 1.7; margin-top: 16px; padding-top: 16px; border-top: 1px solid #e5e7eb;">
+                            Absolutely! We're partners in your growth journey. Beyond registration, we offer continuous
+                            support for accounting, tax filing, compliance management, bookkeeping, and financial
+                            consultancy. Our team is always available to answer your questions and help your business
+                            thrive.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleFAQ(element) {
+            const content = element.querySelector('div:last-child');
+            const icon = element.querySelector('span:last-child');
+            const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+            // Close all FAQs
+            document.querySelectorAll('[onclick="toggleFAQ(this)"]').forEach(faq => {
+                faq.querySelector('div:last-child').style.maxHeight = '0';
+                faq.querySelector('span:last-child').style.transform = 'rotate(0deg)';
+                faq.style.background = '#f8fafc';
+            });
+
+            // Open clicked FAQ if it was closed
+            if (!isOpen) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(45deg)';
+                element.style.background = '#e5e8f5';
+            }
+        }
+
+        function showMoreFAQs() {
+            alert('Contact us at +91 9884521264 or support@wealthempires.in for more information!');
+        }
+    </script>
+    <!-- Footer -->
+    <style>
+        @media (max-width: 768px) {
+
+            /* Stack header items vertically */
+            .footer-header-content {
+                flex-direction: column;
+                gap: 20px;
+                /* Adds space between logo and contact info */
+            }
+
+            .header-divider {
+                display: none;
+                /* Hide the vertical divider line */
+            }
+
+            /* Stack the main content columns */
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                /* Center-aligns the text in columns */
+            }
+
+            .footer-column {
+                margin-bottom: 20px;
+                /* Adds space between stacked columns */
+            }
+
+            .footer-column h3 {
+                margin-top: 0;
+                /* Removes extra space for headings after the first one */
+            }
+
+            /* Stack bottom links and social media vertically */
+            .footer-bottom-content {
+                flex-direction: column-reverse;
+                /* Shows copyright at the bottom */
+                gap: 20px;
+                /* Adds space between elements */
+                text-align: center;
+            }
+
+            .footer-links {
+                display: flex;
+                flex-direction: column;
+                /* Stack policy links */
+                gap: 10px;
+            }
+
+            .footer-links span {
+                display: none;
+                /* Hide the pipe dividers */
+            }
+
+            .footer-right {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+    <footer class="footer-container">
+        <!-- Top Header Section -->
+        <div class="footer-header">
+            <div class="footer-header-content">
+                <div class="logo-section">
+                    <img src="Wealth Empires.jpg" alt="Wealth Empires" class="footer-logo">
+                </div>
+                <div class="header-divider"></div>
+                <div class="contact-section">
+                    <a href="mailto:support@wealthempires.com" class="support-email">support@wealthempires.com </a>
+                    <span style="color: rgb(204, 199, 199);"> | </span>
+                    <a href="#" style="text-decoration: none; color: #2563ec; font-weight: 500;">+91 9884521264</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="https://hitworth.wealthempires.in">HitWorth </a></li>
+                    <li><a href="https://wealthempires.in">Health Check</a></li>
+                    <li><a href="https://crm.wealthempires.in">WE CRM</a></li>
+                </ul>
+                <h3 style="margin-top: 32px;">Templates</h3>
+                <ul>
+                    <li><a href="#">Online CA Consultation</a></li>
+                    <li><a href="#">Online Lawyer Consultation</a></li>
+                    <li><a href="#">Online GST Consultation</a></li>
+                    <li><a href="#">Online Business Consultation</a></li>
+                    <li><a href="#">Legal Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Partnership Agreement</a></li>
+                    <li><a href="#">Rental Agreement</a></li>
+                    <li><a href="#">Service Contract</a></li>
+                </ul>
+                <h3 style="margin-top: 32px;">Quick links</h3>
+                <ul>
+                    <li><a href="#">MCA Portal</a></li>
+                    <li><a href="#">GST Portal</a></li>
+                    <li><a href="#">File ITR</a></li>
+                    <li><a href="#">Check Trademark status</a></li>
+                    <li><a href="#">Check ISO Validity</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Talk To Experts</h3>
+                <ul>
+                    <li><a href="#">Business Incorporation </a></li>
+                    <li><a href="#">360 degree Compliance</a></li>
+                    <li><a href="#">360 degree Accounting </a></li>
+                    <li><a href="#">Trademark Registration Platform </a></li>
+                    <li><a href="#">GST Registration Online</a></li>
+                    <li><a href="#">Tax Planning</a></li>
+                    <li><a href="#">ISO Certification</a></li>
+                    <li><a href="#">Funding</a></li>
+                    <li><a href="#">Risk Mitigation</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Coupons</a></li>
+                    <li><a href="#">eBooks</a></li>
+                    <li><a href="#">Perks</a></li>
+                    <li><a href="#">videos</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <h3 style="margin-top: 32px;">Partnership</h3>
+                <ul>
+                    <li><a href="#">Sponsorship</a></li>
+                    <li><a href="#">B2B Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Life at Wealth Empires</a></li>
+                    <li><a href="#">Brand assets</a></li>
+                    <li><a href="#">Office</a></li>
+                    <li><a href="#">Compare</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-links">
+                    <a href="Terms of Service.html">Terms of Service</a>
+                    <span>|</span>
+                    <a href="Privacy Policy.html">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="gdpr.html">Compliance & Security</a>
+                    <span>|</span>
+                    <a href="gdpr.html">GDPR</a>
+                    <span>|</span>
+                    <a href="Responsible Disclosure Policy.html">Responsible Disclosure</a>
+                    <span>|</span>
+                </div>
+
+                <div class="footer-right">
+                    <div class="copyright">
+                        Copyright © 2025 Wealth Empires Inc.
+                    </div>
+                    <div class="social-links">
+                        <a href="https://x.com/wewealthempires" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/wealthempires" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/thewealthempires" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@thewealthempires" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

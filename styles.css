@@ -25,7 +25,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 25px 24px;
 }
 
 /* Header */
@@ -1795,9 +1795,6 @@ footer {
 
 /* Advantages Grid Mobile */
 @media (max-width: 768px) {
-  .advantages {
-    padding: 60px 0;
-  }
 
   .advantages-grid {
     grid-template-columns: 1fr;
