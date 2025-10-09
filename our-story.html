@@ -10,6 +10,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=rocket_launch" />
     <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -858,56 +859,57 @@
                     padding: 13px 28px;
                 }
             }
+        }
 
-            /* Mobile */
-            @media (max-width: 640px) {
-                body {
-                    padding: 48px 16px;
-                }
-
-                .section-label {
-                    font-size: 14px;
-                    margin-bottom: 16px;
-                }
-
-                .main-heading {
-                    font-size: 48px;
-                    margin-bottom: 24px;
-                }
-
-                .description {
-                    font-size: 17px;
-                    margin-bottom: 32px;
-                }
-
-                .cta-button {
-                    font-size: 15px;
-                    padding: 12px 24px;
-                    width: 100%;
-                    max-width: 320px;
-                }
+        /* Mobile */
+        @media (max-width: 640px) {
+            body {
+                padding: 48px 16px;
             }
 
-            @media (max-width: 480px) {
+            .section-label {
+                font-size: 14px;
+                margin-bottom: 16px;
+            }
+
+            .main-heading {
+                font-size: 48px;
+                margin-bottom: 24px;
+            }
+
+            .description {
+                font-size: 17px;
+                margin-bottom: 32px;
+            }
+
+            .cta-button {
+                font-size: 15px;
+                padding: 12px 24px;
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-heading {
+                font-size: 40px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+
+            .solution-section {
+                padding: 100px 20px 0px 20px;
+                gap: 40px;
+            }
+
+            @media (max-width: 380px) {
                 .main-heading {
-                    font-size: 40px;
-                }
-
-                .description {
-                    font-size: 16px;
-                }
-
-                .solution-section {
-                    padding: 100px 20px 0px 20px;
-                    gap: 40px;
-                }
-
-                @media (max-width: 380px) {
-                    .main-heading {
-                        font-size: 36px;
-                    }
+                    font-size: 36px;
                 }
             }
+        }
     </style>
 </head>
 
@@ -1074,74 +1076,81 @@
                 </p>
             </div>
 
-<section style="background: #fafafa; padding: 50px 0;">
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 60px;">
-            <h2 style="font-size: 2.8rem; color: #2d2d2d; font-weight: 700;">Our Impact</h2>
-            <p style="font-size: 1.1rem; color: #5a5a5a; max-width: 600px; margin: 12px auto 0;">Transforming visions into successful, compliant businesses.</p>
-        </div>
+            <section style="background: #fafafa; padding: 50px 0;">
+                <div class="container">
+                    <div style="text-align: center; margin-bottom: 60px;">
+                        <h2 style="font-size: 2.8rem; color: #2d2d2d; font-weight: 700;">Our Impact</h2>
+                        <p style="font-size: 1.1rem; color: #5a5a5a; max-width: 600px; margin: 12px auto 0;">
+                            Transforming visions into successful, compliant businesses.</p>
+                    </div>
 
-        <div class="impact-grid">
-            <div class="timeline-column-left">
-                <div class="impact-timeline-card">
-                    <div class="card-content">
-                        <i class="fa-solid fa-indian-rupee-sign"></i>
-                        <div class="text-content">
-                            <h3>Cost Savings</h3>
-                            <p>Saved startups in hidden legal costs through transparent pricing and smart solutions.</p>
-                            <div class="highlight-text" style="color: #a16207;">Average 60% cost reduction per client</div>
+                    <div class="impact-grid">
+                        <div class="timeline-column-left">
+                            <div class="impact-timeline-card">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                                    <div class="text-content">
+                                        <h3>Cost Savings</h3>
+                                        <p>Saved startups in hidden legal costs through transparent pricing and smart
+                                            solutions.</p>
+                                        <div class="highlight-text" style="color: #a16207;">Average 60% cost reduction
+                                            per client</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="impact-timeline-card">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <div class="text-content">
+                                        <h3>Risk Prevention</h3>
+                                        <p>Protected <strong>500+ businesses</strong> from compliance penalties through
+                                            proactive guidance.</p>
+                                        <div class="highlight-text" style="color: #4338ca;">Zero compliance violations
+                                            for our clients</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-center">
+                            <div class="timeline-line-desktop">
+                                <div class="timeline-dot dot-1"></div>
+                                <div class="timeline-dot dot-2"></div>
+                                <div class="timeline-dot dot-3"></div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-column-right">
+                            <div class="impact-timeline-card">
+                                <div class="card-content">
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                    <div class="text-content">
+                                        <h3>Growth Focus</h3>
+                                        <p>Enabled <strong>1000+ entrepreneurs</strong> to focus on scaling while we
+                                            handle complexities.</p>
+                                        <div class="highlight-text" style="color: #047857;">3x faster business scaling
+                                            average</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="impact-stats-box">
+                                <div class="impact-stats-grid">
+                                    <div>
+                                        <div class="stat-number">2500+</div>
+                                        <div class="stat-label">Dreams Realized</div>
+                                    </div>
+                                    <div>
+                                        <div class="stat-number">99.8%</div>
+                                        <div class="stat-label">Success Rate</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="impact-timeline-card">
-                    <div class="card-content">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <div class="text-content">
-                            <h3>Risk Prevention</h3>
-                            <p>Protected <strong>500+ businesses</strong> from compliance penalties through proactive guidance.</p>
-                            <div class="highlight-text" style="color: #4338ca;">Zero compliance violations for our clients</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-center">
-                <div class="timeline-line-desktop">
-                    <div class="timeline-dot dot-1"></div>
-                    <div class="timeline-dot dot-2"></div>
-                    <div class="timeline-dot dot-3"></div>
-                </div>
-            </div>
-
-            <div class="timeline-column-right">
-                <div class="impact-timeline-card">
-                    <div class="card-content">
-                        <i class="fa-solid fa-arrow-trend-up"></i>
-                        <div class="text-content">
-                            <h3>Growth Focus</h3>
-                            <p>Enabled <strong>1000+ entrepreneurs</strong> to focus on scaling while we handle complexities.</p>
-                            <div class="highlight-text" style="color: #047857;">3x faster business scaling average</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="impact-stats-box">
-                    <div class="impact-stats-grid">
-                        <div>
-                            <div class="stat-number">2500+</div>
-                            <div class="stat-label">Dreams Realized</div>
-                        </div>
-                        <div>
-                            <div class="stat-number">99.8%</div>
-                            <div class="stat-label">Success Rate</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
         </div>
     </section>
 
@@ -1234,55 +1243,55 @@
     </section>
 
     <!-- Footer -->
-    <style>
-     @media (max-width: 768px) {
-            
-            /* Stack header items vertically */
-            .footer-header-content {
-                flex-direction: column;
-                gap: 20px; /* Adds space between logo and contact info */
-            }
+    <style></style>
+    @media (max-width: 768px) {
 
-            .header-divider {
-                display: none; /* Hide the vertical divider line */
-            }
+    /* Stack header items vertically */
+    .footer-header-content {
+    flex-direction: column;
+    gap: 20px; /* Adds space between logo and contact info */
+    }
 
-            /* Stack the main content columns */
-            .footer-content {
-                flex-direction: column;
-                text-align: center; /* Center-aligns the text in columns */
-            }
-            
-            .footer-column {
-                margin-bottom: 20px; /* Adds space between stacked columns */
-            }
+    .header-divider {
+    display: none; /* Hide the vertical divider line */
+    }
 
-            .footer-column h3 {
-                margin-top: 0; /* Removes extra space for headings after the first one */
-            }
+    /* Stack the main content columns */
+    .footer-content {
+    flex-direction: column;
+    text-align: center; /* Center-aligns the text in columns */
+    }
 
-            /* Stack bottom links and social media vertically */
-            .footer-bottom-content {
-                flex-direction: column-reverse; /* Shows copyright at the bottom */
-                gap: 20px; /* Adds space between elements */
-                text-align: center;
-            }
+    .footer-column {
+    margin-bottom: 20px; /* Adds space between stacked columns */
+    }
 
-            .footer-links {
-                display: flex;
-                flex-direction: column; /* Stack policy links */
-                gap: 10px;
-            }
+    .footer-column h3 {
+    margin-top: 0; /* Removes extra space for headings after the first one */
+    }
 
-            .footer-links span {
-                display: none; /* Hide the pipe dividers */
-            }
-            
-            .footer-right {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
+    /* Stack bottom links and social media vertically */
+    .footer-bottom-content {
+    flex-direction: column-reverse; /* Shows copyright at the bottom */
+    gap: 20px; /* Adds space between elements */
+    text-align: center;
+    }
+
+    .footer-links {
+    display: flex;
+    flex-direction: column; /* Stack policy links */
+    gap: 10px;
+    }
+
+    .footer-links span {
+    display: none; /* Hide the pipe dividers */
+    }
+
+    .footer-right {
+    flex-direction: column;
+    gap: 15px;
+    }
+    }
     </style>
     <footer class="footer-container">
         <!-- Top Header Section -->
