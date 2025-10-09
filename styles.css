@@ -427,7 +427,6 @@ nav {
 
 /* CTA Sections Mobile Responsive */
 @media (max-width: 768px) {
-
   /* Services section CTA buttons */
   .gst-section div[style*="display: flex; justify-content: center"] {
     flex-direction: column !important;
@@ -445,7 +444,6 @@ nav {
 }
 
 @media (max-width: 480px) {
-
   /* Additional CTA mobile styles for smaller screens */
   .gst-section div[style*="display: flex; justify-content: center"] {
     padding: 0 16px !important;
@@ -460,7 +458,6 @@ nav {
 
 /* #WE People First Company CTA Section Mobile Responsive */
 @media (max-width: 768px) {
-
   /* Main CTA section container */
   section[style*="background: #ffebd0"] {
     margin: 0 20px !important;
@@ -475,7 +472,7 @@ nav {
   }
 
   /* Left content padding */
-  .hero-grid>div:first-child {
+  .hero-grid > div:first-child {
     padding-left: 0 !important;
   }
 
@@ -508,7 +505,7 @@ nav {
   }
 
   /* Right side image container */
-  .hero-grid>div:last-child {
+  .hero-grid > div:last-child {
     margin-left: 0 !important;
     width: 100% !important;
     max-width: 350px !important;
@@ -525,7 +522,6 @@ nav {
 }
 
 @media (max-width: 480px) {
-
   /* Additional styles for smaller mobile screens - #WE People First Company section */
   section[style*="background: #ffebd0"] {
     margin: 0 16px !important;
@@ -542,7 +538,7 @@ nav {
     font-size: 15px !important;
   }
 
-  .hero-grid>div:last-child {
+  .hero-grid > div:last-child {
     height: 250px !important;
   }
 }
@@ -590,9 +586,11 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
   border-radius: 20px;
   pointer-events: none;
 }
@@ -625,9 +623,11 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg,
-      rgba(52, 152, 219, 0.3) 0%,
-      rgba(52, 152, 219, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.3) 0%,
+    rgba(52, 152, 219, 0.1) 100%
+  );
   border-radius: 15px;
   pointer-events: none;
 }
@@ -793,7 +793,7 @@ nav {
   letter-spacing: -0.5px;
 }
 
-.mandatory-section>p {
+.mandatory-section > p {
   text-align: center;
   color: #1a1a1a;
   font-size: 16px;
@@ -901,7 +901,6 @@ nav {
     grid-template-columns: 1fr;
   }
 }
-
 
 .step {
   display: grid;
@@ -1132,7 +1131,7 @@ nav {
   text-align: center;
 }
 
-.documents-section>p {
+.documents-section > p {
   text-align: center;
   color: #64748b;
   margin-bottom: 32px;
@@ -1360,7 +1359,7 @@ footer {
     margin-bottom: 0;
   }
 
-  .nav-links>li>a {
+  .nav-links > li > a {
     width: 100%;
     padding: 16px 24px;
     font-size: 16px;
@@ -1368,7 +1367,7 @@ footer {
     border-radius: 0;
   }
 
-  .nav-links>li>a:hover {
+  .nav-links > li > a:hover {
     background: rgba(102, 126, 234, 0.08);
   }
 
@@ -1577,7 +1576,7 @@ footer {
     margin-bottom: 0;
   }
 
-  .nav-links>li>a {
+  .nav-links > li > a {
     width: 100%;
     padding: 16px 24px;
     font-size: 16px;
@@ -1585,7 +1584,7 @@ footer {
     border-radius: 0;
   }
 
-  .nav-links>li>a:hover {
+  .nav-links > li > a:hover {
     background: rgba(102, 126, 234, 0.08);
   }
 
@@ -1795,7 +1794,6 @@ footer {
 
 /* Advantages Grid Mobile */
 @media (max-width: 768px) {
-
   .advantages-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -1824,59 +1822,59 @@ footer {
   .requirements-content {
     grid-template-columns: 1fr;
   }
-}
 
-/* Process Mobile */
-.process {
-  padding: 60px 0;
-}
+  /* Process Mobile */
+  .process {
+    padding: 60px 0;
+  }
 
-.step {
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 24px;
-}
+  .step {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px;
+  }
 
-.step-number {
-  flex-direction: row;
-  justify-content: flex-start;
-}
+  .step-number {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 
-.step-content h3 {
-  font-size: 1.3rem;
-}
+  .step-content h3 {
+    font-size: 1.3rem;
+  }
 
-/* GST Section Mobile */
-.gst-section {
-  align-items: center;
-  padding: 20px;
-}
+  /* GST Section Mobile */
+  .gst-section {
+    align-items: center;
+    padding: 20px;
+  }
 
-.gst-info-grid {
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-}
+  .gst-info-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
 
-.gst-visual {
-  position: static;
-}
+  .gst-visual {
+    position: static;
+  }
 
-.gstin-format {
-  padding: 24px;
-}
+  .gstin-format {
+    padding: 24px;
+  }
 
-.gstin-part {
-  flex-direction: column;
-  align-items: flex-start;
-}
+  .gstin-part {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-/* Documents Grid Mobile */
-.documents-grid {
-  grid-template-columns: 1fr;
-}
+  /* Documents Grid Mobile */
+  .documents-grid {
+    grid-template-columns: 1fr;
+  }
 
-.document-item {
-  padding: 24px;
+  .document-item {
+    padding: 24px;
+  }
 }
 
 /* Footer Mobile */
@@ -2209,7 +2207,7 @@ footer {
     font-size: 1.5rem !important;
   }
 
-  .compliance-right>div {
+  .compliance-right > div {
     padding: 24px !important;
   }
 
@@ -2242,7 +2240,7 @@ footer {
     padding: 20px !important;
   }
 
-  .compliance-right>div {
+  .compliance-right > div {
     padding: 20px !important;
   }
 }
@@ -2266,7 +2264,7 @@ footer {
     padding: 20px !important;
   }
 
-  .partner-card>div:first-child {
+  .partner-card > div:first-child {
     width: 80px !important;
     height: 80px !important;
   }
@@ -2288,7 +2286,7 @@ footer {
     gap: 16px !important;
   }
 
-  .partner-card>div:first-child {
+  .partner-card > div:first-child {
     width: 70px !important;
     height: 70px !important;
   }
@@ -2307,7 +2305,6 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-
 
 /* ================================================= */
 /* ============== IMPACT TIMELINE SECTION ============== */
@@ -2428,7 +2425,6 @@ footer {
   box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);
 }
 
-
 /* --- Stats Box Styles --- */
 .impact-stats-box {
   background: #ffffff;
@@ -2460,7 +2456,6 @@ footer {
   font-weight: 500;
 }
 
-
 /* ================================================= */
 /* ============== RESPONSIVE MOBILE FIX ============== */
 /* ================================================= */
@@ -2469,7 +2464,6 @@ footer {
   .impact-grid {
     /* Switch to a single column layout */
     grid-template-columns: 1fr;
-
   }
 
   .timeline-center {
@@ -2520,8 +2514,7 @@ footer {
     position: relative;
     right: 20px;
   }
-  .impact-stats-box{
+  .impact-stats-box {
     display: none;
   }
-
 }
