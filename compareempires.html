@@ -53,148 +53,63 @@
             font-weight: 400;
         }
 
-        .tabs {
-            display: flex;
-            justify-content: center;
-            gap: 0;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .tab-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: none;
-            border: none;
-            border-bottom: 2px solid transparent;
-            color: #6b7280;
-            font-size: 0.95rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            bottom: -1px;
-        }
-
-        .tab-btn:hover {
-            color: #1a1a1a;
-        }
-
-        .tab-btn.active {
-            color: #1a1a1a;
-            border-bottom-color: #1a1a1a;
-        }
-
-        .tab-btn svg {
-            width: 16px;
-            height: 16px;
-        }
-
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 16px;
-            margin-bottom: 40px;
-            padding: 0px 20px 0px 20px;
-        }
-
-        .pricing-card {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 24px 16px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .pricing-card.featured {
-            background: #0d3d3d;
-            border-color: #F4E4A6;
-            position: relative;
-        }
-
-        .pricing-card.featured::before {
-            content: '';
-            position: absolute;
-            top: -1px;
-            left: -1px;
-            right: -1px;
-            bottom: -1px;
-            background: linear-gradient(135deg, #F4E4A6 0%, #F4E4A6 100%);
-            border-radius: 12px;
-            z-index: -1;
-        }
-
-        .card-header {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
         .company-name {
             font-size: 1rem;
             font-weight: 600;
             color: #1a1a1a;
-            margin-bottom: 8px;
         }
 
-        .price {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #000000;
-            line-height: 1;
-        }
-
-        .period {
-            font-size: 1rem;
-            font-weight: 500;
-            color: #4b5563;
-        }
-
-        .state-fees {
-            font-size: 0.875rem;
-            color: #6b7280;
-            margin-top: 4px;
-        }
-
-        .additional-fees {
-            font-size: 0.875rem;
-            color: #6b7280;
-            margin-top: 4px;
-        }
-
-        .additional-fees div {
-            margin: 2px 0;
+        .table-scroll-wrapper {
+            overflow-x: auto;
+            width: 100%;
+            padding: 0 20px;
         }
 
         .comparison-table {
             display: flex;
             flex-direction: column;
             margin-bottom: 40px;
-            padding: 0px 30px;            
+            min-width: 800px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
         }
 
         .comparison-row {
             display: grid;
-            grid-template-columns: 1fr repeat(5, 1fr);
+            grid-template-columns: 1.5fr repeat(5, 1fr);
             border-bottom: 1px solid #e5e7eb;
-            min-height: 80px;
             align-items: center;
         }
 
-        .comparison-row.no-border {
+        .comparison-row:last-child {
             border-bottom: none;
-            min-height: 60px;
         }
 
-        .comparison-row:nth-child(odd) {
+        .comparison-row:not(.comparison-header):nth-of-type(even) {
             background-color: #f9fafb;
         }
 
+        .comparison-header {
+            background-color: #ffffff !important;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .company-header-cell {
+            padding: 20px 16px;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .company-header-cell.featured {
+            background: #0d3d3d;
+        }
+
         .feature-name {
-            padding: 20px 24px;
+            padding: 24px;
             font-weight: 600;
             color: #1a1a1a;
             font-size: 0.95rem;
@@ -203,41 +118,25 @@
         .advfeature-value {
             color: #0d3d3d;
             font-weight: 800;
-            padding: 20px 16px;
+            padding: 24px 16px;
             text-align: center;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 4px;
             font-size: 1.1rem;
+            background-color: #f4e4a61f;
+            height: 100%;
         }
 
         .feature-value {
-            padding: 20px 16px;
+            padding: 24px 16px;
             text-align: center;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 4px;
             font-size: 0.9rem;
             color: #1a1a1a;
-        }
-
-        .using {
-            font-size: 0.8rem;
-            color: #6b7280;
-        }
-
-        .check-icon {
-            width: 24px;
-            height: 24px;
-        }
-
-        .x-icon {
-            width: 24px;
-            height: 24px;
+            height: 100%;
         }
 
         .cta-buttons {
@@ -264,92 +163,126 @@
             transform: translateY(-1px);
         }
 
-        .btn-secondary {
-            background-color: #ffffff;
-            color: #1a1a1a;
-            border: 1px solid #d1d5db;
-            padding: 14px 32px;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        /* Footer Styles */
+        .footer-container {
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 40px 20px;
+            border-top: 1px solid #e7e7e7;
         }
 
-        .btn-secondary:hover {
-            border-color: #9ca3af;
-            transform: translateY(-1px);
+        .footer-header {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
 
-        .deduction-section {
-            text-align: center;
-            background-color: #f9fafb;
-            padding: 60px 40px;
-            border-radius: 16px;
-            margin-top: 60px;
+        .footer-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .deduction-title {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 24px;
-            line-height: 1.3;
+        .footer-logo {
+            height: 40px;
         }
 
-        .highlight {
-            background-color: #F4E4A6;
-            padding: 4px 12px;
-            border-radius: 6px;
+        .header-divider {
+            height: 40px;
+            width: 1px;
+            background-color: #ccc;
+            margin: 0 20px;
         }
 
-        .deduction-text {
-            font-size: 1.0625rem;
-            color: #4b5563;
-            max-width: 800px;
-            margin: 0 auto 20px auto;
-            line-height: 1.7;
+        .contact-section a {
+            color: #2563ec;
+            text-decoration: none;
+            font-weight: 500;
         }
 
-        .deduction-note {
-            font-size: 0.875rem;
-            color: #6b7280;
-            max-width: 800px;
-            margin: 0 auto 32px auto;
-            line-height: 1.6;
+        .contact-section .support-email {
+            color: #555;
         }
 
-        .btn-learn-more {
-            background-color: #000000;
-            color: #ffffff;
-            border: none;
-            padding: 14px 32px;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        .btn-learn-more:hover {
-            background-color: #1a1a1a;
-            transform: translateY(-1px);
+        .footer-column {
+            flex: 1;
+            min-width: 150px;
         }
 
-        @media (max-width: 1024px) {
-            .pricing-cards {
-                grid-template-columns: repeat(3, 1fr);
-            }
+        .footer-column h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #000;
+        }
 
-            .comparison-row {
-                grid-template-columns: 1fr repeat(3, 1fr);
-            }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-            .comparison-row>div:nth-child(4),
-            .comparison-row>div:nth-child(5),
-            .comparison-row>div:nth-child(6) {
-                display: none;
-            }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .footer-bottom-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .footer-links a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links span {
+            color: #ccc;
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .copyright {
+            margin-right: 20px;
+        }
+
+        .social-links a {
+            color: #555;
+            margin-left: 15px;
+            font-size: 18px;
         }
 
         @media (max-width: 768px) {
@@ -362,87 +295,64 @@
                 font-size: 1rem;
             }
 
-            .pricing-cards {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .comparison-row {
-                grid-template-columns: 1.2fr 1fr 1fr;
-                font-size: 0.85rem;
-            }
-
-            .comparison-row>div:nth-child(3),
-            .comparison-row>div:nth-child(4),
-            .comparison-row>div:nth-child(5),
-            .comparison-row>div:nth-child(6) {
-                display: none;
-            }
-
-            .feature-name {
-                padding: 16px 12px;
-                font-size: 0.85rem;
-            }
-
-            .feature-value {
-                padding: 16px 8px;
-                font-size: 0.8rem;
-            }
-
-            .tabs {
-                flex-wrap: wrap;
-                gap: 8px;
-            }
-
-            .tab-btn {
-                padding: 10px 16px;
-                font-size: 0.875rem;
-            }
-
-            .deduction-title {
-                font-size: 1.75rem;
-            }
-
-            .deduction-section {
-                padding: 40px 24px;
-            }
-
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .btn-primary,
-            .btn-secondary {
+            .btn-primary {
                 width: 100%;
                 max-width: 300px;
+            }
+
+            /* Footer Responsive */
+            .footer-header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .header-divider {
+                display: none;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-column {
+                margin-bottom: 20px;
+            }
+
+            .footer-column h3 {
+                margin-top: 0;
+            }
+
+            .footer-bottom-content {
+                flex-direction: column-reverse;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .footer-links {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-links span {
+                display: none;
+            }
+
+            .footer-right {
+                flex-direction: column;
+                gap: 15px;
             }
         }
 
         @media (max-width: 480px) {
-            .pricing-cards {
-                grid-template-columns: 1fr;
-            }
-
-            .comparison-row {
-                grid-template-columns: 1fr;
-                gap: 12px;
-                padding: 16px 0;
-            }
-
-            .comparison-row>div:not(:first-child) {
-                display: none;
-            }
-
-            .feature-name {
-                text-align: center;
-            }
-
             .main-title {
                 font-size: 1.875rem;
-            }
-
-            .deduction-title {
-                font-size: 1.5rem;
             }
 
             .container {
@@ -453,7 +363,6 @@
 </head>
 
 <body>
-    <!-- Header -->
     <div class="nav-overlay" id="navOverlay"></div>
     <header>
         <div class="nav-container">
@@ -475,30 +384,17 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">Services <i class="fa-solid fa-caret-down"></i></a>
                         <div class="dropdown-menu">
-                            <a href="incorporation.html" class="dropdown-item">
-                                <span>Incorporation</span>
-                            </a>
-                            <a href="360-compliance.html" class="dropdown-item">
-                                <span>360° Compliance</span>
-                            </a>
-                            <a href="trademark.html" class="dropdown-item">
-                                <span>Trademark</span>
-                            </a>
-                            <a href="taxes.html" class="dropdown-item">
-                                <span>Taxes</span>
-                            </a>
-
+                            <a href="incorporation.html" class="dropdown-item"><span>Incorporation</span></a>
+                            <a href="360-compliance.html" class="dropdown-item"><span>360° Compliance</span></a>
+                            <a href="trademark.html" class="dropdown-item"><span>Trademark</span></a>
+                            <a href="taxes.html" class="dropdown-item"><span>Taxes</span></a>
                         </div>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">Our Product <i class="fa-solid fa-caret-down"></i></a>
                         <div class="dropdown-menu">
-                            <a href="hitworth.html" class="dropdown-item">
-                                <span>HitWorth</span>
-                            </a>
-                            <a href="health-check.html" class="dropdown-item">
-                                <span>Health Check</span>
-                            </a>
+                            <a href="hitworth.html" class="dropdown-item"><span>HitWorth</span></a>
+                            <a href="health-check.html" class="dropdown-item"><span>Health Check</span></a>
                         </div>
                     </li>
                     <li><a href="our-story.html">Our Story</a></li>
@@ -511,117 +407,85 @@
                         </div>
                     </li>
                 </ul>
-
             </nav>
         </div>
     </header>
+
     <section class="hero-section">
         <h1 class="main-title">Stay Legally Sound In One Click!.</h1>
         <p class="subtitle">There's no reason to pay crazy high prices to start your business.</p>
         <p class="subtitle-secondary">Wealth Empires does it worry-free, without the hidden fees.</p>
     </section>
 
-    <div class="pricing-cards">
-        <div class="pricing-card featured">
-            <div class="card-header">
-                <div class="company-name" style="color: white;">Wealth Empires</div>
+    <div class="table-scroll-wrapper">
+        <div class="comparison-table">
+            <div class="comparison-row comparison-header">
+                <div class="feature-name"></div>
+                <div class="company-header-cell featured">
+                    <div class="company-name" style="color: white;">Wealth Empires</div>
+                </div>
+                <div class="company-header-cell">
+                    <div class="company-name">India filings</div>
+                </div>
+                <div class="company-header-cell">
+                    <div class="company-name">Vakil Search</div>
+                </div>
+                <div class="company-header-cell">
+                    <div class="company-name">Quick company</div>
+                </div>
+                <div class="company-header-cell">
+                    <div class="company-name">Egnoil</div>
+                </div>
             </div>
-        </div>
 
-        <div class="pricing-card">
-            <div class="card-header">
-                <div class="company-name">India filings</div>
+            <div class="comparison-row">
+                <div class="feature-name">MCA Compliance</div>
+                <div class="advfeature-value">22.5k</div>
+                <div class="feature-value">25.8k</div>
+                <div class="feature-value">28k</div>
+                <div class="feature-value">35k</div>
+                <div class="feature-value">30k</div>
             </div>
-        </div>
 
-        <div class="pricing-card">
-            <div class="card-header">
-                <div class="company-name">Vakil Search</div>
+            <div class="comparison-row">
+                <div class="feature-name">Trademark</div>
+                <div class="advfeature-value">6.5k</div>
+                <div class="feature-value">8k</div>
+                <div class="feature-value">9k</div>
+                <div class="feature-value">8.5k</div>
+                <div class="feature-value">10k</div>
             </div>
-        </div>
 
-        <div class="pricing-card">
-            <div class="card-header">
-                <div class="company-name">Quick company</div>
+            <div class="comparison-row">
+                <div class="feature-name">Company Incorporation</div>
+                <div class="advfeature-value">12.5k</div>
+                <div class="feature-value">15k</div>
+                <div class="feature-value">14k</div>
+                <div class="feature-value">17k</div>
+                <div class="feature-value">15.5k</div>
             </div>
-        </div>
 
-        <div class="pricing-card">
-            <div class="card-header">
-                <div class="company-name">Egnoil</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="comparison-table">
-        <div class="comparison-row">
-            <div class="feature-name">MCA Compliance</div>
-            <div class="advfeature-value">22.5k</div>
-            <div class="feature-value">
-                <div>25.8k</div>
-            </div>
-            <div class="feature-value">28k</div>
-            <div class="feature-value">35k</div>
-            <div class="feature-value">30k</div>
-        </div>
-
-        <div class="comparison-row">
-            <div class="feature-name">Trademark</div>
-            <div class="advfeature-value">6.5k</div>
-            <div class="feature-value">
-                <div>8k</div>
-            </div>
-            <div class="feature-value">9k</div>
-            <div class="feature-value">8.5k</div>
-            <div class="feature-value">10k</div>
-        </div>
-
-        <div class="comparison-row">
-            <div class="feature-name">Company Incorporation</div>
-            <div class="advfeature-value">12.5k</div>
-            <div class="feature-value">
-                <div>15k</div>
-            </div>
-            <div class="feature-value">14k</div>
-            <div class="feature-value">17k</div>
-            <div class="feature-value">
-                <div>15.5k</div>
-            </div>
-        </div>
-
-
-
-        <div class="comparison-row no-border">
-            <div class="feature-name">Perks</div>
-            <div class="advfeature-value">6</div>
-            <div class="feature-value">
-                <div>3</div>
-            </div>
-            <div class="feature-value">4</div>
-            <div class="feature-value">
-                0
-            </div>
-            <div class="feature-value">
-                0
+            <div class="comparison-row">
+                <div class="feature-name">Perks</div>
+                <div class="advfeature-value">6</div>
+                <div class="feature-value">3</div>
+                <div class="feature-value">4</div>
+                <div class="feature-value">0</div>
+                <div class="feature-value">0</div>
             </div>
         </div>
     </div>
 
     <div class="cta-buttons">
-        <a href="/wealth-empires/index.html"><button class="btn-primary">Get Started</button></a>
+        <a href="index.html"><button class="btn-primary">Get Started</button></a>
     </div>
 
-
-    </div>
-    <!-- FAQ Section -->
     <section style="background: #ffffff; padding: 0px;">
         <div class="container">
             <div style="text-align: center; margin-bottom: 50px;">
                 <h2 style="font-size: 2.8rem; margin-bottom: 16px; color: #1a1a1a; font-weight: 700;">FAQs</h2>
             </div>
-
             <div style="max-width: 800px; margin: 0 auto;">
-                <!-- FAQ Item 1 -->
                 <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
                     onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -638,8 +502,6 @@
                             can focus on building their business.</p>
                     </div>
                 </div>
-
-                <!-- FAQ Item 2 -->
                 <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
                     onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -656,8 +518,6 @@
                             verification.</p>
                     </div>
                 </div>
-
-                <!-- FAQ Item 3 -->
                 <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
                     onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -674,8 +534,6 @@
                             market.</p>
                     </div>
                 </div>
-
-                <!-- FAQ Item 4 -->
                 <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
                     onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -692,8 +550,6 @@
                             specific requirements for your chosen service.</p>
                     </div>
                 </div>
-
-                <!-- FAQ Item 5 -->
                 <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
                     onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -710,8 +566,6 @@
                             without any hassle.</p>
                     </div>
                 </div>
-
-                <!-- FAQ Item 6 -->
                 <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
                     onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -728,8 +582,6 @@
                         </p>
                     </div>
                 </div>
-
-                <!-- FAQ Item 7 -->
                 <div style="background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; cursor: pointer; transition: all 0.3s;"
                     onclick="toggleFAQ(this)">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -749,93 +601,34 @@
             </div>
         </div>
     </section>
+
     <script>
         function toggleFAQ(element) {
             const content = element.querySelector('div:last-child');
             const icon = element.querySelector('span:last-child');
             const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
 
-            // Close all FAQs
             document.querySelectorAll('[onclick="toggleFAQ(this)"]').forEach(faq => {
-                faq.querySelector('div:last-child').style.maxHeight = '0';
-                faq.querySelector('span:last-child').style.transform = 'rotate(0deg)';
-                faq.style.background = '#f8fafc';
+                if (faq !== element) {
+                    faq.querySelector('div:last-child').style.maxHeight = '0';
+                    faq.querySelector('span:last-child').style.transform = 'rotate(0deg)';
+                    faq.style.background = '#f8fafc';
+                }
             });
 
-            // Open clicked FAQ if it was closed
             if (!isOpen) {
                 content.style.maxHeight = content.scrollHeight + 'px';
                 icon.style.transform = 'rotate(45deg)';
                 element.style.background = '#e5e8f5';
+            } else {
+                content.style.maxHeight = '0';
+                icon.style.transform = 'rotate(0deg)';
+                element.style.background = '#f8fafc';
             }
-        }
-
-        function showMoreFAQs() {
-            alert('Contact us at +91 9884521264 or support@wealthempires.in for more information!');
         }
     </script>
-    <!-- Footer -->
-    <style>
-        @media (max-width: 768px) {
 
-            /* Stack header items vertically */
-            .footer-header-content {
-                flex-direction: column;
-                gap: 20px;
-                /* Adds space between logo and contact info */
-            }
-
-            .header-divider {
-                display: none;
-                /* Hide the vertical divider line */
-            }
-
-            /* Stack the main content columns */
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-                /* Center-aligns the text in columns */
-            }
-
-            .footer-column {
-                margin-bottom: 20px;
-                /* Adds space between stacked columns */
-            }
-
-            .footer-column h3 {
-                margin-top: 0;
-                /* Removes extra space for headings after the first one */
-            }
-
-            /* Stack bottom links and social media vertically */
-            .footer-bottom-content {
-                flex-direction: column-reverse;
-                /* Shows copyright at the bottom */
-                gap: 20px;
-                /* Adds space between elements */
-                text-align: center;
-            }
-
-            .footer-links {
-                display: flex;
-                flex-direction: column;
-                /* Stack policy links */
-                gap: 10px;
-            }
-
-            .footer-links span {
-                display: none;
-                /* Hide the pipe dividers */
-            }
-
-            .footer-right {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-    </style>
     <footer class="footer-container">
-        <!-- Top Header Section -->
         <div class="footer-header">
             <div class="footer-header-content">
                 <div class="logo-section">
@@ -849,7 +642,6 @@
                 </div>
             </div>
         </div>
-
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Products</h3>
@@ -867,7 +659,6 @@
                     <li><a href="#">Legal Consultation</a></li>
                 </ul>
             </div>
-
             <div class="footer-column">
                 <h3>Services</h3>
                 <ul>
@@ -884,7 +675,6 @@
                     <li><a href="#">Check ISO Validity</a></li>
                 </ul>
             </div>
-
             <div class="footer-column">
                 <h3>Talk To Experts</h3>
                 <ul>
@@ -897,10 +687,8 @@
                     <li><a href="#">ISO Certification</a></li>
                     <li><a href="#">Funding</a></li>
                     <li><a href="#">Risk Mitigation</a></li>
-
                 </ul>
             </div>
-
             <div class="footer-column">
                 <h3>Resources</h3>
                 <ul>
@@ -917,7 +705,6 @@
                     <li><a href="#">B2B Support</a></li>
                 </ul>
             </div>
-
             <div class="footer-column">
                 <h3>Company</h3>
                 <ul>
@@ -933,7 +720,6 @@
                 </ul>
             </div>
         </div>
-
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <div class="footer-links">
@@ -946,13 +732,9 @@
                     <a href="gdpr.html">GDPR</a>
                     <span>|</span>
                     <a href="Responsible Disclosure Policy.html">Responsible Disclosure</a>
-                    <span>|</span>
                 </div>
-
                 <div class="footer-right">
-                    <div class="copyright">
-                        Copyright © 2025 Wealth Empires Inc.
-                    </div>
+                    <div class="copyright">Copyright © 2025 Wealth Empires Inc.</div>
                     <div class="social-links">
                         <a href="https://x.com/wewealthempires" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.linkedin.com/company/wealthempires" aria-label="LinkedIn"><i
